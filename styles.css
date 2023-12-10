@@ -10,13 +10,13 @@ body {
         display: flex;
         padding: 10px;
         margin: 10px;
-        background: #659972;
+        background: #1b5028;
         border-radius:  20px; /* curved corners */
         }
         .assign img {
         width: 200px;
         padding: 10px;
-        border: 1px #37423D;
+        border: 1px #32453d;
         }
  a {
         text-decoration: none; /* remove underlining on anchor tags */
@@ -41,7 +41,7 @@ body {
             flex-wrap: wrap;
            }
            h1 {
-            color: #ffd670;
+            color: #70ff8d;
             text-align: center;
             width: 100%;
             display: block;
@@ -57,12 +57,12 @@ body {
             color: black;
            }
            .assign {
-            background-color: #70d6ff;
+            background-color: #7085ff;
             margin: 10px;
             padding: 10px;
             border-radius: 20px;
             width: 20%;
-            box-shadow: 8px 8px #ff70a6;
+            box-shadow: 8px 8px #70b5ff;
             display: block; /* instead of flex */
            }
            .assign img {
@@ -73,5 +73,5 @@ body {
            .assign img:hover {
             width: 200px;
             margin: 10px;
-            border: 2px dotted green;
+            border: 2px dotted rgba(0, 128, 0, 0.792);
            }
