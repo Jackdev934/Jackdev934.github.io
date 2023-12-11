@@ -32,10 +32,10 @@ body {
            Explain a:hover, img:hover, h1:hover
            a:hover {
             text-decoration: none; /* remove underlining on anchor tags */
-            color: salmon; /* pick the color you want */
+            color: rgb(27, 100, 34); /* pick the color you want */
            }
            body {
-            background-color: #ff9770;
+            background-color: #198834;
             font-family: Arial, Helvetica, sans-serif;
             display: flex;
             flex-wrap: wrap;
@@ -47,7 +47,7 @@ body {
             display: block;
            }
            h1:hover {
-            color: lime green;
+            color: rgb(124, 138, 124) green;
             text-align: center;
             width: 100%;
             display: block;
@@ -75,3 +75,4 @@ body {
             margin: 10px;
             border: 2px dotted rgba(0, 128, 0, 0.792);
            }
+
