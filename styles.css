@@ -41,7 +41,7 @@ body {
             flex-wrap: wrap;
            }
            h1 {
-            color: white;
+            color: black;
             text-align: center;
             width: 100%;
             display: block;
@@ -54,7 +54,7 @@ body {
            }
            a {
             text-decoration: none;
-            color: black;
+            color: white;
            }
            .assign {
             background-color: #7085ff;
