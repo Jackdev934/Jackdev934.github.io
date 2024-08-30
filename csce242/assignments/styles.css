@@ -1,0 +1,44 @@
+body{
+    background: #4B949B;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#heading{
+    color:#25DFF0;
+    text-align: center;
+}
+
+#content{
+    background-color: #457685;
+    padding: 5px;
+    margin: 10px auto;
+    width: 50%;
+    border-radius: 10px;
+    border: 5px solid #1A2D33;
+}
+
+#main-head{
+    text-align: center;
+    color: #3A4647;
+}
+
+#hyperlink a{
+    list-style: none;
+    text-decoration: none;
+    background-color:#496D70;
+    color: #3EBAC5;
+    padding: 7px;
+    margin: 7px;
+    border-radius: 10px;
+}
+
+#hyperlink li{
+    list-style: none;
+    display: inline-block;
+}
+
+#hyperlink ul{ 
+    padding-left:0;
+    width: fit-content;
+    margin: auto;
+}
