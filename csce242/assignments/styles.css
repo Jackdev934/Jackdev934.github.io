@@ -14,12 +14,19 @@ body{
     margin: 10px auto;
     width: 50%;
     border-radius: 10px;
-    border: 5px solid #1A2D33;
+    border: 5px solid #030809;
 }
 
 #main-head{
     text-align: center;
     color: #3A4647;
+}
+
+#assignment{
+    background-color: navy;
+    margin:auto;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #hyperlink a{
@@ -32,6 +39,14 @@ body{
     border-radius: 10px;
 }
 
+#hyperlink section{
+    background: white;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
 #hyperlink li{
     list-style: none;
     display: inline-block;
@@ -41,4 +56,18 @@ body{
     padding-left:0;
     width: fit-content;
     margin: auto;
+}
+
+@media only screen and (min-width:768px){
+    .columns{
+        display:flex;
+    }
+
+    .one{
+        flex:1;
+    }
+
+    .two{
+        flex:2;
+    }
 }
