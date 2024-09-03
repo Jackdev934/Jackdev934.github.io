@@ -1,60 +1,89 @@
 /* Structure */
 body{
+    background: #F2EED8;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Content */
+
+h1{
+    text-align: center;
+    color:#5E888C;
+}
+
 #content{
-    width: 95%;
-    margin: auto;
-    background: #fff;
+    width: 100%;
+    margin: 20px;
+    background: #F2EED8;
     border-radius: 5px;
 }
 
-#species section{
-    background: blueviolet;
+#data section{
+    background: #A4BFB8;
     padding: 5px;
-    margin: 5px;
+    margin: 0;
+}
+
+#titles section{
+    background: #A4BFB8;
+}
+
+#titles2 section{
+    background: #A4BFB8;
 }
 
 #main-aside{
-    background: lightblue;
+    background:#D98484;
+    margin:0;
+    padding: 50px;
 }
 
-#news section{
-    background: burlywood;
+
+#ideas{
+    background: #F2EED8;
 }
 
+/* Header and Footer */
 #main-header{
-    background-color: skyblue;
+    background-color: #F2EED8;
     border-radius:5px;
 }
 
 #main-footer{
-    background: navy;
+    text-align: center;
+    background: #F2EED8;
 }
 
 /* Navigation */
 
+nav section{
+    background:#D98484;
+    margin:1px;
+}
+
 #main-nav ul{
-    padding-left: 0;
+    padding-left:0;
+    padding-bottom: 5px;
+    margin: auto;
+    width: 100%; /* nav bar full width */
 }
 
 #main-nav li{
     list-style-type: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid#D98484;
+    padding: 5px;
+    text-align: center;
 }
 #main-nav a{
     text-decoration: none;
     padding: 5px;
-    background: black;
-    color: navy;
+    margin: 2px;
+    background: #D98484;
+    color: white;
     display: block;
 }
 
-/* Typography */
-#main-footer{
-    text-align: center;
-}
+
 
 /* Media Queries */
 
@@ -68,20 +97,35 @@ body{
     }
 
     .two{
-        flex:2;
+        flex: 2;
+        text-align: center;
+        li{
+            list-style-type: none;
+            text-align:auto;
+        }
     }
+
     .three{
         flex:3;
     }
-    .four{
-        flex:4;
+
+    .box{
+        display: flex;
+        align-items:center;
+        gap: 20px;
+        margin-bottom: 20px;
     }
 
+    .image{
+        max-width: 100%;
+        hight:auto;
+    }
+
+    .text{
+        max-width: 60%;
+
+    }
     #main-nav li{
         flex:1;
     }
-}
-/*Apply to 768px and larger*/
-@media only screen and (min-width:768px){
-
 }

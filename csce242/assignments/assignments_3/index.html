@@ -2,53 +2,161 @@
 <html>
     <head>
         <link rel ="stylesheet" href="styles.css">
-        <title>Otters</title>
+        <title>Flex-Box Layout</title>
     </head>
     <body>
         <div id="content">
             <header id = "main-header">
-                <h1>Baby Otters</h1>
-                <h2>Want to learn</h2>
-                <nav id = "main-nav">
+                <h1>Flex-Box Layout</h1>
+                <nav id = "main-nav" class = "columns">
                     <ul>
-                        <li><a href = "#">Home</a></li>
-                        <li><a href = "#">About</a></li>
-                        <li><a href = "#">Pictures</a></li>
-                        <li><a href = "#">Contact Us</a></li>
+                        <div id = "nav section" class = "columns">
+                            <section class = "one">
+                                <li><a href = "#">Home</a></li>
+                            </section>
+                            <section class = "one">
+                                <li><a href = "#">About</a></li>
+                            </section>
+                            <section class = "one">
+                                <li><a href = "#">Blog</a></li>
+                            </section>
+                            <section class = "one">
+                                <li><a href = "#">Store</a></li>
+                            </section>
+                            <section class = "one"> 
+                                <li><a href = "#">Staff</a></li>
+                            </section>
+                            <section class = "one">
+                                <li><a href = "#">Contact </a></li>
+                            </section>
+                        </div>   
                     </ul>
                 </nav>
             </header>
             <div id = "main-content">
-                  <h1> My cool stuff </h1>
-                <div id ="species" class="columns">
-                    <aside class = "one">
-                        <h2>sidebar</h2>
-                        <p>This is my sidebar stuff</p>
+                <div id ="data" class="columns">
+                   
+                    <section class = "three">
+                        <div id = "titles" class = "columns">
+                            <section class = "one">
+                                <h3> Title 1</h3>
+                                <img src ="https://place-hold.it/300">
+                                <p> Lorem ipsum odor amet, consectetuer adipiscing elit.
+                                    Mi pellentesque porta, enim euismod hendrerit facilisis aptent laoreet.
+                                </p>
+                            </section>
+                            <section class = "one">
+                                <h3> Title 2</h3>
+                                <img src ="https://place-hold.it/300">
+                                <p> Lorem ipsum odor amet, consectetuer adipiscing elit.
+                                    Mi pellentesque porta, enim euismod hendrerit facilisis aptent laoreet.
+                                </p>
+                            </section>
+                            <section class = "one">
+                                <h3> Title 3</h3>
+                                <img src ="https://place-hold.it/300">
+                                <p> Lorem ipsum odor amet, consectetuer adipiscing elit.
+                                    Mi pellentesque porta, enim euismod hendrerit facilisis aptent laoreet.
+                                </p>
+                            </section>
+                            <section class = "one">
+                                <h3> Title 4</h3>
+                                <img src ="https://place-hold.it/300">
+                                <p> Lorem ipsum odor amet, consectetuer adipiscing elit.
+                                    Mi pellentesque porta, enim euismod hendrerit facilisis aptent laoreet.
+                                </p>
+                            </section>
+                        </div>  
+
+                        <div id = "titles2" class = "columns">
+                            <section class = "one">
+                                <h3> Title 1</h3>
+                                <img src ="https://place-hold.it/300">
+                                <p> Lorem ipsum odor amet, consectetuer adipiscing elit.
+                                    Mi pellentesque porta, enim euismod hendrerit facilisis aptent laoreet.
+                                </p>
+                            </section>
+                            <section class = "one">
+                                <h3> Title 2</h3>
+                                <img src ="https://place-hold.it/300">
+                                <p> Lorem ipsum odor amet, consectetuer adipiscing elit.
+                                    Mi pellentesque porta, enim euismod hendrerit facilisis aptent laoreet.
+                                </p>
+                            </section>
+                            <section class = "one">
+                                <h3> Title 3</h3>
+                                <img src ="https://place-hold.it/300">
+                                <p> Lorem ipsum odor amet, consectetuer adipiscing elit.
+                                    Mi pellentesque porta, enim euismod hendrerit facilisis aptent laoreet.
+                                </p>
+                            </section>
+                            <section class = "one">
+                                <h3> Title 4</h3>
+                                <img src ="https://place-hold.it/300">
+                                <p> Lorem ipsum odor amet, consectetuer adipiscing elit.
+                                    Mi pellentesque porta, enim euismod hendrerit facilisis aptent laoreet.
+                                </p>
+                            </section>
+                        </div> 
+                    </section>
+                    
+                    <aside id = "main-aside" class = "two">
+                        <h2> Links</h2>
+                        <div id = "link">
+                            <ul>
+                                <li> <a href = "#"> Item 1 </a></li>
+                                <li> <a href = "#"> Item 2 </a></li>
+                                <li> <a href = "#"> Item 3 </a></li>
+                                <li> <a href = "#"> Item 4 </a></li>
+                            </ul>
+                        </div>
                     </aside>
-                    <section class = "four">
-                        <h2>column 2</h2>
-                        <div id = "news" class = "columns">
-                            <section class = "one">
-                                <h3> First News</h3>
-                                <img src ="https://place-hold.it/300">
-                            </section>
-                            <section class = "one">
-                                <h3> Second News</h3>
-                                <img src ="https://place-hold.it/300">
-                            </section>
-                            <section class = "one">
-                                <h3> Third News</h3>
-                                <img src ="https://place-hold.it/300">
-                            </section>
+                </div>
+            </div>
+            
+            <h2> Big Ideas </h2> 
+            <footer id = "ideas" class = "columns">
+                <div id= "main-idea">
+
+                    <section class = "box" >
+                        <img src ="https://place-hold.it/300" class = "image">
+                        <div class = "text">
+                            <h3> Idea 1</h3>
+                            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. 
+                            Lacus non tempus ridiculus nunc, libero ipsum dis mus. 
+                            Conubia himenaeos libero dolor euismod nibh non neque.
+                            </p>
                         </div>
                     </section>
 
-                </div>
-            </div>
-            <footer id="main-footer">
-                <p> &copy; jackdev934 yeah</p>
+                    <section class = "box" >
+                        <img src ="https://place-hold.it/300" class = "image">
+                        <div class = "text">
+                            <h3> Idea 2</h3>
+                            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. 
+                            Lacus non tempus ridiculus nunc, libero ipsum dis mus. 
+                            Conubia himenaeos libero dolor euismod nibh non neque.
+                            </p>
+                        </div>
+                    </section>
 
+                    <section class = "box" >
+                        <img src ="https://place-hold.it/300" class = "image">
+                        <div class = "text">
+                            <h3> Idea 3</h3>
+                            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. 
+                            Lacus non tempus ridiculus nunc, libero ipsum dis mus. 
+                            Conubia himenaeos libero dolor euismod nibh non neque.
+                            </p>
+                        </div>
+                    </section>
+                </div>
             </footer>
+
+            <footer id="main-footer">
+                <p> &copy; jackdev934.com</p>
+            </footer>
+            
         </div>
     </body>
 </html>
