@@ -58,6 +58,48 @@ body{
     margin: auto;
 }
 
+
+
+
+/* Projects */
+
+#projects-area a{
+    list-style: none;
+    text-decoration: none;
+    background-color:#496D70;
+    color: #3EBAC5;
+    padding: 7px;
+    margin: 7px;
+    border-radius: 10px;
+}
+
+#projects section{
+    background: white;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+#projects li{
+    list-style: none;
+    display: inline-block;
+}
+
+#projects ul{ 
+    padding-left:0;
+    width: fit-content;
+    margin: auto;
+}
+
+#projects{
+    background-color: navy;
+    margin:auto;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 @media only screen and (min-width:768px){
     .columns{
         display:flex;
