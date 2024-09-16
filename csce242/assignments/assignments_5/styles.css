@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #2A332B;
+    background-color: #565E70;
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
     min-width: 280px;
     max-width: 100%;
     box-sizing: border-box;
-    background-color: #3E6140;
+    background-color: #5D709B;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -37,8 +37,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #428B47;
-    color: #38B640;
+    background-color: #5677C5;
+    color: black;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -54,14 +54,14 @@ body {
     position: relative;
     width: 100%;
     height: 50px; /* Adjust height to fit the squares */
-    background-color: #20E02D; 
+    background-color: #3C3F46; 
     border-radius: auto; 
 }
 
 #movingSquare {
     width: 50px;
     height: 50px;
-    background-color: #2C362D;
+    background-color: #242833;
     position: absolute;
     top: 0;
     cursor: pointer;
