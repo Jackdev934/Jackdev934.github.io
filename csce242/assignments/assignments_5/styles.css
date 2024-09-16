@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #2A332B;
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
     min-width: 280px;
     max-width: 100%;
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: #3E6140;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -27,19 +27,18 @@ body {
     text-align: center; 
 }
 
-h2 {
-    margin-top: 0;
-}
 
-.counterblock {
+
+.counterblock { 
+
     font-size: 300%; 
     width: 200px; /* Set width to match image width */
     height: 200px; /* Set height to match image height */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
-    color: white;
+    background-color: #428B47;
+    color: #38B640;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -55,14 +54,14 @@ h2 {
     position: relative;
     width: 100%;
     height: 50px; /* Adjust height to fit the squares */
-    background-color: #f0f0f0; 
-    border-radius: 8px; 
+    background-color: #20E02D; 
+    border-radius: auto; 
 }
 
 #movingSquare {
     width: 50px;
     height: 50px;
-    background-color: blue;
+    background-color: #2C362D;
     position: absolute;
     top: 0;
     cursor: pointer;
@@ -74,7 +73,7 @@ h2 {
     height: 20px;
     background-color: none;
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
     left: 0;
 }
 

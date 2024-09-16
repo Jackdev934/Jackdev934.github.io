@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <!-- Cell 1 -->
-        <div class="cell" id="countColumn">
+        <div class="cell" id="countColumn" onclick="incrementCount()" >
             <h2>Count</h2>
             <div id="count" class="counterblock" onclick="incrementCount()">0</div>
         </div>
@@ -25,8 +25,9 @@
             <h2>Slider Move</h2>
             <div class="slider-container">
                 <div id="movingSquare" class="drag"></div>
-                <div id="largerSquare"></div>
-                <img src= "https://place-hold.it/200" id= "image" class= "drag">
+                <div id="largerSquare">
+                    <img src= "https://place-hold.it/200" id= "sliderColumn">
+                </div>
             </div>
         </div>
     </div>
