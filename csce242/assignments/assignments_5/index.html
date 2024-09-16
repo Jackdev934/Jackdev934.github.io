@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Column Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cell 1 -->
+        <div class="cell" id="countColumn">
+            <h2>Count</h2>
+            <div id="count" class="counterblock" onclick="incrementCount()">0</div>
+        </div>
+
+        <!-- Cell 2 -->
+        <div class="cell" id="imageColumn">
+            <h2>Random Image</h2>
+            <img id="randomImage" src="https://picsum.photos/200" alt="Random Image" onclick="refreshImage()">
+        </div>
+
+        <!-- Cell 3 -->
+        <div class="cell" id="sliderColumn">
+            <h2>Slider Move</h2>
+            <div class="slider-container">
+                <div id="movingSquare" class="drag"></div>
+                <div id="largerSquare"></div>
+                <img src= "https://place-hold.it/200" id= "image" class= "drag">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
