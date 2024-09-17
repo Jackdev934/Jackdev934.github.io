@@ -188,6 +188,13 @@ h1 {
 }
 
 /* Music Shops Section Styles */
+.music-shops-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .music-shops-section .container {
     margin: 20px auto;
     width: 90%;
@@ -196,6 +203,29 @@ h1 {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Home button positioned on the right side */
+.music-shops-section header {
+    display: flex;
+    justify-content: flex-end; /* Align Home button to the right */
+    margin-bottom: 20px;
+}
+
+.music-shops-section header .home-button {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 1px solid #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.music-shops-section header .home-button:hover {
+    background-color: #0056b3;
+    color: white;
 }
 
 .music-shops-section .search-section {
