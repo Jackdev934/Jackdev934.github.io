@@ -95,7 +95,7 @@ h1 {
 
 
 /*About Us Section*/
-.right-aligned-heading-container {
+.about-us-heading-container {
     border: 2px solid #ccc;
     padding: 20px;
     width: 300px;
@@ -105,7 +105,7 @@ h1 {
     margin: 20px auto;
 }
 
-.right-aligned-heading {
+.about-us-heading {
     text-align: right;
     margin: 10px 0;
     padding: 10px;
@@ -116,7 +116,7 @@ h1 {
     color: #333;
 }
 
-.right-aligned-heading:hover {
+.about-us-heading:hover {
     background-color: #f1f1f1;
 }
 
