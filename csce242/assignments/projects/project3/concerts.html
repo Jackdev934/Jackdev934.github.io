@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Concerts Near You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="concert-section">
+        <div class="container">
+            <header>
+                <nav>
+                    <ul>
+                        <li class="right"><a href="index.html">Home</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="search-section">
+                <!-- Location Search -->
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="Please enter city">
+                </div>
+                
+                <!-- Genre Search -->
+                <div class="form-group">
+                    <label for="genre">Genre of Music</label>
+                    <input type="text" id="genre" placeholder="Enter genre of music">
+                </div>
+                
+                <!-- Distance Search -->
+                <div class="form-group">
+                    <label for="distance">Distance</label>
+                    <select id="distance">
+                        <option value="5mi">5 miles</option>
+                        <option value="10mi">10 miles</option>
+                        <option value="25mi">25 miles</option>
+                        <option value="50mi">50 miles</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <button>Search</button>
+            </div>
+
+            <!-- Concert List -->
+            <div class="concert-list">
+                <div class="concert-item">
+                    <div class="concert-info">
+                        <h3>Concert 1: The Rock Band</h3>
+                        <p>Venue: Grand Arena, City, State</p>
+                        <p>Date: September 30, 2024</p>
+                        <p class="price">Price: $50</p>
+                    </div>
+                    <div class="concert-link">
+                        <a href="#top">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="concert-item">
+                    <div class="concert-info">
+                        <h3>Concert 2: The Jazz Quartet</h3>
+                        <p>Venue: Blue Note Club, City, State</p>
+                        <p>Date: October 5, 2024</p>
+                        <p class="price">Price: $40</p>
+                    </div>
+                    <div class="concert-link">
+                        <a href="#top">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="concert-item">
+                    <div class="concert-info">
+                        <h3>Concert 3: Pop Sensation</h3>
+                        <p>Venue: The Big Dome, City, State</p>
+                        <p>Date: October 12, 2024</p>
+                        <p class="price">Price: $75</p>
+                    </div>
+                    <div class="concert-link">
+                        <a href="#top">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="concert-item">
+                    <div class="concert-info">
+                        <h3>Concert 4: Classical Evening</h3>
+                        <p>Venue: Symphony Hall, City, State</p>
+                        <p>Date: October 20, 2024</p>
+                        <p class="price">Price: $60</p>
+                    </div>
+                    <div class="concert-link">
+                        <a href="#top">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="concert-item">
+                    <div class="concert-info">
+                        <h3>Concert 5: Indie Stars</h3>
+                        <p>Venue: Indie Lounge, City, State</p>
+                        <p>Date: October 25, 2024</p>
+                        <p class="price">Price: $35</p>
+                    </div>
+                    <div class="concert-link">
+                        <a href="#top">Buy Tickets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a id="top"></a>
+</body>
+</html>

@@ -1,9 +1,8 @@
 /* Title - Primary Body - Content */
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: pink;
-    background-color: yellow;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
 /* Center Align Title */
@@ -15,7 +14,7 @@ h1 {
 #content {
     width: 100%;
     margin: 20px;
-    background: yellow;
+    background: #f4f4f4;
     border-radius: 5px;
 }
 
@@ -40,13 +39,13 @@ h1 {
 #main-nav a {
     text-decoration: none;
     padding: 10px;
-    background: orange;
+    background: #007bff;
     color: white;
     border-radius: 5px;
     display: block;
 }
 
-/* Links to Sections */
+/* Links to Pages */
 #link {
     display: flex;
     justify-content: space-between;
@@ -58,7 +57,7 @@ h1 {
     flex: 1;
     margin: 10px;
     padding: 10px;
-    background: #f3f3f3;
+    background: #f4f4f4;
     border-radius: 5px;
     text-align: center;
 }
@@ -86,15 +85,14 @@ h1 {
 
 #link a {
     text-decoration: none;
-    background: blue;
+    background: #007bff;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
     display: inline-block;
 }
 
-
-/*About Us Section*/
+/* About Us Section */
 .about-us-section header .home-button {
     text-decoration: none;
     color: #007bff;
@@ -110,10 +108,11 @@ h1 {
     background-color: #0056b3;
     color: white;
 }
+
 .about-us-heading-container {
-    border: 2px solid white;
+    border: 2px solid #ffffff;
     padding: 20px;
-    width: 80%; 
+    width: 80%;
     height: 80%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -121,7 +120,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color:white;
+    background-color: #ffffff;
 }
 
 .about-us-heading {
@@ -155,10 +154,11 @@ h1 {
     background-color: #0056b3;
     color: white;
 }
+
 .contact-heading-container {
     border: 2px solid white;
     padding: 20px;
-    width: 80%; 
+    width: 80%;
     height: 80%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -166,7 +166,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color:white;
+    background-color: white;
 }
 
 .contact-heading {
@@ -194,12 +194,12 @@ h1 {
 
 .about-genre-section .container {
     text-align: center;
-    padding: 40px; /* Increase padding */
+    padding: 40px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Increase the width */
-    max-width: 1200px; /* Set a maximum width */
+    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -210,7 +210,7 @@ h1 {
 .about-genre-section nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end; /* Align Home button to the right */
+    justify-content: flex-end;
     padding: 0;
     margin: 0 0 20px 0;
 }
@@ -236,14 +236,14 @@ h1 {
 }
 
 .about-genre-section h1 {
-    font-size: 32px; /* Increase font size */
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
 .about-genre-section .search-bar {
     width: 80%;
-    padding: 15px; /* Increase padding */
-    font-size: 18px; /* Increase font size */
+    padding: 15px;
+    font-size: 18px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -265,8 +265,8 @@ h1 {
 
 .about-genre-section .genre-item button {
     width: 100%;
-    padding: 30px; /* Increase padding */
-    font-size: 20px; /* Increase font size */
+    padding: 30px;
+    font-size: 20px;
     background-color: #e0e0e0;
     border: none;
     border-radius: 10px;
@@ -278,7 +278,7 @@ h1 {
     background-color: #d0d0d0;
 }
 
-/* Music Shops Section*/
+/* Music Shops Section */
 .music-shops-section {
     display: flex;
     justify-content: center;
@@ -296,10 +296,9 @@ h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Home button positioned on the right side */
 .music-shops-section header {
     display: flex;
-    justify-content: flex-end; /* Align Home button to the right */
+    justify-content: flex-end;
     margin-bottom: 20px;
 }
 
@@ -420,5 +419,286 @@ h1 {
     .music-shops-section .form-group {
         width: 100%;
         margin-bottom: 15px;
+    }
+}
+
+/* Concerts Section */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.search-section .form-group {
+    width: 32%;
+}
+
+.search-section label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.search-section input[type="text"], .search-section select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Search buttons */
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Concert Group */
+.concert-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.concert-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.concert-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.concert-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.concert-info p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.concert-info p.price {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.concert-link a {
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.concert-link a:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Concert Section */
+@media (max-width: 768px) {
+    .concert-list {
+        grid-template-columns: 1fr;
+    }
+
+    .search-section .form-group {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* Playlist Section */
+.playlist-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.playlist-section .container {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.playlist-section header {
+    margin-bottom: 20px;
+}
+
+.playlist-section nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.playlist-section nav ul li {
+    display: inline-block;
+}
+
+.playlist-section nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.playlist-section nav ul li a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.playlist-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.playlist-section .search-bar {
+    width: 80%;
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Genre grid for playlist*/
+.playlist-section .genre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.playlist-section .genre-item {
+    position: relative;
+}
+
+.playlist-section .genre-item a {
+    text-decoration: none;
+}
+
+.playlist-section .genre-item button {
+    width: 100%;
+    padding: 30px;
+    font-size: 20px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.playlist-section .genre-item button:hover {
+    background-color: #d0d0d0;
+}
+
+/* Back to Top*/
+.back-to-top {
+    margin-top: 20px;
+}
+
+.back-to-top button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .playlist-section .genre-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .playlist-section .search-bar {
+        width: 100%;
     }
 }
