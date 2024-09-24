@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Conditionals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id = "title">JavaScript Conditionals</h1>
+    <!-- Buttons to get to each exercise -->
+    <button id="ex1" onclick="exercise1()">Exercise 1</button>
+    <button id="ex2" onclick="exercise2()">Exercise 2</button>
+
+    <!-- Exercise 1 -->
+    <section id="cell1">
+        <div class="random" id="imageColumn" onclick="refreshImage()">
+            <h2>Random Image</h2>
+            <div id="sizes">
+                <button id="small" onclick="small()">Small</button>
+                <button id="medium" onclick="medium()">Medium</button>
+                <button id="large" onclick="large()">Large</button>
+            </div>
+            <img id="randomImage" src="https://picsum.photos/200" alt="Random Image">
+        </div>
+    </section>
+
+    <!-- Exercise 2 -->
+    <section id="cell2">
+        <div id="exercise2Container">
+            <h2>Slider and Image</h2>
+            <div class="slider-container">
+                <div id="movingSquare" class="drag"></div>
+                <input type="range" min="1" max="100" value="50" class="slider" id="boxRange">
+                <p id = "color-message"> </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

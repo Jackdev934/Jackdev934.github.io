@@ -22,14 +22,14 @@ body{
     color: #3A4647;
 }
 
-#assignment{
+#assignment, #assignment2{
     background-color: navy;
     margin:auto;
     padding: 5px;
     border-radius: 5px;
 }
 
-#hyperlink a{
+#hyperlink a, #hyperlink2 a{
     list-style: none;
     text-decoration: none;
     background-color:#496D70;
@@ -39,7 +39,7 @@ body{
     border-radius: 10px;
 }
 
-#hyperlink section{
+#hyperlink section, #hyperlink2 section{
     background: white;
     border-radius: 5px;
     margin: 20px;
@@ -47,12 +47,12 @@ body{
     text-align: center;
 }
 
-#hyperlink li{
+#hyperlink li, #hyperlink2 li{
     list-style: none;
     display: inline-block;
 }
 
-#hyperlink ul{ 
+#hyperlink ul, #hyperlink2 ul{ 
     padding-left:0;
     width: fit-content;
     margin: auto;
