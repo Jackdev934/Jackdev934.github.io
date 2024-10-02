@@ -1,8 +1,8 @@
 /* Title - Primary Body - Content */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #43414B;
+    background-color: #3112A1;
 }
 
 /* Center Align Title */
@@ -14,7 +14,7 @@ h1 {
 #content {
     width: 100%;
     margin: 20px;
-    background: #f4f4f4;
+    background: #3112A1;
     border-radius: 5px;
 }
 
@@ -39,7 +39,7 @@ h1 {
 #main-nav a {
     text-decoration: none;
     padding: 10px;
-    background: #007bff;
+    background: #F4E143;
     color: white;
     border-radius: 5px;
     display: block;
@@ -57,7 +57,7 @@ h1 {
     flex: 1;
     margin: 10px;
     padding: 10px;
-    background: #f4f4f4;
+    background: #3112A1;
     border-radius: 5px;
     text-align: center;
 }
@@ -85,7 +85,7 @@ h1 {
 
 #link a {
     text-decoration: none;
-    background: #007bff;
+    background: #F4E143;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -95,17 +95,17 @@ h1 {
 /* About Us Section */
 .about-us-section header .home-button {
     text-decoration: none;
-    color: #007bff;
+    color: #F4E143;
     font-size: 18px;
     padding: 10px 20px;
-    background-color: #f0f0f0;
+    background-color: #3112A1;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #F4E143;
     transition: background-color 0.3s ease;
 }
 
 .about-us-section header .home-button:hover {
-    background-color: #0056b3;
+    background-color: #F4E143;
     color: white;
 }
 
@@ -131,7 +131,7 @@ h1 {
     background-color: #f9f9f9;
     border-radius: 5px;
     font-weight: bold;
-    color: #333;
+    color: #43414B;
 }
 
 .about-us-heading:hover {
@@ -141,17 +141,17 @@ h1 {
 /* Contact Page */
 .contact-section header .home-button {
     text-decoration: none;
-    color: #007bff;
+    color: #F4E143;
     font-size: 18px;
     padding: 10px 20px;
     background-color: #f0f0f0;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #F4E143;
     transition: background-color 0.3s ease;
 }
 
 .contact-section header .home-button:hover {
-    background-color: #0056b3;
+    background-color: #F4E143;
     color: white;
 }
 
@@ -226,12 +226,12 @@ h1 {
     padding: 10px 20px;
     background-color: #f0f0f0;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #F4E143;
     transition: background-color 0.3s ease;
 }
 
 .about-genre-section nav ul li a:hover {
-    background-color: #007bff;
+    background-color: #F4E143;
     color: white;
 }
 
@@ -304,17 +304,17 @@ h1 {
 
 .music-shops-section header .home-button {
     text-decoration: none;
-    color: #007bff;
+    color: #F4E143;
     font-size: 18px;
     padding: 10px 20px;
     background-color: #f0f0f0;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #F4E143;
     transition: background-color 0.3s ease;
 }
 
 .music-shops-section header .home-button:hover {
-    background-color: #0056b3;
+    background-color: #F4E143;
     color: white;
 }
 
@@ -351,7 +351,7 @@ h1 {
 .music-shops-section .search-bar button {
     padding: 12px 24px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #F4E143;
     color: white;
     border: none;
     border-radius: 5px;
@@ -360,7 +360,7 @@ h1 {
 }
 
 .music-shops-section .search-bar button:hover {
-    background-color: #0056b3;
+    background-color: #F4E143;
 }
 
 /* Store List Styles */
@@ -387,19 +387,19 @@ h1 {
 
 .music-shops-section .store-info h3 {
     font-size: 20px;
-    color: #333;
+    color: #43414B;
     margin-bottom: 5px;
 }
 
 .music-shops-section .store-info p {
     font-size: 16px;
-    color: #666;
+    color: #43414B;
 }
 
 .music-shops-section .store-link a {
     text-decoration: none;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #F4E143;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -407,7 +407,7 @@ h1 {
 }
 
 .music-shops-section .store-link a:hover {
-    background-color: #0056b3;
+    background-color: #F4E143;
 }
 
 /* Media Queries for Music Shops Section */
@@ -426,7 +426,7 @@ h1 {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: #43414B;
 }
 
 .container {
@@ -457,7 +457,7 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    background-color: #007bff;
+    background-color: #F4E143;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -465,7 +465,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background-color: #0056b3;
+    background-color: #F4E143;
 }
 
 /* Search Section */
@@ -503,7 +503,7 @@ header nav ul li a:hover {
 .search-bar button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #F4E143;
     color: white;
     border: none;
     border-radius: 5px;
@@ -512,7 +512,7 @@ header nav ul li a:hover {
 }
 
 .search-bar button:hover {
-    background-color: #0056b3;
+    background-color: #F4E143;
 }
 
 /* Concert Group */
@@ -547,13 +547,13 @@ header nav ul li a:hover {
 
 .concert-info p.price {
     font-weight: bold;
-    color: #007bff;
+    color: #F4E143;
 }
 
 .concert-link a {
     text-decoration: none;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #F4E143;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -561,7 +561,7 @@ header nav ul li a:hover {
 }
 
 .concert-link a:hover {
-    background-color: #0056b3;
+    background-color: #F4E143;
 }
 
 /* Media Queries for Concert Section */
@@ -614,17 +614,17 @@ header nav ul li a:hover {
 
 .playlist-section nav ul li a {
     text-decoration: none;
-    color: #007bff;
+    color: #F4E143;
     font-size: 18px;
     padding: 10px 20px;
     background-color: #f0f0f0;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #F4E143;
     transition: background-color 0.3s ease;
 }
 
 .playlist-section nav ul li a:hover {
-    background-color: #007bff;
+    background-color: #F4E143;
     color: white;
 }
 
@@ -680,7 +680,7 @@ header nav ul li a:hover {
 .back-to-top button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #F4E143;
     color: white;
     border: none;
     border-radius: 5px;
@@ -689,7 +689,7 @@ header nav ul li a:hover {
 }
 
 .back-to-top button:hover {
-    background-color: #0056b3;
+    background-color: #F4E143;
 }
 
 /* Media Queries */
@@ -725,7 +725,7 @@ header nav ul li a {
     text-decoration: none;
     color: white;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #F4E143;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -746,7 +746,7 @@ header nav ul li a:hover {
 }
 
 .rock-heading-heading {
-    color: #333;
+    color: #43414B;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -772,7 +772,7 @@ header nav ul li a:hover {
 .button-container button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #F4E143;
     color: white;
     border: none;
     border-radius: 5px;
