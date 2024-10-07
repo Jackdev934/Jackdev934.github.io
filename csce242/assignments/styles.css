@@ -1,115 +1,152 @@
-body{
-    background: #4B949B;
-    font-family:Arial, Helvetica, sans-serif;
+/* Body and General Styling */
+body {
+    background-color: #4B949B;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
-#heading{
-    color:#25DFF0;
-    text-align: center;
-}
-
-#content{
+/* Content section styling */
+#content {
     background-color: #457685;
-    padding: 5px;
-    margin: 10px auto;
-    width: 50%;
+    padding: 20px;
+    margin: 40px auto;
+    width: 80%;
     border-radius: 10px;
     border: 5px solid #030809;
-}
-
-#main-head{
     text-align: center;
-    color: #3A4647;
+    color: #fff;
 }
 
-#assignment, #assignment2{
-    background-color: navy;
-    margin:auto;
-    padding: 5px;
-    border-radius: 5px;
+h1, h2 {
+    color: #25DFF0;
+    margin-bottom: 20px;
 }
 
-#hyperlink a, #hyperlink2 a{
-    list-style: none;
+/* Global hyperlink styling */
+a {
     text-decoration: none;
-    background-color:#496D70;
+    background-color: #496D70;
     color: #3EBAC5;
-    padding: 7px;
-    margin: 7px;
+    padding: 8px 12px;
+    margin: 10px 0;
     border-radius: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-#hyperlink section, #hyperlink2 section{
+a:hover {
+    background-color: #3EBAC5;
+    color: #fff;
+}
+
+/* Section (Assignments and Projects) */
+section.one {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 40px); /* Four items per row */
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Heading styling inside sections */
+section h3 {
+    color: #4B949B;
+    margin-bottom: 10px;
+}
+
+/* Image resizing to ensure uniform dimensions and content fitting */
+section img {
+    width: 100%;  /* Full width within the section */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Prevents image from becoming too large */
+    object-fit: contain; /* Keeps the full image visible within the box */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #A13E3A;
+}
+
+/* Paragraph styling */
+section p {
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 1.6;
+    flex-grow: 1; /* Ensures text fills available space */
+}
+
+/* Hyperlink section */
+#hyperlink, #hyperlink2, #project-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 90%;
+}
+#hyperlink3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 90%;
+}
+
+#hyperlink3 section {
     background: white;
     border-radius: 5px;
     margin: 20px;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
+    color: #333;
 }
 
-#hyperlink li, #hyperlink2 li{
-    list-style: none;
-    display: inline-block;
-}
-
-#hyperlink ul, #hyperlink2 ul{ 
-    padding-left:0;
-    width: fit-content;
-    margin: auto;
-}
-
-
-
-
-/* Projects */
-
-#projects a{
-    list-style: none;
-    text-decoration: none;
-    background-color:#496D70;
-    color: #3EBAC5;
-    padding: 7px;
-    margin: 7px;
-    border-radius: 10px;
-}
-
-#projects section{
-    background: white;
-    border-radius: 5px;
-    margin: 20px;
-    padding: 5px;
-    text-align: center;
-}
-
-#projects li{
-    list-style: none;
-    display: inline-block;
-}
-
-#projects ul{ 
-    padding-left:0;
-    width: fit-content;
-    margin: auto;
-}
-
-#projects{
-    background-color: navy;
-    margin:auto;
+#hyperlink3 img {
     width: 100%;
-    padding: 5px;
-    border-radius: 5px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #A13E3A;
 }
 
-@media only screen and (min-width:768px){
-    .columns{
-        display:flex;
+/* List and link formatting inside sections */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Flexbox for responsive design */
+@media (min-width: 768px) {
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
-    .one{
-        flex:1;
+    section.one {
+        flex: 1 1 calc(25% - 40px); /* Ensure four boxes fit per row */
+        max-width: calc(25% - 40px); /* Set max width for each box */
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+    #content {
+        width: 70%;
     }
 
-    .two{
-        flex:2;
+    #hyperlink, #hyperlink2, #project-group {
+        width: 80%;
     }
 }

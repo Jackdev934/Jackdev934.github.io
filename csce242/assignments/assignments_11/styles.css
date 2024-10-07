@@ -1,0 +1,116 @@
+/* Body and General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2A362F; 
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #0EE15D; 
+}
+
+/* Container and Bird Cards */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.column {
+    text-align: center;
+    background-color: #3E8B5A; 
+    border: 2px solid #0EE15D; 
+    border-radius: 12px;
+    padding: 20px;
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+
+.column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #A13E3A;
+}
+
+.column p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #E02119; 
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Smaller card-like modal content */
+.modal-content {
+    background-color: #3E8B5A; 
+    padding: 15px; 
+    border-radius: 12px;
+    max-width: 400px; 
+    width: 80%; 
+    text-align: center;
+    position: relative;
+    border: 2px solid #0EE15D;
+}
+
+
+.modal-header.card-header {
+    background-color: #2A362F;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    font-size: 22px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+
+.modal-body {
+    padding: 15px;
+    color: white;
+}
+
+.modal-bird-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid #A13E3A; 
+}
+
+/* Modal text */
+.modal p {
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Modal text titles */
+.modal p strong {
+    color: #0EE15D; 
+}
