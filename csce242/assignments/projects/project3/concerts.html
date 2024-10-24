@@ -1,115 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Concerts Near You</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Concerts</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="concert-section">
-        <div class="container">
-            <header>
-                <nav>
-                    <ul>
-                        <li class="right"><a href="index.html">Home</a></li>
-                    </ul>
-                </nav>
-            </header>
-
-            <div class="search-section">
-                <!-- Location Search -->
-                <div class="form-group">
-                    <label for="location">Location</label>
-                    <input type="text" id="location" placeholder="Please enter city">
-                </div>
-                
-                <!-- Genre Search -->
-                <div class="form-group">
-                    <label for="genre">Genre of Music</label>
-                    <input type="text" id="genre" placeholder="Enter genre of music">
-                </div>
-                
-                <!-- Distance Search -->
-                <div class="form-group">
-                    <label for="distance">Distance</label>
-                    <select id="distance">
-                        <option value="5mi">5 miles</option>
-                        <option value="10mi">10 miles</option>
-                        <option value="25mi">25 miles</option>
-                        <option value="50mi">50 miles</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="search-bar">
-                <button>Search</button>
-            </div>
-
-            <!-- Concert List -->
-            <div class="concert-list">
-                <div class="concert-item">
-                    <div class="concert-info">
-                        <h3>Concert 1: The Rock Band</h3>
-                        <p>Venue: Grand Arena, City, State</p>
-                        <p>Date: September 30, 2024</p>
-                        <p class="price">Price: $50</p>
-                    </div>
-                    <div class="concert-link">
-                        <a href="#top">Buy Tickets</a>
-                    </div>
-                </div>
-
-                <div class="concert-item">
-                    <div class="concert-info">
-                        <h3>Concert 2: The Jazz Quartet</h3>
-                        <p>Venue: Blue Note Club, City, State</p>
-                        <p>Date: October 5, 2024</p>
-                        <p class="price">Price: $40</p>
-                    </div>
-                    <div class="concert-link">
-                        <a href="#top">Buy Tickets</a>
-                    </div>
-                </div>
-
-                <div class="concert-item">
-                    <div class="concert-info">
-                        <h3>Concert 3: Pop Sensation</h3>
-                        <p>Venue: The Big Dome, City, State</p>
-                        <p>Date: October 12, 2024</p>
-                        <p class="price">Price: $75</p>
-                    </div>
-                    <div class="concert-link">
-                        <a href="#top">Buy Tickets</a>
-                    </div>
-                </div>
-
-                <div class="concert-item">
-                    <div class="concert-info">
-                        <h3>Concert 4: Classical Evening</h3>
-                        <p>Venue: Symphony Hall, City, State</p>
-                        <p>Date: October 20, 2024</p>
-                        <p class="price">Price: $60</p>
-                    </div>
-                    <div class="concert-link">
-                        <a href="#top">Buy Tickets</a>
-                    </div>
-                </div>
-
-                <div class="concert-item">
-                    <div class="concert-info">
-                        <h3>Concert 5: Indie Stars</h3>
-                        <p>Venue: Indie Lounge, City, State</p>
-                        <p>Date: October 25, 2024</p>
-                        <p class="price">Price: $35</p>
-                    </div>
-                    <div class="concert-link">
-                        <a href="#top">Buy Tickets</a>
-                    </div>
-                </div>
-            </div>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Music Shop - Find Concerts</h1>
         </div>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#search">Find Concerts</a></li>
+                <li><a href="index.html">Genres</a></li>
+                <li><a href="index.html">Playlists</a></li>
+                <li><a href="music-shop.html">Music Shops</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <a id="top"></a>
+    <!-- Concert Search Section -->
+    <section id="search" class="concert-search">
+        <h2>Find Your Next Concert</h2>
+        <p>Search by artist, city, or genre, and adjust the distance to find concerts near you!</p>
+
+        <!-- Search Form -->
+        <form action="#" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Search by artist, city, or genre" required>
+
+            <label for="distance">Search within (miles):</label>
+            <input type="range" id="distance" name="distance" min="10" max="100" value="50" oninput="document.getElementById('distanceValue').innerHTML = this.value;">
+            <span id="distanceValue">50</span> miles
+
+            <button type="submit" class="cta-button">Search</button>
+        </form>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="concert-results">
+        <h3>Your Results</h3>
+        <div class="result-list">
+            <!-- Placeholder for results that would populate dynamically -->
+            <p>Enter a search above to find concerts near you!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Follow Us on Social Media:</p>
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
+        <p>&copy; 2024 Music Shop. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
