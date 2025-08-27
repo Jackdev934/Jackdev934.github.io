@@ -40,14 +40,3 @@ ul {
 ul li {
     margin: 5px 0;
 }
-
-/* Tables */
-
-table{
-    border-collapse: collapse;
-}
-
-td, th{
-    border:1px solid black;
-    padding: 5px 10px; /*top and bottom 5, right and left 10*/ 
-}

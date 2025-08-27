@@ -1,0 +1,47 @@
+/* Structure */
+
+/* Typography */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('images/grassfield.jpg');
+    background-size: cover;
+}
+
+#content{
+    background: #564F59;
+    width: 70%; /*moves it away from edges of page*/
+    margin: auto; /*centers the div*/
+    padding: 1%; /*text away from edge*/
+    border-radius: 5px; /*round corners*/
+
+}
+
+/**/
+#dog{
+    width: 200px;
+    height: 100px;
+    box-shadow: 10px 10px #D0D1D9 ;
+}
+
+/*Tables */
+
+table{
+    border-collapse: collapse;
+}
+
+td, th{
+    border:1px solid black;
+    padding: 5px 10px; /*top and bottom 5, right and left 10*/ 
+}
+
+th{
+    background: #A67F68;
+}
+
+h1{
+    color: #591D0F;
+}
+
+h2{
+    color:#732F17;
+}
