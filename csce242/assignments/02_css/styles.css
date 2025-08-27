@@ -1,8 +1,31 @@
 /* Typography */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #1b1a17; /* darkest background */
-    color: #f4efde; /* light text for readability */
+    background: url('images/background.jpg'); /*Background image*/
+    background-size: cover;
+    color: #f4efde; 
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+#covers{ /*first image*/
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 5px 5px 15px #000000; /* subtle shadow */
+}
+
+#world{ /*last image */
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 5px 5px 15px #000000; /* subtle shadow */
 }
 
 #content {
@@ -31,16 +54,6 @@ a:hover {
     font-weight: bold;
 }
 
-/* Unordered Lists */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 5px 0;
-}
-
 /* Tables */
 
 table{
@@ -48,6 +61,6 @@ table{
 }
 
 td, th{
-    border:1px solid black;
+    border:1px solid #000000;
     padding: 5px 10px; /*top and bottom 5, right and left 10*/ 
 }
