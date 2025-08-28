@@ -58,9 +58,14 @@ a:hover {
 
 table{
     border-collapse: collapse;
+    background-color: #2c2620;
+}
+
+#names{
+    background-color:#695442;
 }
 
 td, th{
-    border:1px solid #000000;
+    border:1px solid #a78a6d;
     padding: 5px 10px; /*top and bottom 5, right and left 10*/ 
 }
