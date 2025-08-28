@@ -57,6 +57,8 @@ a:hover {
 /* Tables */
 
 table{
+    text-align: center;
+    margin: auto;
     border-collapse: collapse;
     background-color: #2c2620;
 }
