@@ -15,7 +15,7 @@ body {
     border: 2px solid #695442; /* accent border */
 }
 
-#content {
+#content, #project {
     background: #38322b; /* secondary background */
     width: 70%; /* moves it away from edges of page */
     margin: auto; /* centers the div */
@@ -41,6 +41,11 @@ a:hover {
     font-weight: bold;
 }
 
+h2 {
+    color: #f4efde;
+    text-align: center;
+}
+
 /* Unordered Lists */
 #assignments{
     list-style-type: none;
@@ -49,8 +54,15 @@ a:hover {
     text-align: center;
 }
 
+#project ul {
+    list-style-type: none;
+    padding: 5px;
+    margin: 5px 0;
+    text-align: center;
+}
 
-li {
+
+#li {
     margin: 5px 0;
     text-align: center;
 }
@@ -65,7 +77,7 @@ li {
     border-radius: 5px; /* optional: rounded corners */
 }
 
-#assign {
+#assign, #proj {
     background: #695442;
     color:#f4efde;
     padding: 10px;
@@ -77,14 +89,14 @@ li {
 /*Larger Devices*/
 @media only screen and (min-width: 790px) {
 
-    #main-header, #content { 
+    #main-header, #content, #project { 
         width: 95%; /*Allows both to flex when enlarged*/
         padding: 5px; 
         margin: auto;
         text-align: center;
     }
 
-    #assign {
+    #assign, #proj {
         background: #695442;
         color:#f4efde;
         padding: 10px;
