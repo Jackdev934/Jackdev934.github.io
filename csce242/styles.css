@@ -97,7 +97,6 @@ li {
     /*Three image containers*/
     .column{
         text-align: center;
-        float: left;
         flex: 50%;
         width:30%;
         padding: 10px; 
