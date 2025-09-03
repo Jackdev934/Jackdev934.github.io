@@ -63,9 +63,16 @@ nav section{
 
 @media only screen and (min-width: 768px) {
 
+    #body{
+        display: flex;
+        flex-direction: column;
+    }
+
 
     #content {
         width:100%;
+        display: flex;
+        flex-direction: column;
     }
 
     #idea{ /*Background and border is all that is changed*/
@@ -87,6 +94,7 @@ nav section{
 
     /*Aside*/
     #links{
+        background: orange;
         display: flex;
         flex-direction: column;
         padding: 10px;
@@ -94,16 +102,19 @@ nav section{
 
     /*Examples*/
     #examples{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+       background: #5E888C;
+        display: grid; /* switch to grid */
+        grid-template-columns: repeat(2, 2fr); /* 3 columns */
+        padding: 10px;
+        margin: auto;
     }
 
     /*Gallery*/
     #gallery{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        background: yellow;
+        display: grid; /* switch to grid */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        padding: 10px;
     }
 
 
@@ -115,7 +126,8 @@ nav section{
     /*Flexes (changes ratio such as about page is a three has 75 percent and a one has 25 percent*/
     
     .one{
-        flex: 1;
+        margin-right: 0;
+        flex: 0.3;
     }
 
     .two{
