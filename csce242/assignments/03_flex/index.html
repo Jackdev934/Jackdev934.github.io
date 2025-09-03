@@ -6,206 +6,156 @@
     </head>
 
     <body id = "content">
-        <header>
-            <h1> Layout With Flex</h1>
-            <nav id = "main-nav" class = "columns">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Staff</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main id= "idea" class = "columns">
+        <div id="content">
+            <header id = "main-header">
+                <h1> Layout With Flex</h1>
+                <nav id = "main-nav" class = "columns">
+                    <ul>
+                        <div id = "nav section" class = "columns">
+                            <section class = "one">
+                                <li><a href = "#">Home</a></li>
+                            </section>
+                            <section class = "one">
+                                <li><a href = "#">About</a></li>
+                            </section>
+                            <section class = "one">
+                                <li><a href = "#">Blog</a></li>
+                            </section>
+                            <section class = "one">
+                                <li><a href = "#">Store</a></li>
+                            </section>
+                            <section class = "one"> 
+                                <li><a href = "#">Staff</a></li>
+                            </section>
+                            <section class = "one">
+                                <li><a href = "#">Contact </a></li>
+                            </section>
+                        </div>   
+                    </ul>
+                </nav>
+            </header>
+            <main id= "idea" class = "columns">  
 
-            <div>
-                <img src ="https://placehold.co/200x400" id = images1>
-                <h2> Idea 1</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                    accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                    ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                    eget volutpat libero porta. Proin volutpat in nibh ac rhoncus. 
-                    Morbi convallis ante ac vulputate dignissim. Cras nibh nunc, pellentesque 
-                    id ante a, ultrices varius risus.
+                <div id= "idea1">
+                    <img src ="https://placehold.co/200x400" id = images1 class = "one">
+                    <h2> Idea 1</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
+                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
+                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
+                    </p>
+                </div>
+
+                <div id= "idea2">
+                    <img src ="https://placehold.co/200x400" id = images1 class = "one">
+                    <h2> Idea 2</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
+                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
+                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
+                    </p>
+                </div>
+
+                <div id="idea3">
+                    <img src ="https://placehold.co/200x400" id = images1 class = "one">
+                    <h2> Idea 3</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
+                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
+                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
+                    </p>
+                </div>
+            </main>
+
+            <main>
+                <div id="main-layout" class="columns">
+                    
+                    <aside id="links" class="one">
+                        <h3> Links </h3>
+                        <ul>
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                        </ul>
+                    </aside>
+
+                    <div id="examples" class="two">
+                        <section>
+                            <h2> Title 1 </h2>
+                            <img src="https://placehold.co/200x100" id="images2">
+                            <p>Some text here...</p>
+                        </section>
+
+                        <section>
+                            <h2> Title 2 </h2>
+                            <img src="https://placehold.co/200x100" id="images2">
+                            <p>Some text here...</p>
+                        </section>
+
+                        <section>
+                            <h2> Title 3 </h2>
+                            <img src="https://placehold.co/200x100" id="images2">
+                            <p>Some text here...</p>
+                        </section>
+
+                        <section>
+                            <h2> Title 4 </h2>
+                            <img src="https://placehold.co/200x100" id="images2">
+                            <p>Some text here...</p>
+                        </section>
+                    </div>
+
+                    <div id="gallery" class="two">
+                        <section>
+                            <h2> Gallery 1 </h2>
+                            <img src="https://placehold.co/200x50" id="images3">
+                            <p>Some text here...</p>
+                        </section>
+                        <section>
+                            <h2> Gallery 2 </h2>
+                            <img src="https://placehold.co/200x50" id="images3">
+                            <p>Some text here...</p>
+                        </section>
+
+                        <section>
+                            <h2> Gallery 3 </h2>
+                            <img src="https://placehold.co/200x50" id="images3">
+                            <p>Some text here...</p>
+                        </section>
+
+                        <section>
+                            <h2> Gallery 4 </h2>
+                            <img src="https://placehold.co/200x50" id="images3">
+                            <p>Some text here...</p>
+                        </section>
+
+                        <section>
+                            <h2> Gallery 5 </h2>
+                            <img src="https://placehold.co/200x50" id="images3">
+                            <p>Some text here...</p>
+                        </section>
+
+                        <section>
+                            <h2> Gallery 6 </h2>
+                            <img src="https://placehold.co/200x50" id="images3">
+                            <p>Some text here...</p>
+                        </section>
+                        
+                    </div>
+
+                </div>
+            </main>
+
+            <footer>
+                <p> 
+                    &copy;Jackdev934.com 
                 </p>
-            </div>
-
-            <div>
-                <img src ="https://placehold.co/200x400" id = images1>
-                <h2> Idea 2</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                    accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                    ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                    eget volutpat libero porta. Proin volutpat in nibh ac rhoncus. 
-                    Morbi convallis ante ac vulputate dignissim. Cras nibh nunc, pellentesque 
-                    id ante a, ultrices varius risus.
-                </p>
-            </div>
-
-            <div>
-                <img src ="https://placehold.co/200x400" id = images1>
-                <h2> Idea 3</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                    accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                    ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                    eget volutpat libero porta. Proin volutpat in nibh ac rhoncus. 
-                    Morbi convallis ante ac vulputate dignissim. Cras nibh nunc, pellentesque 
-                    id ante a, ultrices varius risus.
-                </p>
-            </div>
-        </main>
-
-        <main>
-            <aside id = "links" class = "columns" class = "one">
-                <h3> Links </h3>
-                <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                </ul>
-            </aside>
-
-            <div id = "examples" class = "columns" class = "three">
-
-                <section>
-                    <h2> Title 1 </h2>
-                    <img src ="https://placehold.co/200x100" id = images2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                        eget volutpat libero porta.
-                    </p>
-                </section>
-
-                <section>
-                    <h2> Title 2 </h2>
-                    <img src ="https://placehold.co/200x100" id = images2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                        eget volutpat libero porta.
-                    </p>
-                </section>
-
-                <section>
-                    <h2> Title 3 </h2>
-                    <img src ="https://placehold.co/200x100" id = images2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                        eget volutpat libero porta.
-                    </p>
-                </section>
-
-                <section>
-                    <h2> Title 4 </h2>
-                    <img src ="https://placehold.co/200x100" id = images2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                        eget volutpat libero porta.
-                    </p>
-                </section>
-
-            </div>
-
-            <div id = "gallery" class = "columns">
-
-                <section>
-                    <h2> Gallery 1</h2>
-                    <img src ="https://placehold.co/200x50" id = images3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                        eget volutpat libero porta.
-                    </p>
-                </section>
-                <section>
-                    <h2> Gallery 2</h2>
-                    <img src ="https://placehold.co/200x50" id = images3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                        eget volutpat libero porta.
-                    </p>
-                </section>
-                <section>
-                    <h2> Gallery 3</h2>
-                    <img src ="https://placehold.co/200x50" id = images3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                        eget volutpat libero porta.
-                    </p>
-                </section>
-                <section>
-                    <h2> Gallery 4</h2>
-                    <img src ="https://placehold.co/200x50" id = images3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                        eget volutpat libero porta.
-                    </p>
-                </section>
-                <section>
-                    <h2> Gallery 5</h2>
-                    <img src ="https://placehold.co/200x50" id = images3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                        eget volutpat libero porta.
-                    </p>
-                </section>
-                <section>
-                    <h2> Gallery 6</h2>
-                    <img src ="https://placehold.co/200x50" id = images3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        In lacinia pulvinar convallis. Nunc maximus lacus non diam 
-                        accumsan rutrum. Ut et gravida enim. Fusce scelerisque neque 
-                        ac malesuada rutrum. Sed tristique nulla a mauris consequat, 
-                        eget volutpat libero porta.
-                    </p>
-                </section>
-
-
-
-            </div>
-
-        </main>
-
-        <footer>
-            <p> 
-                &copy;Jackdev934.com 
-            </p>
-        </footer>
-
+            </footer>
+        </div>
     </body>
 
 </html>
