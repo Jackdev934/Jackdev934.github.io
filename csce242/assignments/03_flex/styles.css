@@ -2,53 +2,73 @@
 #body{
     font-family: Arial, Helvetica, sans-serif;
 }
+#content{
+    text-align: center;
+    background: #F2EED8;
+}
 
 h1{
     text-align: center;
     padding: 5px;
 }
 
+
 /*Main Nav*/
 #main-nav ul{
     list-style-type: none; /* remove the bullets */
-    padding: 0;
     width: 100%;
-
-
+    background: #F2EED8;
 }
 
 #main-nav li{
     display: inline-block;
-    margin-right: 10px;
+    background: #D98484;
+    padding: 10px;
 }
 
-#main-nav a{
+#main-nav a {
     text-decoration: none;
-    color: #5E888C;
+    color: #F2EED8;
     font-weight: bold;
+    font-size: 20px;
+    display: block;
 }
 
 nav section{
-    margin: 5px;
+    margin: 1px;
+    background: #D98484;
+    border:2px solid #F2EED8;
 }
 
 /*Ideas Section*/
 
-#idea{ /*Background and border is all that is changed*/
-    background: #38322b; /* secondary background */
+#main-idea{ /*Background and border is all that is changed*/
+    background: #F2EED8; /* secondary background */
     margin: auto; /* centers the div */
     padding: 1%; /* text away from edge */
-    border-radius: 5px; /* round corners */
-    border: 2px solid #695442; /* accent border */
+    border: 2px solid #F2EED8; /* accent border */
 }
 
+#main-idea2{ /*Background and border is all that is changed*/
+    background: #F2EED8; /* secondary background */
+    padding: 1%; /* text away from edge */
+    border: 2px solid #F2EED8; /* accent border */
+}
+
+
 #idea1, #idea2, #idea3{
-    background: #695442;
+    background: #F2EED8;
     color:#f4efde;
     padding: 10px;
     margin: 10px;
-    border-radius: 5px;
     float: left;
+    box-sizing: border-box;
+}
+
+#idea3{
+    clear: both;                 /* forces new row */
+    margin-left: 10px;  /* shifts Idea 3 left so it lines up under Idea 1 */
+ 
 }
 
 #idea1 img, #idea2 img, #idea3 img{
@@ -59,12 +79,17 @@ nav section{
 
 }
 
+#main-layout{
+    clear:both;
+}
+
 /*Aside*/
 #links{
     background: orange;
     display: flex;
     flex-direction: column;
     padding: 10px;
+    border: 5px solid #F2EED8;
 }
 
 /*Examples*/
@@ -74,30 +99,38 @@ nav section{
     grid-template-columns: repeat(2, 2fr); /* 3 columns */
     padding: 10px;
     margin-right: 0;
+    border: 5px solid #F2EED8;
 }
 
 #ex1, #ex2, #ex3, #ex4 {
     background: red;
     padding: 10px;
     margin: 5px;
-    border-radius: 5px;
     text-align: center;
 }
 
 /*Gallery*/
 #gallery{
-    background: #5E888C;
+    background: #A4BFB8;
     display: grid; /* switch to grid */
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     padding: 10px;
+    border: 5px solid #F2EED8;
 }
 
 #gal1, #gal2, #gal3, #gal4, #gal5, #gal6 {
-    background: red;
+    background: #A4BFB8;
     padding: 10px;
     margin: 5px;
-    border-radius: 5px;
     text-align: center;
+}
+
+#main-footer{
+    background: #D98484;
+    padding: 10px;
+    text-align: center;
+    color: #F2EED8;
+    width: 100%;
 }
 
 /*Media Query*/
@@ -116,64 +149,81 @@ nav section{
         flex-direction: column;
     }
 
-    #idea{ /*Background and border is all that is changed*/
-    background: #38322b; /* secondary background */
-    margin: auto; /* centers the div */
-    padding: 1%; /* text away from edge */
-    border-radius: 5px; /* round corners */
-    border: 2px solid #695442; /* accent border */
+   #main-idea{ /*Background and border is all that is changed*/
+        background: #F2EED8; /* secondary background */
+        margin: auto; /* centers the div */
+        padding: 1%; /* text away from edge */
+        border: 2px solid #F2EED8; /* accent border */
+    }
+
+    #main-idea2{ /*Background and border is all that is changed*/
+        background: #F2EED8; /* secondary background */
+        padding: 1%; /* text away from edge */
+        border: 2px solid #F2EED8; /* accent border */
     }
 
     #idea1, #idea2, #idea3{
-     background: #695442;
-        color:#f4efde;
+        background: #F2EED8;
+        color:#5E888C;
         padding: 10px;
         margin: 10px;
-        border-radius: 5px;
         float: left;
+        box-sizing: border-box;
+    }
+
+    #idea3{
+        clear:both;
+        width: calc(50% - 20px);
+        margin-left: 10px;  /* shifts Idea 3 left so it lines up under Idea 1 */
+
+    }
+
+    #main-layout{
+        clear:both;
     }
 
     /*Aside*/
     #links{
-        background: orange;
+        background: #D98484;
         display: flex;
         float: left;
         padding: 10px;
+        text-align: center;
     }
 
     /*Examples*/
     #examples{
-       background: #5E888C;
+        background: #F2EED8;
         display: grid; /* switch to grid */
         grid-template-columns: repeat(2, 2fr); /* 3 columns */
         padding: 10px;
         margin-right: 0;
         flex-direction: column;
+        color:#F2EED8;
     }
 
     #ex1, #ex2, #ex3, #ex4 {
-        background: red;
+        background: #5E888C;
         padding: 10px;
         margin: 5px;
-        border-radius: 5px;
         text-align: center;
         flex-direction: column;
     }
 
     /*Gallery*/
     #gallery{
-        background: #5E888C;
+        background: #F2EED8;
         display: grid; /* switch to grid */
         grid-template-columns: repeat(3, 1fr); /* 3 columns */
         padding: 10px;
         flex-direction: column;
+        color:#F2EED8;
     }
 
     #gal1, #gal2, #gal3, #gal4, #gal5, #gal6 {
-        background: red;
+        background: #A4BFB8;
         padding: 10px;
         margin: 5px;
-        border-radius: 5px;
         text-align: center;
         flex-direction: column;
     }
@@ -187,7 +237,7 @@ nav section{
     
     .one{
         margin-right: 0;
-        flex: 0.3;
+        flex: .5;
     }
 
     .two{
