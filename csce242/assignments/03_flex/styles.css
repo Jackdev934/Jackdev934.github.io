@@ -59,6 +59,47 @@ nav section{
 
 }
 
+/*Aside*/
+#links{
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/*Examples*/
+#examples{
+    background: #5E888C;
+    display: grid; /* switch to grid */
+    grid-template-columns: repeat(2, 2fr); /* 3 columns */
+    padding: 10px;
+    margin-right: 0;
+}
+
+#ex1, #ex2, #ex3, #ex4 {
+    background: red;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/*Gallery*/
+#gallery{
+    background: #5E888C;
+    display: grid; /* switch to grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    padding: 10px;
+}
+
+#gal1, #gal2, #gal3, #gal4, #gal5, #gal6 {
+    background: red;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
 /*Media Query*/
 
 @media only screen and (min-width: 768px) {
@@ -96,7 +137,7 @@ nav section{
     #links{
         background: orange;
         display: flex;
-        flex-direction: column;
+        float: left;
         padding: 10px;
     }
 
@@ -106,17 +147,36 @@ nav section{
         display: grid; /* switch to grid */
         grid-template-columns: repeat(2, 2fr); /* 3 columns */
         padding: 10px;
-        margin: auto;
+        margin-right: 0;
+        flex-direction: column;
+    }
+
+    #ex1, #ex2, #ex3, #ex4 {
+        background: red;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        text-align: center;
+        flex-direction: column;
     }
 
     /*Gallery*/
     #gallery{
-        background: yellow;
+        background: #5E888C;
         display: grid; /* switch to grid */
         grid-template-columns: repeat(3, 1fr); /* 3 columns */
         padding: 10px;
+        flex-direction: column;
     }
 
+    #gal1, #gal2, #gal3, #gal4, #gal5, #gal6 {
+        background: red;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        text-align: center;
+        flex-direction: column;
+    }
 
     /*Columns*/
     .columns{
@@ -153,3 +213,10 @@ nav section{
 
 }
 
+/* Small Screens */
+@media only screen and (max-width: 768px) {
+    #examples, #gallery {
+        display: grid;
+        grid-template-columns: 1fr; /* single column */
+    }
+}
