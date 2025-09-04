@@ -85,37 +85,50 @@ nav section{
 
 /*Aside*/
 #links{
-    background: orange;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border: 5px solid #F2EED8;
+  background: #D98484;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 2px solid #F2EED8;
+  box-sizing: border-box; /* keeps width aligned even with the border */
 }
 
 /*Examples*/
 #examples{
-    background: #5E888C;
+    background: #F2EED8;
     display: grid; /* switch to grid */
     grid-template-columns: repeat(2, 2fr); /* 3 columns */
     padding: 10px;
     margin-right: 0;
-    border: 5px solid #F2EED8;
+    flex-direction: column;
+    color:#F2EED8;
 }
 
 #ex1, #ex2, #ex3, #ex4 {
-    background: red;
+    background: #5E888C;
     padding: 10px;
     margin: 5px;
     text-align: center;
+    flex-direction: column;
+}
+    
+
+#ex1, #ex2{        
+    padding-top: 10px;
+}
+
+#ex3, #ex4 {
+    padding-bottom: 10px;
 }
 
 /*Gallery*/
 #gallery{
-    background: #A4BFB8;
+    background: #F2EED8;
     display: grid; /* switch to grid */
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     padding: 10px;
-    border: 5px solid #F2EED8;
+    flex-direction: column;
+    color:#F2EED8;
 }
 
 #gal1, #gal2, #gal3, #gal4, #gal5, #gal6 {
@@ -123,6 +136,7 @@ nav section{
     padding: 10px;
     margin: 5px;
     text-align: center;
+    flex-direction: column;
 }
 
 #main-footer{
@@ -189,6 +203,8 @@ nav section{
         float: left;
         padding: 10px;
         text-align: center;
+        border: 2px solid #F2EED8;
+        box-sizing: border-box;
     }
 
     /*Examples*/
@@ -208,6 +224,14 @@ nav section{
         margin: 5px;
         text-align: center;
         flex-direction: column;
+    }
+
+    #ex1, #ex2{
+        padding-top: 10px;
+    }
+
+    #ex3, #ex4 {
+        padding-bottom: 10px;
     }
 
     /*Gallery*/
