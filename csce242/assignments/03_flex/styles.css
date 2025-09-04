@@ -6,6 +6,7 @@
 #content, #main-content{
     text-align: center;
     background: #F2EED8;
+    margin: auto;
 }
 
 #content{
@@ -167,6 +168,7 @@ nav section{
         width:100%;
         display: flex;
         flex-direction: column;
+        margin: auto;
     }
 
     #content{
@@ -178,6 +180,7 @@ nav section{
         margin: auto; /* centers the div */
         padding: 1%; /* text away from edge */
         border: 2px solid #F2EED8; /* accent border */
+
     }
 
     #main-idea2{ /*Background and border is all that is changed*/
