@@ -47,7 +47,7 @@ h2 {
 }
 
 /* Unordered Lists */
-#assignments{
+#assignments, #assignments2{
     list-style-type: none;
     padding: 5px;
     margin: 5px 0;
@@ -77,7 +77,7 @@ h2 {
     border-radius: 5px; /* optional: rounded corners */
 }
 
-#assign, #proj {
+#assign,#assign2, #proj {
     background: #695442;
     color:#f4efde;
     padding: 10px;
@@ -96,7 +96,7 @@ h2 {
         text-align: center;
     }
 
-    #assign, #proj {
+    #assign, #assign2, #proj {
         background: #695442;
         color:#f4efde;
         padding: 10px;

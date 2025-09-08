@@ -1,0 +1,285 @@
+:root {
+  --primary-color: #000;       /* black */
+  --secondary-color: #73000A;  /* USC garnet */
+  --light-bg: #f5f5f5;         /* optional light gray */
+  --third-color: #fff;         /* white */
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background: #111; /* subtle dark background behind everything */
+}
+
+/* Utility Header */
+#utility-header {
+  background: var(--secondary-color);
+  font-size: 14.4px;
+}
+
+#utility-header ul {
+  display: flex;
+  justify-content: flex-start; /* links aligned left */
+  gap: 16px;
+  padding: 8px 16px;
+  list-style: none;
+}
+
+#utility-header a {
+  text-decoration: none;
+  color: var(--third-color);
+}
+
+/* Divider lines in utility header */
+#utility-header ul li:not(:last-child)::after {
+  content: "|";
+  margin-left: 8px;
+  color: var(--third-color); 
+}
+
+/* Main Header */
+#main-header {
+  background: var(--primary-color);
+  color: var(--third-color);
+  padding: 16px;
+  position: relative;
+}
+
+#main-header h1 {
+  margin: 0;
+  font-size: 24px;
+  text-align: left;
+}
+
+#main-nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  list-style: none;
+  margin-top: 8px;
+}
+
+#main-nav a {
+  text-decoration: none;
+  color: var(--third-color);
+  font-weight: bold;
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  text-align: center;
+  color: var(--third-color);
+  background: var(--secondary-color);
+}
+
+#hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.85;
+}
+
+#hero h2,
+#hero p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+#hero h2 { top: 20%; }
+#hero p { top: 35%; max-width: 600px; }
+
+/* Prepared Section */
+#prepared {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 32px 16px;
+  background: var(--primary-color);
+  color: var(--third-color);
+}
+
+#prepared img {
+  max-width: 50%;
+}
+
+/* Programs Section */
+#programs {
+  padding: 32px 16px;
+  text-align: center;
+  background: var(--secondary-color);
+  color: var(--third-color);
+}
+
+#programs a { font-weight: bold; }
+
+/* Research Section */
+#research {
+  padding: 32px 16px;
+  background: #222;
+  color: var(--third-color);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#research img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 16px auto;
+  display: block;
+}
+
+/* Connections Section */
+#connections {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 32px 16px;
+  background: var(--secondary-color);
+  color: var(--third-color);
+}
+
+#connections img {
+  max-width: 50%;
+}
+
+/* News Section */
+#news {
+  padding: 32px 16px;
+  background: #111;
+  color: var(--third-color);
+}
+
+#news h2 { margin-bottom: 16px; }
+#news article { margin-bottom: 24px; }
+
+/* Apply Section */
+#apply {
+  text-align: center;
+  padding: 32px 16px;
+  background: var(--secondary-color);
+  color: var(--third-color);
+}
+
+#apply a {
+  display: inline-block;
+  background: var(--third-color);
+  color: var(--secondary-color);
+  padding: 8px 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Footer */
+#main-footer {
+  background: var(--primary-color);
+  color: var(--third-color);
+  padding: 32px 16px;
+}
+
+#main-footer nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+/* Divider lines in legal footer */
+#legal ul {
+  display: flex;            /* row layout */
+  gap: 16px;
+  justify-content: center;  /* center horizontally */
+}
+
+#legal ul li:not(:last-child)::after {
+  content: "|";
+  margin-left: 8px;
+  color: var(--third-color);
+}
+
+/* ===== Universal UL Reset ===== */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* ===== Universal UL/LI Link Styling ===== */
+ul li a {
+  color: var(--third-color);
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+  color: #ddd;
+}
+
+#address,
+#footer-links,
+#legal {
+  margin-top: 16px;
+}
+
+#footer-links ul,
+#legal ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* ========== Large Screen Media Query ========== */
+@media (min-width: 1200px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  #main-header h1 {
+    font-size: 32px;
+  }
+
+  #prepared,
+  #connections {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  #prepared img,
+  #connections img {
+    max-width: 40%;
+  }
+
+  #programs,
+  #research,
+  #apply {
+    padding: 64px 96px;
+  }
+
+  #news .articles {
+    gap: 48px;
+  }
+
+  #news article {
+    flex: 1 1 350px;
+  }
+}
