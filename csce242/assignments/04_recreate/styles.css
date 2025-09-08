@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #000;       /* black */
-  --secondary-color: #73000A;  /* USC garnet */
-  --light-bg: #f5f5f5;         /* optional light gray */
-  --third-color: #fff;         /* white */
+  --primary-color: #000;
+  --secondary-color: #73000A;
+  --third-color: #fff;
 }
+
 
 /* Reset */
 * {
@@ -15,230 +15,321 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  background: #111;
   color: #333;
-  background: #111; /* subtle dark background behind everything */
 }
 
-/* Utility Header */
+
+/* ===================== Utility Header ===================== */
 #utility-header {
-  background: var(--primary-color); /* now black */
-  font-size: 14.4px;
+  background: var(--primary-color);
+  font-size: 14px;
 }
 
 #utility-header ul {
   display: flex;
-  justify-content: flex-start; /* links aligned left */
+  justify-content: flex-start;
   gap: 16px;
   padding: 8px 16px;
   list-style: none;
 }
 
 #utility-header a {
-  text-decoration: none;
   color: var(--third-color);
+  text-decoration: none;
 }
 
-/* Divider lines in utility header */
 #utility-header ul li:not(:last-child)::after {
   content: "|";
   margin-left: 8px;
-  color: var(--third-color); 
+  color: var(--third-color);
 }
 
-/* Main Header */
+
+/* ===================== Main Header ===================== */
 #main-header {
+  background: var(--primary-color);
   color: var(--third-color);
-  padding: 0;
-  position: relative;
-  background: var(--primary-color); /* black only for h1 */
 }
 
 #main-header h1 {
-  margin: 0;
-  font-size: 24px;
-  text-align: left;
-  background: var(--primary-color); /* black */
   padding: 8px 16px;
+  font-size: 24px;
 }
 
-/* Main Nav directly under h1 */
 #main-nav {
-  background: var(--secondary-color); /* full-width garnet */
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  background: var(--secondary-color);
 }
 
 #main-nav ul {
   display: flex;
   justify-content: flex-end;
   gap: 16px;
-  list-style: none;
-  margin: 0;
   padding: 8px 16px;
+  list-style: none;
 }
 
 #main-nav a {
-  text-decoration: none;
   color: var(--third-color);
   font-weight: bold;
+  text-decoration: none;
 }
 
-/* Hero Section */
+
+/* ===================== Hero Section ===================== */
 #hero {
-  position: relative; /* enables absolute positioning for child */
+  position: relative;
   text-align: center;
-  color: var(--third-color);
-  background: var(--secondary-color);
 }
 
 #hero img {
   width: 100%;
-  height: auto;
   display: block;
   opacity: 0.85;
 }
 
 #hero h2 {
   position: absolute;
-  top: 55%; /* stays a little below halfway */
-  left: 0;  /* flush against left edge */
-  color: var(--primary-color);
+  top: 55%;
+  left: 0;
+
   background: rgba(255, 255, 255, 0.6);
-  padding: 12px 24px;
   border: 3px solid rgba(255, 255, 255, 0.8);
-  border-radius: 0; /* square edges */
+
+  padding: 12px 24px;
   font-size: 28px;
-  text-align: left;
+  color: var(--primary-color);
 }
 
-/* Paragraph block below hero image */
 #hero-text {
-  background: var(--third-color); /* white background */
-  color: var(--primary-color);    /* black text */
+  background: #fff;
+  color: #000;
   text-align: center;
   padding: 24px 16px;
-  width: 100%;
-  font-size: 18px;
 }
 
-/* Prepared Section */
+
+/* ===================== Prepared Section ===================== */
 #prepared {
   display: flex;
-  gap: 16px;
-  align-items: center;
-  padding: 32px 16px;
-  background: var(--primary-color);
-  color: var(--third-color);
+  width: 100%;
+  background: #000;
+  color: #fff;
+}
+
+#prepared div {
+  flex: 0 0 50%;
+  padding: 40px;
 }
 
 #prepared img {
-  max-width: 50%;
+  flex: 0 0 50%;
+  width: 100%;
+  object-fit: cover;
 }
 
-/* Programs Section */
+
+/* ===================== Programs Section ===================== */
 #programs {
-  padding: 32px 16px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#programs img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Top white overlay */
+#programs .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
   text-align: center;
-  background: var(--secondary-color);
-  color: var(--third-color);
+
+  padding: 40px 20px;
 }
 
-#programs a { font-weight: bold; }
-
-/* Make program links inline in one row */
-#programs ul {
+#programs .overlay ul {
   display: flex;
-  justify-content: center; /* center the row */
-  gap: 24px;
-  padding: 0;
+  justify-content: center;
+  gap: 32px;
   margin-top: 16px;
+  list-style: none;
 }
 
-#programs ul li {
-  display: inline;
+#programs .overlay a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-/* Research Section */
+#programs .overlay a:hover {
+  text-decoration: underline;
+}
+
+
+/* Lower-right info card */
+#programs .info-card {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+
+  padding: 24px;
+  max-width: 520px;
+}
+
+#programs .info-card .cta {
+  display: inline-block;
+  padding: 8px 16px;
+
+  border: 2px solid #fff;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+#programs .info-card .cta:hover {
+  background: #fff;
+  color: var(--secondary-color);
+}
+
+
+/* ===================== Research Section ===================== */
 #research {
   padding: 32px 16px;
   background: #222;
-  color: var(--third-color);
+  color: #fff;
   text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 #research img {
   width: 250px;
   height: 250px;
-  object-fit: cover;
+
   border-radius: 50%;
+  object-fit: cover;
+
   margin: 16px auto;
-  display: block;
 }
 
-/* Connections Section */
+/* ===================== Connections Section ===================== */
 #connections {
   display: flex;
-  gap: 16px;
+  flex-direction: row;     /* force side-by-side */
   align-items: center;
-  padding: 32px 16px;
+  justify-content: space-between;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
   background: var(--secondary-color);
   color: var(--third-color);
+}
+
+#connections div {
+  flex: 0 0 50%;           /* ~40% width for text */
+  padding: 40px;
 }
 
 #connections img {
-  max-width: 50%;
+  flex: 0 0 50%;           /* ~60% width for image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* News Section */
+/* ===================== News Section ===================== */
 #news {
   padding: 32px 16px;
   background: #111;
-  color: var(--third-color);
+  color: #fff;
 }
 
-#news h2 { margin-bottom: 16px; }
-#news article { margin-bottom: 24px; }
+#news .articles {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
-/* Apply Section */
+#news article {
+  flex: 1 1 300px;
+}
+
+
+/* ===================== Apply Section ===================== */
 #apply {
-  text-align: center;
-  padding: 32px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 40px;
   background: var(--secondary-color);
   color: var(--third-color);
+  text-align: left;
+}
+
+#apply div {
+  flex: 1;                /* text takes more space */
+  padding: 20px 40px;
+}
+
+#apply img {
+  flex: 0 0 auto;         /* image takes only as much as needed */
+  width: 400px;           /* smaller fixed width */
+  height: auto;
+  object-fit: cover;
+  border: 6px solid var(--third-color);   /* white border */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* subtle shadow */
+  margin-left: 40px;
 }
 
 #apply a {
   display: inline-block;
+  margin-top: 20px;
   background: var(--third-color);
   color: var(--secondary-color);
-  padding: 8px 16px;
+  padding: 10px 20px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 4px;
 }
 
-/* Footer */
+#apply a:hover {
+  background: #ddd;
+  color: var(--primary-color);
+}
+
+
+
+/* ===================== Footer ===================== */
 #main-footer {
-  background: var(--primary-color);
-  color: var(--third-color);
+  background: #000;
+  color: #fff;
   padding: 32px 16px;
 }
 
 #main-footer nav ul {
   display: flex;
-  flex-wrap: wrap;
   gap: 16px;
-  list-style: none;
-  margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 
-/* Divider lines in legal footer */
 #legal ul {
   display: flex;
   gap: 16px;
@@ -248,71 +339,5 @@ body {
 #legal ul li:not(:last-child)::after {
   content: "|";
   margin-left: 8px;
-  color: var(--third-color);
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-
-/*Universal UL/LI Link Styling*/
-ul li a {
-  color: var(--third-color);
-  text-decoration: none;
-}
-
-ul li a:hover {
-  text-decoration: underline;
-  color: #ddd;
-}
-
-#address,
-#footer-links,
-#legal {
-  margin-top: 16px;
-}
-
-#footer-links ul,
-#legal ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* Large Screen Media Query*/
-@media (min-width: 1200px) {
-  body {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  #main-header h1 {
-    font-size: 32px;
-  }
-
-  #prepared,
-  #connections {
-    flex-direction: row;
-    text-align: left;
-  }
-
-  #prepared img,
-  #connections img {
-    max-width: 40%;
-  }
-
-  #programs,
-  #research,
-  #apply {
-    padding: 64px 96px;
-  }
-
-  #news .articles {
-    gap: 48px;
-  }
-
-  #news article {
-    flex: 1 1 350px;
-  }
+  color: #fff;
 }
