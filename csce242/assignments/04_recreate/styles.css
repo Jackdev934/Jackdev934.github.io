@@ -106,7 +106,7 @@ body {
 }
 
 
-/* ===================== Prepared Section ===================== */
+/*Prepared Section*/
 #prepared {
   display: flex;
   width: 100%;
@@ -126,7 +126,7 @@ body {
 }
 
 
-/* ===================== Programs Section ===================== */
+/* Programs Section*/
 #programs {
   position: relative;
   width: 100%;
@@ -200,7 +200,7 @@ body {
 }
 
 
-/* ===================== Research Section ===================== */
+/*Research Section*/
 #research {
   padding: 32px 16px;
   background: #222;
@@ -219,7 +219,7 @@ body {
 }
 
 
-/* ===================== Connections Section ===================== */
+/*Connections Section*/
 #connections {
   display: flex;
   flex-direction: row;
@@ -248,7 +248,7 @@ body {
 }
 
 
-/* ===================== News Section ===================== */
+/* News Section*/
 #news {
   padding: 32px 16px;
   background: #111;
@@ -266,7 +266,7 @@ body {
 }
 
 
-/* ===================== Apply Section ===================== */
+/*Apply Section*/
 #apply {
   display: flex;
   flex-direction: row;
@@ -317,7 +317,7 @@ body {
 }
 
 
-/* ===================== Footer ===================== */
+/*Footer*/
 #main-footer {
   background: #000;
   color: #fff;
@@ -343,7 +343,7 @@ body {
 }
 
 
-/* ===================== Global Link + List Styling ===================== */
+/*Global Link + List Styling*/
 ul {
   list-style: none;
   margin: 0;
@@ -359,3 +359,142 @@ a:hover {
   color: #ddd;
   text-decoration: underline;
 }
+
+/* Larger screens*/
+@media (max-width: 1024px) {
+  #main-nav ul {
+    justify-content: center;
+  }
+
+  #programs img {
+    height: 520px;
+  }
+
+  #programs .overlay {
+    padding: 28px 16px;
+  }
+
+  #programs .info-card {
+    right: 16px;
+    bottom: 16px;
+    max-width: 460px;
+    padding: 20px;
+  }
+
+  #prepared div,
+  #connections div {
+    padding: 28px;
+  }
+
+  #hero h2 {
+    font-size: 24px;
+    padding: 10px 20px;
+  }
+
+  #apply img {
+    width: 340px;
+    margin-left: 28px;
+  }
+}
+
+/* smaller screens  */
+@media (max-width: 768px) {
+  /* Utility + main nav */
+  #utility-header ul,
+  #main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 8px 12px;
+  }
+
+  /* Hero */
+  #hero h2 {
+    top: 62%;
+    left: 8px;                 
+    border-width: 2px;
+    font-size: 20px;
+    padding: 8px 14px;
+  }
+
+  /* Prepared & Connections: stack */
+  #prepared,
+  #connections {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  #prepared div,
+  #connections div {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 20px 16px;
+  }
+
+  #prepared img,
+  #connections img {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  /* Programs banner */
+  #programs img {
+    height: 420px;
+  }
+
+  #programs .overlay {
+    padding: 24px 16px;
+  }
+
+  #programs .overlay ul {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  
+  #programs .info-card {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    max-width: none;
+    padding: 20px;
+  }
+
+  
+  #research img {
+    width: 200px;
+    height: 200px;
+  }
+
+ 
+  #apply {
+    flex-direction: column;
+    text-align: left;
+    padding: 24px 16px;
+  }
+
+  #apply div {
+    width: 100%;
+    padding: 0 0 16px 0;
+  }
+
+  #apply img {
+    width: 300px;
+    margin: 0;               
+  }
+
+  /* News layout stacks */
+  #news .articles {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Footer spacing */
+  #main-footer nav ul {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
