@@ -86,7 +86,7 @@ body {
 
 /* Hero Section */
 #hero {
-  position: relative;
+  position: relative; /* enables absolute positioning for child */
   text-align: center;
   color: var(--third-color);
   background: var(--secondary-color);
@@ -97,6 +97,29 @@ body {
   height: auto;
   display: block;
   opacity: 0.85;
+}
+
+#hero h2 {
+  position: absolute;
+  top: 55%; /* stays a little below halfway */
+  left: 0;  /* flush against left edge */
+  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 12px 24px;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 0; /* square edges */
+  font-size: 28px;
+  text-align: left;
+}
+
+/* Paragraph block below hero image */
+#hero-text {
+  background: var(--third-color); /* white background */
+  color: var(--primary-color);    /* black text */
+  text-align: center;
+  padding: 24px 16px;
+  width: 100%;
+  font-size: 18px;
 }
 
 /* Prepared Section */
@@ -127,7 +150,7 @@ body {
 #programs ul {
   display: flex;
   justify-content: center; /* center the row */
-  gap: 24px;               /* spacing between links */
+  gap: 24px;
   padding: 0;
   margin-top: 16px;
 }
@@ -217,9 +240,9 @@ body {
 
 /* Divider lines in legal footer */
 #legal ul {
-  display: flex;            /* row layout */
+  display: flex;
   gap: 16px;
-  justify-content: center;  /* center horizontally */
+  justify-content: center;
 }
 
 #legal ul li:not(:last-child)::after {
