@@ -1,0 +1,15 @@
+/* Reset default margins/padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #101820; /* background behind iframe */
+}
+
+/* Make iframe fill the full page */
+iframe #wireframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* removes default border */
+    display: block; /* removes inline gaps */
+}
