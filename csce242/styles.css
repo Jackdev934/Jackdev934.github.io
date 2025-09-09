@@ -1,41 +1,35 @@
 /* Typography */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #1b1a17; /* darkest background */
-    color: #f4efde; /* light text for readability */
+    background: #1b1a17; 
+    color: #f4efde; 
+    margin: 0;       
+    padding: 10px;   
 }
 
-#main-header {
+#main-header,
+#content,
+#project {
     text-align: center;
-    background: #38322b; /* secondary background */
-    width: 70%; /* moves it away from edges of page */
-    margin: auto; /* centers the div */
-    padding: 1%; /* text away from edge */
-    border-radius: 5px; /* round corners */
-    border: 2px solid #695442; /* accent border */
+    background: #38322b; 
+    width: calc(100% - 20px);   
+    max-width: 1400px;          
+    margin: 16px auto;
+    padding: 1.5%;
+    border-radius: 5px;
+    border: 2px solid #695442;
 }
 
-#content, #project {
-    background: #38322b; /* secondary background */
-    width: 70%; /* moves it away from edges of page */
-    margin: auto; /* centers the div */
-    padding: 1%; /* text away from edge */
-    border-radius: 5px; /* round corners */
-    border: 2px solid #695442; /* accent border */
-}
-
-/* Links to assignments */
+/* Links */
 a:link {
     color: #38322b; 
     font-weight: bold;
     text-decoration: none;
 }
-
 a:visited {
     color: #4d3b2f; 
     font-weight: bold;
 }
-
 a:hover {
     color: #f4efde; 
     font-weight: bold;
@@ -44,92 +38,71 @@ a:hover {
 h2 {
     color: #f4efde;
     text-align: center;
+    margin: 8px 0 16px;
 }
 
-/* Unordered Lists */
-#assignments, #assignments2{
+/* Lists */
+#assignments,
+#projects-list {
     list-style-type: none;
     padding: 5px;
     margin: 5px 0;
     text-align: center;
 }
 
-#project ul {
-    list-style-type: none;
-    padding: 5px;
-    margin: 5px 0;
-    text-align: center;
-}
-
-
-#li {
-    margin: 5px 0;
-    text-align: center;
-}
-
+/* Images */
 .images {
-    max-width: 100%;  /* scales down with container */
-    width: 400px;
-    height: 200px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     border: 2px solid #695442;
-    height: auto;     /* keeps aspect ratio */
-    border: 2px solid #695442;
-    border-radius: 5px; /* optional: rounded corners */
-}
-
-#assign,#assign2, #proj {
-    background: #695442;
-    color:#f4efde;
-    padding: 10px;
-    margin: 10px;
     border-radius: 5px;
+    display: block;
+    margin-top: 6px;
 }
 
+/* Cards */
+.assign, .assign2, .proj {
+    background: #695442;
+    color: #f4efde;
+    padding: 10px;
+    margin: 0;               
+    border-radius: 5px;
+    text-align: center;
+}
 
-/*Larger Devices*/
-@media only screen and (min-width: 790px) {
-
-    #main-header, #content, #project { 
-        width: 95%; /*Allows both to flex when enlarged*/
-        padding: 5px; 
-        margin: auto;
-        text-align: center;
+/* Medium+ screens */
+@media only screen and (min-width: 600px) {
+    /* Assignments: 3 per row */
+    #assignments {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        align-items: stretch;
+        justify-items: center;
+    }
+    #assignments .assign {
+        width: 100%;
+        max-width: 380px;
     }
 
-    #assign, #assign2, #proj {
-        background: #695442;
-        color:#f4efde;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 5px;
-        float: left;
+    /* Projects: 2 per row */
+    #projects-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: stretch;
+        justify-items: center;
     }
-
-
-    /*Three image containers*/
-    .column{
-        text-align: center;
-        flex: 50%;
-        width:30%;
-        padding: 10px; 
-        margin: auto; 
+    #projects-list .proj {
+        width: 100%;
+        max-width: 600px;
     }
+}
 
-    /* Clear floats after image containers */
-    .row::after {
-        text-align: center;
-        padding: 10px;
-        content: "";
-        clear: both;
-        display: table;
-    } 
-
-    .images {
-        max-width: 100%;  /* scales down with container */
-        height: auto;     /* keeps aspect ratio */
-        border: 2px solid #695442;
-        border-radius: 5px; /* optional: rounded corners */
+/* Large screens */
+@media only screen and (min-width: 1100px) {
+    #main-header, #content, #project {
+        padding: 20px;
     }
-
-
 }
