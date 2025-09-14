@@ -17,7 +17,6 @@ main {
     box-sizing: border-box;
 }
 
-/* Boxes fill the row and are taller */
 .box {
     flex: 1 1 0;
     min-width: 200px;
@@ -51,10 +50,10 @@ main {
     display: none !important;
 }
 
-/* -------- Sunny box specifics -------- */
-/* When lyrics are visible, override the default .box section flex layout */
+/*Sunny box specifics*/
+
 #sunny-box #lyrics:not(.hidden) {
-    display: block;     /* cancel the flex centering from .box section */
+    display: block;  
     width: 100%;
     margin-top: 8px;
 }
@@ -70,15 +69,15 @@ main {
 
 #p2 { 
     text-align: left;
-    padding-left: 100px;   /* slightly right of left */
+    padding-left: 100px; /*left */
 }
 
 #p3 { 
-    text-align: center;  /* centered */
+    text-align: center; /* centered */
 }
 
 #p4 { 
-    text-align: right;
+    text-align: right; /*right*/
 
 }
 
