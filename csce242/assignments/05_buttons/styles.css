@@ -36,7 +36,7 @@ main {
     margin: 10px;
 }
 
-/* Default section layout for boxes (used by other boxes) */
+/* Default section layout for boxes */
 .box section {
     flex-grow: 1;
     display: flex;
@@ -45,7 +45,7 @@ main {
     width: 100%;
 }
 
-/* Hidden utility — keep this authoritative */
+/* Hidden utility*/
 .hidden {
     display: none !important;
 }
@@ -98,7 +98,7 @@ main {
   border-radius: 4px;
 }
 
-/* Make the weather area control the size */
+/* Weather Box */
 #weather {
   flex-grow: 1;
   width: 100%;
