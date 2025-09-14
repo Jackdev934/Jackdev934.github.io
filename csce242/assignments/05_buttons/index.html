@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Buttons</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>JavaScript Buttons, Functions, and More</h1>
+        </header>
+        <main>
+            <div id ="sunny-box" class="box">
+                <h3>Sunny Times</h3>
+                <section id = "lyrics" class = "hidden">
+                    <p id = "p1">
+                        Here comes the sun
+                    </p>
+
+                    <p id = "p2">
+                        Sun
+                    </p>
+
+                    <p id = "p3">
+                        Sun
+                    </p>
+
+                                
+                    <p id = "p4">               
+                        Sun
+                    </p>
+
+                    <p id = "p5">
+                        Here it comes
+                    </p>
+                </section>
+                        
+            </div>
+
+            <div class="box">
+                <h3>Select A Color</h3>
+                <section>
+                    <label for="favcolor">Select your favorite color:</label>
+                    <input type="color" id="favcolor" value="#ff0000">
+                </section>
+
+                <!-- Add these two lines below the section -->
+                <p id="color-text">This text will change to your color.</p>
+                <div class="color-code">Color: <code id="color-code">#ff0000</code></div>
+
+            </div>
+
+            <div class="box">
+                <h3>Image Change</h3>
+                <p>Click the image to make it sunny</p>
+                <section id="weather" aria-live="polite">
+                    <img src="images/rainy.jpg" id="img-rainy" class="weather-img" alt="Rainy weather">
+                    <img src="images/sunny.jpg" id="img-sunny" class="weather-img hidden" alt="Sunny weather">
+                </section>
+            </div>
+
+        </main>
+        <script src = "java.js"></script>
+    </body>
+</html>
