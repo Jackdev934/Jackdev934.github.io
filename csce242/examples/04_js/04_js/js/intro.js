@@ -40,4 +40,4 @@ document.getElementById("txt-emotion").onkeyup = (event) => {
 };
 
 //input type = color for assignment
-//research .style and .color
+//research .style and .color    
