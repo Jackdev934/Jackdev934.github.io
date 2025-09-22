@@ -11,12 +11,16 @@
         </header>
         <main>
 
-            <nav class="nav">
-                <ul id="navList">
+            <nav class="nav" aria-label="Exercises">
+                <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navList">
+                    <span class="arrow" aria-hidden="true">▸</span> Exercises
+                </button>
+                <ul id="navList" class="nav-list">
                     <li><a href="#">Exercise 1</a></li>
                     <li><a href="#">Exercise 2</a></li>
                 </ul>
             </nav>
+
             
             <section id="planter">
                   <div class="slider-wrap">
@@ -26,7 +30,6 @@
                         type="range"
                         id="sizeSlider"
                         min="0" max="100" step="1" value="50"
-                        aria-label="Adjust size percentage"
                     />
                     <img id="plantImage" class="plant-image"/>
                     <p id="days" class="days-msg"></p>

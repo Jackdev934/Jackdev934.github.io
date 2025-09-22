@@ -1,69 +1,9 @@
-
+/* Headline */
 h1{
-    text-align: center;
+  text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;            
-  justify-content: center;
-  align-items: center;
-}
-
-nav li { margin: 0; padding: 0; }
-
-nav a {
-  display: block;
-  padding: 8px 16px;
-  text-decoration: none;
-  color: #111;
-}
-
-
-nav li + li { border-left: 1px solid #333; }
-
-/* Navigation*/
-nav ul{ 
-    list-style:none; margin:0; 
-    padding:0; 
-    display:flex; 
-    justify-content:center; 
-    align-items:center; 
-    gap:0; 
-}
-nav li{ 
-    margin:0; 
-    padding:0; 
-}
-nav a{ 
-    display:block; 
-    padding:8px 16px; 
-    text-decoration:none; 
-    color:#111; 
-}
-nav li + li{ 
-    border-left:1px solid #333; 
-}
-
-.plant-image{
-  display:block;
-  max-width: 420px;
-  width: min(60%, 420px);
-  height: auto;
-  border-radius: 8px;
-  margin: 8px auto 0;
-  object-fit: cover;
-}
-
-/* optional: fade-in on swap */
-.plant-image {
-  transition: opacity .2s ease;
-}
-
-
-/*Sections share same area*/
+/*Exercise section*/
 #planter,
 #clock{
   background:#0b5ed7;
@@ -75,10 +15,10 @@ nav li + li{
   text-align: center;
 }
 
-/* hidden utility */
+/* Hidden utility */
 .hidden{ display:none; }
 
-/*Planter*/
+/* Planter */
 .slider-wrap{
   display: grid;
   gap: 8px;
@@ -88,4 +28,88 @@ nav li + li{
 
 #sizeSlider{
   width: clamp(220px, 60%, 420px);
+}
+
+.plant-image{
+  display:block;
+  max-width: 420px;
+  width: min(60%, 420px);
+  height: auto;
+  border-radius: 8px;
+  margin: 8px auto 0;
+  object-fit: cover;
+  transition: opacity .2s ease; 
+}
+
+.nav { 
+  max-width: 900px; 
+  margin: 16px auto; 
+}
+
+/* Toggle button (shown only on small screens) */
+.nav-toggle{
+  display: none;                 
+  background: none;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #111;
+  font: inherit;
+}
+.nav-toggle .arrow{
+  display: inline-block;
+  transition: transform .2s ease;
+}
+
+/* Default Nav*/
+.nav-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;                 
+  justify-content: center;
+  align-items: center;
+  gap: 12px;                     
+}
+.nav-list li{ margin: 0; padding: 0; }
+.nav-list a{
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #111;
+}
+.nav-list li + li{ border: 0; }  
+
+/* Medium screens */
+@media (max-width: 900px) and (min-width: 600px){
+  .nav-list{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;                    
+  }
+  .nav-list li + li{ border: 0; }
+}
+
+/* Small screens: toggle menu */
+@media (max-width: 599px){
+  .nav-toggle{ 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+  }
+  .nav-list{
+    display: none;               
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 8px;
+    gap: 8px;                    
+  }
+  .nav.open .nav-list{ 
+    display: flex;               
+  }
+  .nav-list li + li{ border: 0; }
+  .nav.open .nav-toggle .arrow{
+    transform: rotate(90deg);    
+  }
 }

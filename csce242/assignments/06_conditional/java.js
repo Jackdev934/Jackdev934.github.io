@@ -1,19 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const link1 = document.querySelector('nav li:nth-child(1) a');
-  const link2 = document.querySelector('nav li:nth-child(2) a');
+  const nav        = document.querySelector('nav.nav');
+  const navToggle  = document.getElementById('navToggle');
+  const navList    = document.getElementById('navList');
+
+  const link1   = document.querySelector('nav li:nth-child(1) a');
+  const link2   = document.querySelector('nav li:nth-child(2) a');
   const planter = document.getElementById('planter');
-  const clock = document.getElementById('clock');
-  const txt = document.getElementById('txt');
+  const clock   = document.getElementById('clock');
+  const txt     = document.getElementById('txt');
 
   // Planter elements
   const sizeSlider = document.getElementById('sizeSlider');
   const sizeValue  = document.getElementById('sizeValue');
   const daysMsg    = document.getElementById('days');
 
-  // show planter, hide clock
+  // Default: show planter, hide clock
   planter.classList.remove('hidden');
   clock.classList.add('hidden');
 
+  // Planter: messages per range
   function updateSliderUI() {
     const val = Number(sizeSlider.value); 
     sizeValue.textContent = `${val}%`;
@@ -30,13 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     daysMsg.textContent = msg;
   }
-
-  // Initialize once and update on input
   updateSliderUI();
   sizeSlider.addEventListener('input', updateSliderUI);
   sizeSlider.addEventListener('change', updateSliderUI);
 
-  // World Clock
+  //World Clock 
   function renderTime() {
     const now = new Date();
     const h = String(now.getHours()).padStart(2, '0');
@@ -47,16 +50,47 @@ document.addEventListener('DOMContentLoaded', () => {
   renderTime();
   setInterval(renderTime, 1000);
 
-  // Nav switching
+  // Nav: small-screen toggle
+  const mqSmall = window.matchMedia('(max-width: 599px)');
+
+  function toggleNav() {
+    const isOpen = nav.classList.toggle('open');
+    if (navToggle) navToggle.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  function closeNavIfSmall() {
+    if (mqSmall.matches) {
+      nav.classList.remove('open');
+      if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  if (navToggle) {
+    navToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleNav();
+    });
+  }
+
+  // Close the menu after choosing an item (on small screens)
+  navList.addEventListener('click', (e) => {
+    if (e.target.matches('a')) {
+      closeNavIfSmall();
+    }
+  });
+
+  // Nav switching between sections
   link1.addEventListener('click', (e) => {
     e.preventDefault();
     planter.classList.remove('hidden');
     clock.classList.add('hidden');
+    closeNavIfSmall();
   });
 
   link2.addEventListener('click', (e) => {
     e.preventDefault();
     clock.classList.remove('hidden');
     planter.classList.add('hidden');
+    closeNavIfSmall();
   });
 });
