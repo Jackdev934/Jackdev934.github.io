@@ -10,13 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const sizeValue  = document.getElementById('sizeValue');
   const daysMsg    = document.getElementById('days');
 
-  // Default: show planter, hide clock
+  // show planter, hide clock
   planter.classList.remove('hidden');
   clock.classList.add('hidden');
 
-  // --- Planter: update label + message based on % ---
   function updateSliderUI() {
-    const val = Number(sizeSlider.value);      // 0..100
+    const val = Number(sizeSlider.value); 
     sizeValue.textContent = `${val}%`;
 
     let msg = '';
@@ -37,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   sizeSlider.addEventListener('input', updateSliderUI);
   sizeSlider.addEventListener('change', updateSliderUI);
 
-  // --- World Clock ---
+  // World Clock
   function renderTime() {
     const now = new Date();
     const h = String(now.getHours()).padStart(2, '0');
