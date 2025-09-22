@@ -1,15 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+    //Constants 
   const nav        = document.querySelector('nav.nav');
   const navToggle  = document.getElementById('navToggle');
   const navList    = document.getElementById('navList');
-
   const link1   = document.querySelector('nav li:nth-child(1) a');
   const link2   = document.querySelector('nav li:nth-child(2) a');
   const planter = document.getElementById('planter');
   const clock   = document.getElementById('clock');
   const txt     = document.getElementById('txt');
-
-  // Planter elements
   const sizeSlider = document.getElementById('sizeSlider');
   const sizeValue  = document.getElementById('sizeValue');
   const daysMsg    = document.getElementById('days');
@@ -30,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       msg = "Plant watered 3 days ago, plan a light watering soon.";
     } else if (val <= 74) {
       msg = "Plant watered 6 days ago, you must water your plants today.";
-    } else { // 75-100
+    } else {
       msg = "Plant watered 12 days ago, Plant is dead.";
     }
     daysMsg.textContent = msg;
