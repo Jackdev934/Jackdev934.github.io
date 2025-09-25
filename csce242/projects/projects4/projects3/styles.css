@@ -88,7 +88,9 @@ ul {
 .band-brown { background: var(--panel); }
 
 .pill {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 10px 12px;
   background: var(--accent);
@@ -98,6 +100,7 @@ ul {
   text-align: center;
   cursor: pointer;
   transition: background 0.3s ease;
+  min-height: 40px;   /* ✅ keeps all buttons same height */
 }
 .pill:hover {
   background: #a30012;
@@ -282,13 +285,13 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 8px;   /* 🔽 reduced from 14px */
+  align-items: stretch;
+  gap: 8px;
   border-radius: var(--radius);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 480px;
-  max-width: 280px;
+  width: 100%;
+  min-height: 480px;   /* ✅ default desktop height */
 }
-
 
 .char-card:hover, .boss-card:hover {
   transform: translateY(-4px);
@@ -305,7 +308,8 @@ ul {
 
 .character-grid,
 .boss-grid {
-  justify-items: center;   /* ✅ center 1–2 cards */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  justify-items: stretch;
 }
 
 .boss-title { text-align: center; margin: 20px 0; }
@@ -401,6 +405,22 @@ ul {
 @media (max-width: 900px) {
   .row-tiles {
     grid-template-columns: 50% 50%;
+  }
+
+  .char-card, .boss-card {
+    min-height: 420px;   /* ✅ shrink on medium screens */
+  }
+  .char-card img, .boss-card img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .char-card, .boss-card {
+    min-height: 360px;   /* ✅ shrink further on phones */
+  }
+  .char-card img, .boss-card img {
+    height: 240px;
   }
 }
 
