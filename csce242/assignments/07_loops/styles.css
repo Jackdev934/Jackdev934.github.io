@@ -1,0 +1,95 @@
+/* optional but nice: allow vertical centering later if you want */
+html, body { height: 100%; }
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+
+/* CHANGED: make the scene not full-width and center it */
+#scene {
+  position: relative;
+  width: min(900px, 95%); 
+  height: 500px;
+  overflow: hidden;
+  margin-inline: auto;     
+}
+
+/* Clouds */
+.cloud {
+  width: 80px;
+  height: 50px;
+  background: white;
+  border-radius: 50px;
+  position: absolute;
+}
+.cloud::before, .cloud::after {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+.cloud::before {
+  width: 40px;
+  height: 40px;
+  top: -20px;
+  left: 10px;
+}
+.cloud::after {
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  right: 10px;
+}
+
+/* tree */
+.tree {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.tree .trunk {
+  width: 20px;
+  height: 60px;
+  background: #8B4513;
+  margin: 0 auto; 
+}
+
+.tree .leaves {
+  width: 80px;
+  height: 80px;
+  background: green;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.leaves{
+  position: relative;
+  top: -120px;
+}
+
+.sun {
+  width: 80px;
+  height: 80px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.moon {
+  width: 80px;
+  height: 80px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-shadow: -15px 0 0 0 yellow;
+}
+
