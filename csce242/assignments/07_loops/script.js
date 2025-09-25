@@ -18,6 +18,7 @@ document.getElementById("drawBtn").onclick = function () {
     cloud.className = "cloud";
     cloud.style.top = Math.random() * 200 + "px";
     cloud.style.left = Math.random() * 80 + (i * 150) + "px";
+    
     scene.appendChild(cloud);
   }
 
