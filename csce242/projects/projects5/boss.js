@@ -25,13 +25,13 @@ const bossInfo = {
     imgs: [
       "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/10/dark-souls-3-vordt-of-boreal-valley.jpg",
       "https://darksouls3.wdfiles.com/local--files/boss-image:vordt/Vordt.jpg",
-      "https://static.wikia.nocookie.net/darksouls/images/a/ae/Vordt_of_the_Boreal_Valley.jpg/revision/latest?cb=20160414211515"
+      "https://images.steamusercontent.com/ugc/1001432308775048608/AF8CF1E3BD898E30BCFFE21772ADE8B02C875424/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
     ],
     text: "A once-loyal knight transformed into a frost-driven beast, Vordt serves as a corrupted sentinel of the Boreal Valley. His savage charges and frostbite breath freeze unwary travelers. He resists frost and dark damage, but fire is especially effective against him, and he has moderate vulnerability to lightning."
   },
   "Curse-Rotted Greatwood": {
     imgs: [
-      "https://static.wikia.nocookie.net/darksouls/images/2/28/Greatwood.jpg/revision/latest?cb=20160423230044",
+      "https://images.steamusercontent.com/ugc/1052100875014753956/AA3C73F8CE4F35C5F16678E7FA0779F29D1DBDD6/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
       "https://i.ytimg.com/vi/yX3MSBKvlnU/maxresdefault.jpg",
       "https://live.staticflickr.com/1922/45549384702_44b9a7fb39_b.jpg"
     ],
@@ -39,7 +39,7 @@ const bossInfo = {
   },
   "Crystal Sage": {
     imgs: [
-      "https://static.wikia.nocookie.net/darksouls/images/4/48/Crystal_sage_boss_%282%29.jpg/revision/latest?cb=20160510174813",
+      "https://soulslore.wdfiles.com/local--resized-images/data:crystal-sage/crystal-sage.jpg/medium.jpg",
       "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/dark_souls_3_crystal_sage.jpg",
       "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/Crystal_Sage_Casting.jpg?v=1497025479467"
     ],
@@ -63,7 +63,7 @@ const bossInfo = {
   },
   "High Lord Wolnir": {
     imgs: [
-      "https://static.wikia.nocookie.net/darksouls/images/7/75/High_Lord_Wolnir_6.png/revision/latest?cb=20160620200907",
+      "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/high-lord-wolnir-enemy-dark-souls-3-wiki-guide.jpg",
       "https://assets.vg247.com/current//2016/04/dark_souls_3_high_lord_wolnir.jpg",
       "https://cdna.artstation.com/p/assets/images/images/007/247/716/large/shawn-kok-ds3-sunsetarmour-preview-03.jpg?1504751241"
     ],
@@ -71,8 +71,8 @@ const bossInfo = {
   },
   "Old Demon King": {
     imgs: [
-      "https://static.wikia.nocookie.net/darksouls/images/c/cd/Old_demon_king_%282%29.jpg/revision/latest/thumbnail/width/360/height/450?cb=20160418174041",
-      "https://static.wikia.nocookie.net/darksouls/images/d/d1/Old_Demon_King_Boss_Fight_-_Dark_Souls_3/revision/latest/scale-to-width-down/340?cb=20160415173006",
+      "https://static.wikia.nocookie.net/darksouls/images/c/cd/Old_demon_king_%282%29.jpg/revision/latest?cb=20160418174041",
+      "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/old_demon_king-dks3_small.jpg",
       "https://www.svg.com/img/gallery/tragic-details-you-missed-in-dark-souls-3/the-old-demon-kings-final-moments-1659618906.jpg"
     ],
     text: "The final remnant of the chaos demons, this ancient monarch burns with the fading ember of the First Flame. He is resistant to fire but weak to lightning and dark damage, making miracles and sorceries effective choices. His massive firestorms and sweeps punish slow fighters."
@@ -88,7 +88,7 @@ const bossInfo = {
   "Yhorm the Giant": {
     imgs: [
       "https://darksouls3.wdfiles.com/local--files/boss-image:yhorm1/Yhorm1.jpg",
-      "https://static.wikia.nocookie.net/villains/images/c/c9/Ds3-yhorm-the-giant.jpg/revision/latest?cb=20231225014525",
+      "https://static0.gamerantimages.com/wordpress/wp-content/uploads/Dark-Souls-3-Yhorm-the-Giant.jpg?w=1200&h=628&fit=crop",
       "https://origin.mos.cms.futurecdn.net/izAG3e6YrGShxbZWidQSqg.jpg"
     ],
     text: "Once a benevolent giant who became a Lord of Cinder, Yhorm can only be meaningfully felled using the Storm Ruler, a sword placed within his arena. Standard weapons deal little to him, as his immense size grants natural resistance. With the Storm Ruler, lightning-infused gusts of wind tear through his defenses."
@@ -103,7 +103,7 @@ const bossInfo = {
   },
   "Dancer of the Boreal Valley": {
     imgs: [
-      "https://static.wikia.nocookie.net/darksouls/images/b/b5/Dancer_of_the_Boreal_Valley.jpg/revision/latest?cb=20160414211516",
+      "https://darksouls3.wdfiles.com/local--files/boss-image:dancer/Dancer.jpg",
       "https://soulslore.wdfiles.com/local--resized-images/data:dancer-of-the-frigid-valley/dancerface.jpg/medium.jpg",
       "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2020/06/Dancer-1.jpg?q=50&fit=crop&w=825&dpr=1.5"
     ],
@@ -111,7 +111,7 @@ const bossInfo = {
   },
   "Dragonslayer Armour": {
     imgs: [
-      "https://static.wikia.nocookie.net/vsbattles/images/6/6f/Dragonslayer_Armour_Concept_Art.jpg/revision/latest/scale-to-width-down/500?cb=20201027021120",
+      "https://static.wikia.nocookie.net/darksouls/images/0/07/Iron_Dragonslayer_Set.png/revision/latest?cb=20220123232512",
       "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/Dragonslayer_Armour_And_Butterflies.jpg",
       "https://i.ytimg.com/vi/5sk-e0uokOI/maxresdefault.jpg"
     ],
@@ -120,8 +120,8 @@ const bossInfo = {
   "Oceiros, the Consumed King": {
     imgs: [
       "https://soulslore.wdfiles.com/local--resized-images/data:oceiros/king-oceiros.jpg/medium.jpg",
-      "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/Oceiros_The_Consumed_King.jpg",
-      "https://static.wikia.nocookie.net/vsbattles/images/8/8f/Oceiros_DS3_Artbook.jpg/revision/latest?cb=20181029180333"
+      "https://assetsio.gnwcdn.com/dark_souls_3_boss_how_to_beat_oceiros_the_consumed_king.jpg?width=1200&height=630&fit=crop&enable=upscale&auto=webp",
+      "https://images.steamusercontent.com/ugc/871874599756289747/5B66A7ACC62EB61CE431082F6DAD4BAF89715758/?imw=1024&imh=576&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
     ],
     text: "Driven mad by obsession with his imagined child Ocelotte, Oceiros clings to visions and desperation. His dragon-like form grants him frost and magic attacks. He resists magic but is weak to lightning and frostbite. His erratic movement and cries of delusion make the fight unsettling."
   },
@@ -129,7 +129,7 @@ const bossInfo = {
     imgs: [
       "https://i.ytimg.com/vi/EvHEWS2YWOY/sddefault.jpg",
       "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/09/Dark-Souls-3-Champion-Gundyr.jpg?q=50&fit=crop&w=825&dpr=1.5",
-      "https://static.wikia.nocookie.net/darksouls/images/5/5d/Champion_Gundyr_-_01.png/revision/latest?cb=20170325091751"
+      "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/champion_gundyr_header2.jpg"
     ],
     text: "In another timeline, Gundyr succeeded in his task and became the Champion. This version is more aggressive, chaining relentless combos with punishing kicks and grabs. He resists bleed and poison but is weak to lightning and frost damage. Timing rolls and counters is vital against his onslaught."
   },
@@ -137,22 +137,22 @@ const bossInfo = {
     imgs: [
       "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/Lothric_&_Lorian_Risen.jpg",
       "https://darksouls3-fr.wiki.fextralife.com/file/Dark-Souls-3/lothricyoungerprince1_tc.jpg?v=1497128221340",
-      "https://static.wikia.nocookie.net/villains/images/7/7f/LorianElderPrince_LothricYoungerPrince.png/revision/latest?cb=20230926142716"
+      "https://darksouls3.wdfiles.com/local--files/boss-image:twin-princesv1/Twin_Princesv1.jpg"
     ],
     text: "The twin princes embody the fading line of royalty. Lorian, crippled by curse, carries his younger brother Lothric into battle. Lorian strikes with a flaming greatsword while Lothric casts sorceries. They resist fire and dark but are weak to lightning. Their fight is a test of stamina, dodging, and perseverance."
   },
   "Ancient Wyvern": {
     imgs: [
       "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/Ancient%20Wyvern.jpg",
-      "https://static.wikia.nocookie.net/darksouls/images/8/81/Ancient_Wyvern_-_01.jpg/revision/latest/scale-to-width-down/1200?cb=20170708194028",
-      "https://static.wikia.nocookie.net/dragons/images/8/8c/Ancientwyvern1_tc.jpg/revision/latest/scale-to-width-down/1200?cb=20171015173612"
+      "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/ancient-wyvern-enemies-dark-souls-3-wiki-guide.jpg",
+      "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/06/dark-souls-3-ancient-wyvern.jpg?w=1600&h=900&fit=crop"
     ],
     text: "This towering dragon is defeated primarily through a plunging attack from above, rather than direct combat. Its natural resistances make normal weapons ineffective. Lightning-infused weapons or the scripted drop attack deal immense damage."
   },
   "Nameless King": {
     imgs: [
-      "https://static.wikia.nocookie.net/villains/images/f/f9/Nameless_King.jpg/revision/latest?cb=20200524181546",
-      "https://static.wikia.nocookie.net/darksouls/images/f/f9/Nameless_King.jpg/revision/latest?cb=20160527225341",
+      "https://comicbook.com/wp-content/uploads/sites/4/2025/02/Dark-Souls-3-Nameless-King-Elden-Ring-Nightreign.jpg?w=1024",
+      "https://i.ytimg.com/vi/SyFNPZN82kg/sddefault.jpg",
       "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/kingofthestorm1_tc.jpg"
     ],
     text: "A forgotten deity of war and storms, the Nameless King was cast out for allying with dragons. He resists lightning, befitting his stormy powers, but is weak to fire and frost. His fight, split between riding his stormdrake and dueling on foot, is one of the most challenging encounters in the game."
@@ -160,22 +160,22 @@ const bossInfo = {
   "Soul of Cinder": {
     imgs: [
       "https://i.ytimg.com/vi/Z8m6fRxzi3E/maxresdefault.jpg",
-      "https://static.wikia.nocookie.net/darksouls/images/1/1a/Soul_of_Cinder_-_02.png/revision/latest/thumbnail/width/360/height/450?cb=20160726222623",
+      "https://i.ytimg.com/vi/Z8m6fRxzi3E/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC-sfpi5T7JU1UgzK5Sf44369RZJw",
       "https://images.steamusercontent.com/ugc/2308722341887507397/DA31E03A3B75E7F486F369AAA153A9D2CE27FE95/?imw=512&imh=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
     ],
     text: "The final boss embodies all who linked the fire, shifting seamlessly between fighting styles of previous heroes. He resists most elements equally, but lightning and frost have slight advantages. His adaptability forces players to master dodging and endurance."
   },
   "Champion's Gravetender & Greatwolf": {
     imgs: [
-      "https://static.wikia.nocookie.net/darksouls/images/a/af/Gravetender.jpg/revision/latest/scale-to-width-down/1200?cb=20161028144643",
+      "https://darksouls3.wdfiles.com/local--files/boss-image:champions-gravetender/Champions_Gravetender.png",
       "https://i.ytimg.com/vi/KF6CeN4LkWo/maxresdefault.jpg",
-      "https://static.wikia.nocookie.net/ds3-cinders-mod/images/2/28/Gravetender_greatwolf.jpg/revision/latest?cb=20200108190152"
+      "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/champion's-gravetender-gravetender-greatwolf-enemies-dark-souls-3-wiki-guide.jpg"
     ],
     text: "The Gravetender and his loyal wolf guard a forgotten tomb. The Gravetender himself is a skilled swordsman, while the Greatwolf grows more ferocious as the fight progresses. They resist frost but are weak to lightning and fire."
   },
   "Sister Friede": {
     imgs: [
-      "https://static.wikia.nocookie.net/darksouls/images/b/b4/Sister_Friede.png/revision/latest?cb=20161027173902",
+      "https://static.wikia.nocookie.net/darksouls/images/9/99/Sister_Friede_-_01.png/revision/latest?cb=20170324234745",
       "https://d1lss44hh2trtw.cloudfront.net/resize?type=webp&url=https%3A%2F%2Fshacknews-www.s3.amazonaws.com%2Fassets%2Farticle%2F2016%2F10%2F24%2FAshesDLC_1_1200x500.jpg&width=1032&sign=s360XlnWuSUtu4UF6Tn9g04bXsCrjLYkf7Z_fusru1U",
       "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2020/06/Sister-Fried-defeat.jpg?q=50&fit=crop&w=825&dpr=1.5"
     ],
@@ -184,8 +184,8 @@ const bossInfo = {
   "Demon Prince": {
     imgs: [
       "https://ds3-cinders.wdfiles.com/local--files/image-set-bosses:demon-prince/Demon-Prince.jpg",
-      "https://static.wikia.nocookie.net/darksouls/images/c/cf/Demon_in_Pain_-_01.png/revision/latest?cb=20170512152450",
-      "https://static.wikia.nocookie.net/villains/images/4/4a/Demon_Prince.png/revision/latest?cb=20200101224352"
+      "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/demon-prince-enemies-dark-souls-3-wiki-guide.jpg",
+      "https://preview.redd.it/what-are-yalls-thoughts-on-the-demon-prince-v0-ztixujxxawfd1.jpeg?width=1080&crop=smart&auto=webp&s=a1b84a020df839ee45386549cb94299ff139fb3f"
     ],
     text: "Formed from the ashes of two demon lords, the Demon Prince reignites the chaos flame. He is resistant to fire but weak to lightning. Depending on which demon dies first, he may unleash either fire or chaos sorcery in the second phase."
   },
@@ -199,7 +199,7 @@ const bossInfo = {
   },
   "Darkeater Midir": {
     imgs: [
-      "https://static.wikia.nocookie.net/darksouls/images/7/71/Close_dragon_%282%29.jpg/revision/latest?cb=20170406185604",
+      "https://static.wikia.nocookie.net/dragons/images/1/13/1200.jpg/revision/latest?cb=20171011042808",
       "https://i.ytimg.com/vi/jPlWnCE4Edo/maxresdefault.jpg",
       "https://preview.redd.it/darkeater-midir-might-be-the-first-boss-im-forced-to-skip-v0-sjzkyawfq8me1.jpeg?auto=webp&s=86e5875b8d30c87871d92fa901877cc4fc00655a"
     ],
