@@ -352,6 +352,127 @@ ul {
 
 .boss-title { text-align: center; margin: 20px 0; }
 
+/* Weapons page */
+
+.weapon-container {
+  width: 94%;
+  max-width: 1280px;
+  margin: 0 auto 40px;
+  padding: 0 12px;
+}
+
+/* Page title */
+.weapon-head-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: var(--text);
+}
+
+/* Layout for all weapon sections */
+.weapon-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+  margin: 20px;
+}
+
+/* Each weapon class block */
+.weapon-section {
+  background: var(--panel-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+/* Titles for each weapon class */
+.weapon-section h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: var(--text);
+  text-align: center;
+}
+
+/* Subclass gallery inside each section */
+.scroll-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+}
+.scroll-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+.scroll-gallery::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+/* Subclass card */
+.subclass-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  background: #181c22;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+}
+.subclass-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  background: #333;
+}
+.subclass-card button {
+  font-size: 14px;
+  background: #5a4435;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #edecec;
+  cursor: pointer;
+}
+.subclass-card button:hover {
+  background: #73000A;
+}
+
+/* Weapon detail modal */
+#weaponDetailModal .modal-content {
+  max-width: 500px;
+  text-align: center;
+}
+#weaponDetailModal img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 12px auto;
+  border-radius: 6px;
+}
+#weaponDetailDesc {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #cfcfcf;
+  line-height: 1.4;
+}
+
+/* Weapon modal images */
+#weaponModal .slide img {
+  width: 250px;     /* fixed width */
+  height: auto;     /* keeps aspect ratio */
+  margin: 0 auto 12px;
+  display: block;   /* centers it */
+  object-fit: contain;
+}
+
+
 /* =========================
    Modal Styles
    ========================= */
@@ -378,6 +499,9 @@ ul {
   text-align: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   animation: fadeIn 0.3s ease-in-out;
+
+  /* make arrows position against this box */
+  position: relative;
 }
 
 .close {
@@ -403,8 +527,8 @@ ul {
 
 /* Modal for Locations */
 #place-modal-img {
-  width: 300px;
-  height: 200px;
+  width: 600px;
+  height: 400px;
   object-fit: cover;
   border-radius: 8px;
   margin: 15px auto;
@@ -426,22 +550,25 @@ ul {
   margin-bottom: 15px;
 }
 
-/* Next & previous buttons */
+/* Next & previous buttons (carousel style) */
+/* Slideshow arrows */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   padding: 10px;
-  margin-top: -22px;
   color: white;
   font-weight: bold;
   font-size: 24px;
   transition: 0.3s;
   user-select: none;
   border-radius: 4px;
+  background: rgba(0,0,0,0.4);
+  z-index: 1100; /* keeps arrows on top of slides */
 }
-.next { right: 0; }
-.prev { left: 0; }
+.next { right: 10px; }
+.prev { left: 10px; }
 
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.6);

@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (placeData[place]) {
         modalTitle.textContent = place;
         modalImg.src = placeData[place].img;
-        modalText.innerHTML = placeData[place].text; // ✅ innerHTML for <p>
+        modalText.innerHTML = placeData[place].text; 
         modal.style.display = "block";
       }
     });

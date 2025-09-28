@@ -1,63 +1,143 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <title>Weapons & Tools • Astora's Archive</title>
-    <link rel="stylesheet" href="styles.css" />
-    </head>
-        <body>
-        <header class="title-bar"><h1>Weapons and Tools</h1></header>
-            <div class="top-nav">
-                <button class="hamburger" id="hamburger">&#9776;</button>
-                <nav class="nav-row" id="navRow">
-                    <a href="index.html">Home</a>
-                    <a href="bosses.html">Bosses</a>
-                    <a href="characters.html">Characters</a>
-                    <a class="active" href="#">Weapons &amp; Tools</a>
-                    <a href="world.html">World Location</a>
-                    <a href="lore.html">Lore &amp; Story</a>
-                    <a href="guides.html">Guides &amp; Walkthrough</a>
-                    <a href="community.html">Community</a>
-                    <a href="about.html">About Us</a>
-                </nav>
-            </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weapons • Astora's Archive</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 🔹 Title + Nav -->
+  <header class="title-bar"><h1>Weapons & Tools</h1></header>
+  <div class="top-nav">
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav class="nav-row" id="navRow">
+      <a href="index.html">Home</a>
+      <a href="bosses.html">Bosses</a>
+      <a href="characters.html">Characters</a>
+      <a class="active" href="weapons.html">Weapons &amp; Tools</a>
+      <a href="world.html">World Location</a>
+      <a href="lore.html">Lore &amp; Story</a>
+      <a href="guides.html">Guides &amp; Walkthrough</a>
+      <a href="community.html">Community</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </div>
 
-        <main>
-            <div class="container band-dark weapon-grid">
-                <div class="grid grid-3 gap-lg">
-                    <!-- 6 tiles (for now, want gallery) -->
-                    <article class="media-card">
-                        <img src="https://picsum.photos/720/420?random=21">
-                        <button class="pill">Button</button>
-                    </article>
+  <main>
+    <h2 class="weapon-head-title">Dark Souls III Weapon Classes</h2>
 
-                    <article class="media-card">
-                        <img src="https://picsum.photos/720/420?random=22">
-                        <button class="pill">Button</button>
-                    </article>
+    <div class="weapon-container">
+      <div class="weapon-sections">
 
-                    <article class="media-card">
-                        <img src="https://picsum.photos/720/420?random=23">
-                        <button class="pill">Button</button>
-                    </article>
+        <!-- Straight Swords -->
+        <div class="weapon-section">
+          <h2>Straight Swords</h2>
+          <div class="scroll-gallery">
+            <article class="subclass-card" data-class="straight-swords" data-subclass="longswords"><img src="weapons img/straight-swords/longswords/longsword.png"><button class="pill">Longswords</button></article>
+            <article class="subclass-card" data-class="straight-swords" data-subclass="broadswords"><img src="weapons img/straight-swords/broadswords/broadsword.png"><button class="pill">Broadswords</button></article>
+            <article class="subclass-card" data-class="straight-swords" data-subclass="shortswords"><img src="weapons img/straight-swords/shortswords/Shortsword2.png"><button class="pill">Shortswords</button></article>
+          </div>
+        </div>
 
-                    <article class="media-card">
-                        <img src="https://picsum.photos/720/420?random=24">
-                        <button class="pill">Button</button>
-                    </article>
+        <!-- Greatswords -->
+        <div class="weapon-section">
+          <h2>Greatswords</h2>
+          <div class="scroll-gallery">
+            <article class="subclass-card" data-class="greatswords" data-subclass="standard"><img src="weapons img/great-sword/standard/claymore.png"><button class="pill">Standard</button></article>
+            <article class="subclass-card" data-class="greatswords" data-subclass="unique"><img src="weapons img/great-sword/unique/black_knight_greatsword.png"><button class="pill">Unique</button></article>
+          </div>
+        </div>
 
-                    <article class="media-card">
-                        <img src="https://picsum.photos/720/420?random=25">
-                        <button class="pill">Button</button>
-                    </article>
+        <!-- Ultra Greatswords -->
+        <div class="weapon-section">
+          <h2>Ultra Greatswords</h2>
+          <div class="scroll-gallery">
+            <article class="subclass-card" data-class="ultra-greatswords" data-subclass="colossal"><img src="weapons img/ultra-greatswords/colossal.png"><button class="pill">Colossal</button></article>
+            <article class="subclass-card" data-class="ultra-greatswords" data-subclass="paired"><img src="weapons img/ultra-greatswords/paired.png"><button class="pill">Paired</button></article>
+          </div>
+        </div>
 
-                    <article class="media-card">
-                        <img src="https://picsum.photos/720/420?random=26">
-                        <button class="pill">Button</button>
-                    </article>
-                    
-                </div>
-            </div>
-        </main>
-        <script src="nav-tog.js"></script>
-    </body>
+        <!-- Curved Swords -->
+        <div class="weapon-section">
+          <h2>Curved Swords</h2>
+          <div class="scroll-gallery">
+            <article class="subclass-card" data-class="curved-swords" data-subclass="light"><img src="images/placeholder.png"><button class="pill">Light</button></article>
+            <article class="subclass-card" data-class="curved-swords" data-subclass="heavy"><img src="images/placeholder.png"><button class="pill">Heavy</button></article>
+            <article class="subclass-card" data-class="curved-swords" data-subclass="paired"><img src="images/placeholder.png"><button class="pill">Paired</button></article>
+          </div>
+        </div>
+
+        <!-- Curved Greatswords -->
+        <div class="weapon-section">
+          <h2>Curved Greatswords</h2>
+          <div class="scroll-gallery">
+            <article class="subclass-card" data-class="curved-greatswords" data-subclass="heavy"><img src="images/placeholder.png"><button class="pill">Heavy</button></article>
+            <article class="subclass-card" data-class="curved-greatswords" data-subclass="unique"><img src="images/placeholder.png"><button class="pill">Unique</button></article>
+          </div>
+        </div>
+
+        <!-- Katanas -->
+        <div class="weapon-section">
+          <h2>Katanas</h2>
+          <div class="scroll-gallery">
+            <article class="subclass-card" data-class="katanas" data-subclass="standard"><img src="images/placeholder.png"><button class="pill">Standard</button></article>
+            <article class="subclass-card" data-class="katanas" data-subclass="unique"><img src="images/placeholder.png"><button class="pill">Unique</button></article>
+          </div>
+        </div>
+
+        <!-- Daggers -->
+        <div class="weapon-section">
+          <h2>Daggers</h2>
+          <div class="scroll-gallery">
+            <article class="subclass-card" data-class="daggers" data-subclass="standard"><img src="images/placeholder.png"><button class="pill">Standard</button></article>
+            <article class="subclass-card" data-class="daggers" data-subclass="paired"><img src="images/placeholder.png"><button class="pill">Paired</button></article>
+            <article class="subclass-card" data-class="daggers" data-subclass="special"><img src="images/placeholder.png"><button class="pill">Special</button></article>
+          </div>
+        </div>
+
+        <!-- (… keep all your other sections exactly the same …) -->
+
+        <!-- Shields -->
+        <div class="weapon-section">
+          <h2>Shields</h2>
+          <div class="scroll-gallery">
+            <article class="subclass-card" data-class="shields" data-subclass="small"><img src="images/placeholder.png"><button class="pill">Small</button></article>
+            <article class="subclass-card" data-class="shields" data-subclass="medium"><img src="images/placeholder.png"><button class="pill">Medium</button></article>
+            <article class="subclass-card" data-class="shields" data-subclass="great"><img src="images/placeholder.png"><button class="pill">Great</button></article>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="weaponModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeWeapon">&times;</span>
+        <h2 id="weaponTitle">Weapons</h2>
+        <div class="slideshow-container">
+        <div id="weaponGallery"></div>
+
+        <!-- Slider arrows -->
+        <a class="prev" onclick="prevSlide()">⟨</a>
+        <a class="next" onclick="nextSlide()">⟩</a>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- 🔹 Modal: Weapon Details -->
+    <div id="weaponDetailModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeWeaponDetail">&times;</span>
+        <h3 id="weaponDetailTitle">Weapon Name</h3>
+        <img id="weaponDetailImg" src="images/placeholder.png" alt="Weapon Image">
+        <p id="weaponDetailDesc">Description will appear here.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="java/weapons.js"></script>
+  <script src="java/nav-tog.js"></script>
+</body>
 </html>
