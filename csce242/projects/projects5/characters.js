@@ -1,312 +1,274 @@
-// =========================
+
 // Modal Setup
-// =========================
 const charModal = document.getElementById("charModal");
 const charModalTitle = document.getElementById("char-modal-title");
 const charModalText = document.getElementById("char-modal-text");
 const charCloseBtn = charModal.querySelector(".close");
-const charModalSlides = document.getElementById("char-modal-slides");
-const charPrevBtn = charModal.querySelector(".prev");
-const charNextBtn = charModal.querySelector(".next");
+const charModalImg = document.getElementById("char-modal-img");
 
-let charCurrentSlide = 0;
-let charSlides = [];
-
-// =========================
 // Character Data
-// =========================
 const charInfo = {
-  // 🔥 Firelink Shrine
+  // Firelink Shrine
   "Blacksmith Andre": {
-    imgs: ["https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/andre.jpg"],
-    text: "A trusted blacksmith at Firelink Shrine. Andre reforges, infuses, and repairs weapons, aiding the Ashen One throughout their journey."
+    imgs: ["character images/andre.jpeg"],
+    text: "Andre is a blacksmith who has served countless Unkindled across ages. Once appearing in the original Dark Souls, he returns in Firelink Shrine as a steadfast craftsman. He reforges and infuses weapons, repairs equipment, and reinforces Estus Flasks. Lore suggests Andre has been around since the Age of Fire, possibly kept alive by his connection to the flame. He is a regular NPC and never invades or assists in combat. Andre remains permanently at Firelink Shrine, and you can interact with him throughout the game to manage upgrades. He does not have a questline, but he expands his services as you provide him with different coal items."
   },
   "Fire Keeper": {
-    imgs: ["https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/fire_keeper.jpg"],
-    text: "The guardian of the bonfire. She levels up souls into strength and remains bound to the flame."
+    imgs: ["character images/fire.jpeg"],
+    text: "The Fire Keeper is the maiden bound to the flame at Firelink Shrine. She serves as the main level-up NPC, drawing out the Ashen One’s true strength by channeling souls into power. Gentle and mysterious, her blindfold suggests she is a keeper of unseen truths about the linking of fire. In her dialogue, she hints at longing to see a world without flame. She is a regular NPC and never leaves Firelink. In certain endings, she plays a role in extinguishing the flame or granting the Ashen One the chance to usher in a new age. Her questline is tied to the Fire Keeper’s Eyes, which allow her to “see” the darkness and alter the game’s ending."
   },
   "Leonhard the Ringfinger": {
-    imgs: ["https://darksouls.fandom.com/wiki/File:Leonhard_DSIII.jpg"],
-    text: "An enigmatic knight who tempts the Ashen One into serving Rosaria. Encourages invasions and walks the path of darkness."
+    imgs: ["character images/lion.jpeg"],
+    text: "Leonhard is a mysterious knight encountered early at Firelink Shrine. He gifts the Ashen One Cracked Red Eye Orbs, encouraging them to invade other players and pursue the path of Rosaria’s Fingers covenant. His questline is tied to Rosaria, Mother of Rebirth, where he eventually murders her, forcing the player to seek revenge. Leonhard is a regular NPC but becomes hostile later in his questline. He begins at Firelink Shrine near the thrones, then moves to Rosaria’s Bedchamber. Ultimately, he becomes an invader/boss fight when you hunt him down for Rosaria’s soul."
   },
   "Ludleth of Courland": {
-    imgs: ["https://darksouls.wiki.fextralife.com/file/Dark-Souls-3/ludleth.jpg"],
-    text: "A Lord of Cinder who willingly linked the flame. Frail in body but strong in will, he offers soul transposition."
+    imgs: ["character images/ludleth.jpeg"],
+    text: "One of the five Lords of Cinder, Ludleth is a withered figure who willingly linked the First Flame. Unlike the other Lords, he remains seated on his throne at Firelink Shrine, devoted to his choice. Despite his frail form, he allows the Ashen One to transpose souls into powerful boss weapons and spells. Ludleth is a regular NPC with no invasions or summon signs. He never leaves his throne in Firelink Shrine, though his dialogue changes as you progress. If killed, his ashes allow soul transposition to continue, suggesting his role transcends his physical form."
   },
   "Picklepum the Crow": {
-    imgs: ["https://i.redd.it/zf7q9z1h18w21.jpg"],
-    text: "A mischievous crow that trades odd items through the Pickle-Pee, Pump-a-Rum exchange."
+    imgs: ["character images/pickle.jpeg"],
+    text: "Picklepum (sometimes called “Pump-a-Rum”) is a crow merchant residing in a tree near Firelink Shrine. Though unseen, their chirping voice invites the player to drop items into their nest in exchange for rare goods. They are part of the long-running crow traders in the series, echoing Snuggly from Dark Souls 1. Picklepum is a regular NPC and does not invade or appear in combat. They never relocate, always staying at their nest. Their only “questline” is trading items, often giving unique rewards for seemingly useless objects like prism stones or rubbish."
   },
   "Shrine Handmaid": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/1/14/Shrine_Handmaid.jpg"],
-    text: "An elderly vendor of Firelink Shrine. She expands her wares when given ashes."
+    imgs: ["character images/shrine.jpeg"],
+    text: "The Shrine Handmaid is the elderly vendor of Firelink Shrine. She sells basic supplies and weapons, and her inventory expands when you give her ashes found in the world. Lore hints she is tied to the old Firelink Shrine of Dark Souls 1, as she recognizes items from that age. She remains in Firelink Shrine for the entire game. She has no questline but can potentially die if you kill her, at which point her ashes are dropped and her shop remains accessible."
   },
   "Sirris of the Sunless Realms": {
-    imgs: ["https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/sirris.jpg"],
-    text: "A loyal knight who aids the Ashen One against dark spirits. She follows a tragic path of duty and loss."
+    imgs: ["character images/sirris.jpeg"],
+    text: "Sirris is a wandering knight who eventually pledges herself to the Ashen One if treated with kindness. She first appears in Firelink Shrine after the player progresses through early bosses. Her questline involves battling invaders together and ultimately assisting in her duel against her own grandfather, Hodrick. She is both a summonable ally and a quest NPC. She can be summoned for several boss fights, and if you complete her questline, she gifts you her armor and sword upon her death. She relocates to Firelink Shrine temporarily during her questline."
   },
   "Yuria of Londor": {
-    imgs: ["https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/yuria.jpg"],
-    text: "A dark figure guiding the Ashen One to the Usurpation of Fire. Devoted to Londor's destiny."
+    imgs: ["character images/yuria.jpeg"],
+    text: "Yuria is one of the Sable Church’s emissaries and an important NPC for the “Usurpation of Fire” ending. She appears in Firelink Shrine if Yoel of Londor dies after fully hollowing the Ashen One. She teaches advanced sorceries and pushes the player toward marrying Anri in a dark ritual. She is a regular NPC but will turn hostile if her allies (such as the Londor Pale Shade) are killed. She remains in Firelink Shrine, watching over the Ashen One’s choices."
   },
 
-  // 🏰 High Wall
+  // High Wall
   "Greirat of the Undead Settlement": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/0/00/Greirat.jpg"],
-    text: "A thief who scavenges goods for the Ashen One. His fate depends on the player's choices."
+    imgs: ["character images/greirat.jpeg"],
+    text: "A thief found locked in a cell beneath the High Wall of Lothric. Once freed, he moves to Firelink Shrine, where he offers to scavenge goods from distant lands. His questline has him leaving multiple times to scavenge; his survival depends on whether the player summons aid. If successful, he brings back new items for sale. Greirat is a regular NPC but can die permanently if sent on dangerous trips without proper support."
   },
   "Emma, High Priestess of Lothric Castle": {
-    imgs: ["https://i.ytimg.com/vi/gbNYYjNwY-8/maxresdefault.jpg"],
-    text: "A priestess of Lothric who gifts the Small Lothric Banner, granting passage to the Undead Settlement."
+    imgs: ["character images/emma.jpeg"],
+    text: "Emma is a priestess stationed in Lothric Castle. She gives the Ashen One the Small Lothric Banner to progress to the Undead Settlement. Later, she gifts the Way of Blue covenant item. She is not an invader or summon, and she never relocates to Firelink Shrine. She dies after the Dancer of the Boreal Valley boss fight is triggered, marking her as a story NPC tied to progression."
   },
   "Lion Knight Albert": {
-    imgs: ["https://darksouls.fandom.com/wiki/File:Lion_Knight_Albert.jpg"],
-    text: "A phantom knight who aids in the battle against Vordt of the Boreal Valley."
+    imgs: ["character images/albert.jpeg"],
+    text: "A phantom ally summonable to help defeat Vordt of the Boreal Valley. He is not a persistent NPC with dialogue but is notable as one of the few phantom allies tied to Lothric. His presence reinforces the theme of loyal knights serving Lothric Castle. He does not appear in Firelink Shrine or elsewhere."
   },
 
-  // 🟤 Undead Settlement
+  // Undead Settlement
   "Yoel of Londor": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/4/4d/Yoel_of_Londor.jpg"],
-    text: "A sorcerer of Londor who offers to draw out the Ashen One's true strength in exchange for hollowing."
+    imgs: ["character images/yoel.jpeg"],
+    text: "Yoel is a pilgrim of Londor found among corpses near the Foot of the High Wall bonfire. If freed, he relocates to Firelink Shrine and offers to “draw out true strength,” granting free levels in exchange for hollowing. His questline ties into the Usurpation of Fire ending, but if all levels are drawn, he dies, and Yuria takes his place. Yoel is a regular NPC with no combat role."
   },
   "Cornyx of the Great Swamp": {
-    imgs: ["https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/cornyx.jpg"],
-    text: "A pyromancer from the Great Swamp. Teaches flame sorceries and aids in the arts of pyromancy."
+    imgs: ["character images/cornyx.jpeg"],
+    text: "Cornyx is a pyromancer found in a cage in the Undead Settlement. Once freed, he moves to Firelink Shrine, teaching pyromancies and upgrading flame catalysts. His presence expands pyromancer gameplay. Cornyx is a regular NPC and does not invade or appear outside Firelink after relocation."
   },
   "Siegward of Catarina": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/8/80/Siegward.jpg"],
-    text: "A jovial knight of Catarina, known for his onion-shaped armor. Loyal and courageous, though a bit bumbling."
+    imgs: ["character images/siegward.jpeg"],
+    text: "A jovial “onion knight” who aids the player in several locations, including the Undead Settlement, Irithyll, and against Yhorm the Giant. His questline involves helping him through his adventures and culminates in his self-sacrifice after defeating Yhorm. Siegward is a summonable ally but not an invader. He appears in multiple areas before ultimately fulfilling his quest."
   },
   "Irina of Carim": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/0/08/Irina_of_Carim.jpg"],
-    text: "A blind maiden who sells miracles. Her fate changes based on the player's choices of miracles taught."
+    imgs: ["character images/irina.jpeg"],
+    text: "A blind maiden found imprisoned in the Undead Settlement. If freed, she relocates to Firelink Shrine, where she sells miracles. Her fate depends on whether the player teaches her dark miracles—she can either remain as a holy maiden or descend into darkness. Eygon of Carim’s questline is tied to hers."
   },
   "Eygon of Carim": {
-    imgs: ["https://darksouls.wiki.fextralife.com/file/Dark-Souls-3/eygon.jpg"],
-    text: "A knight sworn to protect Irina of Carim. Brutal in combat, loyal to his ward."
+    imgs: ["character images/eygon.jpeg"],
+    text: "A knight sworn to protect Irina. He first appears near her cell and relocates to Firelink Shrine if she does. He aids in boss fights if summoned. If Irina falls to darkness, Eygon becomes hostile. Otherwise, his loyalty persists until his death, after which his gear can be found."
   },
   "Velka the Goddess of Sin": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/2/2f/Velka.jpg"],
-    text: "A mysterious deity of sin and retribution. Associated with absolution and dark faith."
+    imgs: ["character images/velka.jpeg"],
+    text: "Though not a physical NPC in Dark Souls 3, Velka’s presence is felt through statues and items tied to sin and absolution. She embodies retribution and forgiveness, themes carried from earlier games. Her role is symbolic rather than interactive."
   },
   "Holy Knight Hodrick": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/f/f4/Holy_Knight_Hodrick.jpg"],
-    text: "Leader of the Mound-makers covenant. Both ally and foe, embodying chaos."
+    imgs: ["character images/holy.jpeg"],
+    text: "The leader of the Mound-Makers covenant, encountered as both a mad phantom invader and a duel partner. He can be found in the Undead Settlement pit and later in Sirris’ questline. His covenant is tied to chaos and bloodshed, making him a unique invader NPC."
   },
   "Giant of the Undead Settlement": {
-    imgs: ["https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/giant_archer.jpg"],
-    text: "A giant archer perched atop a tower, alternately friend and foe depending on the Ashen One’s actions."
+    imgs: ["character images/giant.jpeg"],
+    text: "A giant archer atop a tower who initially fires at the player but can become friendly if spoken to. If befriended, he aids the player by killing enemies in other areas with his arrows. He never relocates to Firelink Shrine and has no questline beyond this assistance."
   },
 
-  // 🛣 Road of Sacrifices
+  // Road of Sacrifices
   "Orbeck of Vinheim": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/d/df/Orbeck.jpg"],
-    text: "A sorcerer of Vinheim. Trains the Ashen One in sorceries in exchange for scrolls."
+    imgs: ["character images/orbeck.jpeg"],
+    text: "A sorcerer trapped in the Road of Sacrifices, found in the ruins beyond the Crystal Sage. He relocates to Firelink Shrine if given a promise to use his magic, selling sorceries and scroll upgrades. His questline involves collecting scrolls, after which he either leaves or dies, depending on player actions. He never invades but can be summoned for certain fights."
   },
   "Anri of Astora": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/1/1e/Anri.jpg"],
-    text: "A wandering knight with a mysterious fate. Can become an ally, summon, or part of the Usurpation path."
+    imgs: ["character images/anri.jpeg"],
+    text: "A central NPC whose fate varies depending on the player’s choices. Found alongside Horace the Hushed, Anri is tied to the Usurpation of Fire ending if manipulated by Yuria, or can live and fight alongside the Ashen One in other paths. Anri’s gender changes depending on the player’s character. They travel through multiple zones and may end up either married to the Ashen One in a dark ritual, dead, or living peacefully depending on quest outcomes."
   },
   "Horace the Hushed": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/5/54/Horace.jpg"],
-    text: "Silent knight and companion to Anri of Astora. Fiercely loyal, wielding a greatshield."
+    imgs: ["character images/horace.jpeg"],
+    text: "A mute knight and companion of Anri of Astora. Loyal and strong, Horace aids in combat and can be summoned as an ally. His fate is grim, as he eventually loses himself to hollowing in Smouldering Lake. Anri’s questline requires informing them of Horace’s fate. He never relocates to Firelink Shrine."
   },
 
-  // ⛪ Cathedral of the Deep
+  // Cathedral of the Deep
   "Rosaria, Mother of Rebirth": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/b/bd/Rosaria.jpg"],
-    text: "Leader of the Rosaria’s Fingers covenant. Grants rebirth and respec in exchange for Pale Tongues."
+    imgs: ["character images/rosaria.jpeg"],
+    text: "A mysterious matron found in the Cathedral, leader of Rosaria’s Fingers covenant. She allows players to respec their stats and change appearance. Her covenant encourages invasions, and she is later murdered by Leonhard if his questline is followed. She does not move to Firelink Shrine and plays a unique covenant role."
   },
   "Unbreakable Patches": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/6/61/Patches.jpg"],
-    text: "A trickster who deceives the Ashen One but can become a vendor at Firelink Shrine."
+    imgs: ["character images/patches.jpeg"],
+    text: "A trickster NPC who ambushes players by locking them in traps, but later sells useful items if forgiven. Patches can move to Firelink Shrine after being confronted in the Cathedral. His questline ties into Siegward’s, as he impersonates him and steals his armor. He can invade or be an ally depending on choices."
   },
   "Slave Knight Gael": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/d/de/Slave_Knight_Gael.jpg"],
-    text: "A hollow knight seeking the Dark Soul of Man. Becomes the final boss of the series."
+    imgs: ["character images/gael.jpeg"],
+    text: "Introduced here as a mercenary NPC who can be summoned for certain boss fights, Gael later becomes the final boss of the Ringed City DLC. Initially found in the Cathedral, he also appears in the Painted World to urge the player into the DLC. His story is tragic, evolving from a humble knight into a monster consumed by the Dark Soul."
   },
   "Longfinger Kirk": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/7/73/Longfinger_Kirk.jpg"],
-    text: "An invader clad in spiked armor. Member of Rosaria’s Fingers."
+    imgs: ["character images/kirk.jpeg"],
+    text: "An invader phantom found in the Cathedral of the Deep. He wears spiked armor and attacks the player with ruthless aggression. Kirk is a returning invader from Dark Souls 1, reinforcing his role as a thorn in the side of Unkindled. He has no questline and does not relocate to Firelink Shrine."
   },
 
-  // 🌲 Farron Keep
+  // Farron Keep
   "Hawkwood": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/f/f0/Hawkwood.jpg"],
-    text: "A deserter of the Undead Legion. Offers guidance at Firelink Shrine, later duels the Ashen One."
+    imgs: ["character images/hawkwood.jpeg"],
+    text: "A Crestfallen warrior who begins at Firelink Shrine but has ties to Farron Keep. His story is one of failure and despair; he abandons his knightly path and seeks a dragon transformation instead. Hawkwood eventually challenges the Ashen One to a duel in Archdragon Peak. He never invades, but his questline ends with either his death or his victory."
   },
   "Old Wolf of Farron": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/6/67/Oldwolf.jpg"],
-    text: "The slumbering wolf deity of Farron, head of the Watchdogs of Farron covenant."
+    imgs: ["character images/wolf.jpeg"],
+    text: "A great wolf found in the Farron Keep tower, serving as the covenant leader for the Watchdogs of Farron. Though immobile, the wolf embodies the guardians of the swamp. It is not summonable or hostile, and it never relocates. Its role is entirely covenant-based."
   },
   "Yellowfinger Heysel": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/2/28/Yellowfinger.jpg"],
-    text: "A finger of Rosaria who invades the player in the swamps of Farron Keep."
+    imgs: ["character images/yellowfinger.jpeg"],
+    text: "A hostile NPC invader encountered twice, once in the Road of Sacrifices and later near Farron Keep. She wields sorceries and a unique weapon, reinforcing her connection to the xanthous sorcerers. She is exclusively an invader phantom and never appears as a friendly NPC."
   },
 
-  // 🔥 Smouldering Lake
+  // Smouldering Lake
   "Knight Slayer Tsorig": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/7/73/Tsorig.jpg"],
-    text: "An invader wielding the Fume Ultra Greatsword. Merciless and powerful."
+    imgs: ["character images/slayer.jpeg"],
+    text: "A hostile invader found both as a phantom in the Catacombs and as a real enemy in Smouldering Lake. He wields the Fume Ultra Greatsword, tying him back to Dark Souls II’s lore. He has no questline and remains a dangerous foe."
   },
   "Great Swamp Cuculus": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/1/15/Cuculus.jpg"],
-    text: "A phantom pyromancer allied with the Great Swamp, summonable for Old Demon King."
+    imgs: ["character images/cuculus.jpeg"],
+    text: "A summonable phantom ally who aids the player against the Old Demon King. She is tied to Cornyx, being one of his students. She does not have a questline or relocate but exists as a lore callback."
   },
 
-  // ❄️ Irithyll
+  // Irithyll
   "Alva, Seeker of the Spurned": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/a/af/Alva.jpg"],
-    text: "An invader knight found in Irithyll. Once sought a cure for Saint Serreta."
+    imgs: ["character images/alva.jpeg"],
+    text: "A hostile phantom invader encountered in Irithyll. He is a returning character from Dark Souls II, embodying the cursed wanderer. He has no questline and does not relocate."
   },
   "Archdeacon McDonnell": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/2/27/McDonnell.jpg"],
-    text: "Head of the Aldrich Faithful covenant. Grants ranks for defending Anor Londo."
+    imgs: ["character images/deacon.jpeg"],
+    text: "A hidden NPC located in Irithyll, he serves as the covenant leader for Aldrich Faithful. He does not move to Firelink Shrine, and his role is limited to covenant progression."
   },
   "Creighton the Wanderer": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/f/f6/Creighton.jpg"],
-    text: "A murderous outlaw found in Irithyll. Known from Dark Souls II."
+    imgs: ["character images/creighton.jpeg"],
+    text: "An invader phantom who ambushes the player in Irithyll. He is another callback from Dark Souls II, continuing his feud with the Mirrah knight series. He has no questline in Dark Souls 3."
   },
   "Londor Pale Shade": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/3/37/Pale_Shade.jpg"],
-    text: "A mysterious assassin from Londor. Appears as invader or summon depending on quests."
+    imgs: ["character images/londor.jpeg"],
+    text: "An NPC phantom summoned to protect Yuria’s interests. The Pale Shade invades the player if Yuria or her allies are betrayed, reinforcing Londor’s hold on the Ashen One. It is tied solely to the Londor questline."
   },
 
-  // 🏰 Irithyll Dungeon
+  // Irithyll Dungeon
   "Karla": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/6/67/Karla.jpg"],
-    text: "A witch imprisoned in Irithyll Dungeon. Teaches dark sorceries and pyromancies."
+    imgs: ["character images/karla.jpeg"],
+    text: "A dark sorceress imprisoned deep in the dungeon. If freed, she relocates to Firelink Shrine, where she teaches dark sorceries and pyromancies. She is reluctant to share her forbidden knowledge, but she becomes vital for players seeking the darker paths. She has no invasion role but is key for sorcery builds."
   },
 
-  // 🌙 Anor Londo
+  // Anor Londo
   "Company Captain Yorshka": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/f/fc/Yorshka.jpg"],
-    text: "Captain of the Darkmoon Knights. Resides atop Anor Londo's tower."
+    imgs: ["character images/yorshka.jpeg"],
+    text: "Leader of the Blades of the Darkmoon covenant, found imprisoned in Anor Londo’s tower. She is a gentle dragon crossbreed, much like Priscilla from the first game. She never relocates and her sole role is tied to the covenant."
   },
 
-  // 📚 Grand Archives
+  //Grand Archives
   "Black Hand Gotthard": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/5/5e/Gotthard.jpg"],
-    text: "One of the three Black Hands of the king. Dual-wields Gotthard Twinswords."
+    imgs: ["character images/gotthard.jpeg"],
+    text: "A summonable phantom ally for several bosses, notable as a member of the elite Black Hand knights. He has no questline but serves as a lore figure tying into Lothric."
   },
   "Black Hand Kamui": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/c/cf/Kamui.jpg"],
-    text: "A Black Hand of Lothric. Found in the Grand Archives, wields Onikiri and Ubadachi."
+    imgs: ["character images/kamui.jpeg"],
+    text: "Another of the Black Hand knights, wielding a paired weapon. He is fought as a hostile NPC near the archives. He does not relocate or serve a questline."
   },
   "Daughter of Crystal Kriemhild": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/6/65/Kriemhild.jpg"],
-    text: "A crystal sorceress hostile phantom found in the Grand Archives."
+    imgs: ["character images/daughter.jpeg"],
+    text: "A hostile invader encountered near the Grand Archives. She is tied to the crystal sorcery bloodline and drops items reinforcing her lore."
   },
 
-  // 🎨 Painted World
+  // Painted World
   "Sister Friede": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/b/b4/Sister_Friede.jpg"],
-    text: "The eldest daughter of the Sable Church. Antagonist of Ashes of Ariandel."
+    imgs: ["character images/sister.jpeg"],
+    text: "A central figure in the Painted World DLC, Friede serves as both NPC and eventual boss. Initially calm and cryptic, she urges the player to leave the painting untouched. Ultimately, she reveals her true allegiance and becomes a three-phase boss fight alongside Father Ariandel."
   },
   "Sir Vilhelm": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/b/b6/Vilhelm.jpg"],
-    text: "A knight guarding Friede. Wields the Onyx Blade."
+    imgs: ["character images/sir.jpeg"],
+    text: "A dark knight who serves Sister Friede. He attempts to stop the player from progressing further in the Painted World. He is exclusively hostile and does not relocate."
   },
   "Corvian Settler": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/3/35/Corvian.jpg"],
-    text: "A frail Corvian who warns the Ashen One about Ariandel’s rot."
+    imgs: ["character images/settler.jpeg"],
+    text: "A passive NPC urging the Ashen One to burn the painting and cleanse it. His role is lore-based, representing the decay of the painted world."
   },
   "Painting Woman": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/5/52/Young_Painting_Woman.jpg"],
-    text: "A mysterious girl destined to paint a new world."
+    imgs: ["character images/painting.jpeg"],
+    text: "A small girl painting the new world within Ariandel. She plays a symbolic role, representing the creation of the next Painted World."
   },
   "Livid Pyromancer Dunnel": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/6/65/Dunnel.jpg"],
-    text: "An invader wielding pyromancies, found in the Painted World."
+    imgs: ["character images/livid.jpeg"],
+    text: "A hostile NPC invader tied to pyromancy. He does not relocate and serves only as a combat encounter."
   },
 
-  // 🏚 Dreg Heap
+  // Dreg Heap
   "Stone-humped Hag": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/8/86/Stone-Humped_Hag.jpg"],
-    text: "An NPC vendor who greets the player at the start of the Dreg Heap."
+    imgs: ["character images/hag.jpeg"],
+    text: "A merchant NPC found early in the Dreg Heap. She sells valuable goods but dies shortly after, leaving her ashes to continue her inventory at Firelink Shrine."
   },
   "Lapp": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/6/63/Lapp.jpg"],
-    text: "An amnesiac knight in the Ringed City DLC, later revealed as Patches."
+    imgs: ["character images/lapp.jpeg"],
+    text: "A mysterious knight with amnesia, later revealed to be Patches. He helps the Ashen One throughout the Ringed City DLC before betraying or assisting depending on interpretation. He never appears in Firelink Shrine."
   },
 
-  // 🔔 Ringed City
+  //  Ringed City
   "Shira": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/c/cf/Shira.jpg"],
-    text: "A knight devoted to Filianore. A summon and an invader in the Ringed City."
+    imgs: ["character images/shira.jpeg"],
+    text: "A loyal knight who serves Princess Filianore. She aids the Ashen One if aligned with her but turns hostile if Filianore is disturbed."
   },
   "Locust Preacher": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/5/55/Locust_Preacher.jpg"],
-    text: "Strange insect-like preachers offering cryptic wisdom in the Ringed City."
+    imgs: ["character images/preacher.jpeg"],
+    text: "Grotesque insect-like NPCs who deliver cryptic sermons about humanity and the Dark Soul. They appear multiple times but are hostile or neutral depending on context."
   },
   "Judicator Argo": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/2/2b/Judicator_Argo.jpg"],
-    text: "Leader of the Spears of the Church covenant. Summons Halflight or players."
+    imgs: ["character images/argo.jpeg"],
+    text: "A giant cleric who presides over the Spear of the Church boss fight. He is a lore figure tied to the protection of Filianore."
   },
   "Filianore": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/0/0a/Filianore.jpg"],
-    text: "A princess revered in the Ringed City. Sleeping guardian of an illusory world."
+    imgs: ["character images/filianore.jpeg"],
+    text: "A divine princess who slumbers in the Ringed City. Disturbing her egg triggers the endgame events, leading to the battle with Slave Knight Gael. She never relocates or interacts directly."
   },
   "Moaning Knight": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/d/d6/Moaning_Knight.jpg"],
-    text: "An invader loyal to Filianore. Wields the Moaning Shield."
+    imgs: ["character images/moaning.jpeg"],
+    text: "A phantom invader encountered in the Ringed City. His armor emits constant wails, tying him to themes of torment."
   },
   "Ringed City Hollow": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/4/41/Ringed_City_Hollow.jpg"],
-    text: "Hollow residents of the Ringed City, endlessly wandering."
+    imgs: ["character images/hollow.jpeg"],
+    text: "Hostile enemies that embody the decayed state of the Ringed City. They do not relocate and serve purely as ambient lore figures."
   },
   "Silver Knight Ledo": {
-    imgs: ["https://static.wikia.nocookie.net/darksouls/images/8/8d/Ledo.jpg"],
-    text: "A massive knight wielding Ledo’s Great Hammer, found in the Ringed City."
+    imgs: ["character images/ledo.jpg"],
+    text: "A massive knight invader wielding Ledo’s Great Hammer. He appears in the Ringed City and serves as one of the final nods to Gwyn’s silver knights."
   }
 };
 
-// =========================
-// Modal Functions
-// =========================
+
+// Modal Functions 
 function openCharModal(name) {
   const info = charInfo[name];
 
   charModalTitle.textContent = name;
   charModalText.textContent = info ? info.text : "Description coming soon.";
 
-  charModalSlides.innerHTML = "";
-  charSlides = [];
+  const imgSrc = info && info.imgs && info.imgs.length > 0
+    ? info.imgs[0]
+    : "https://via.placeholder.com/600x300?text=" + encodeURIComponent(name);
 
-  const images = info && info.imgs && info.imgs.length > 0
-    ? info.imgs
-    : ["https://via.placeholder.com/600x300?text=" + encodeURIComponent(name)];
-
-  images.forEach((src) => {
-    const slideDiv = document.createElement("div");
-    slideDiv.classList.add("slide");
-    const img = document.createElement("img");
-    img.src = src;
-    slideDiv.appendChild(img);
-    charModalSlides.appendChild(slideDiv);
-    charSlides.push(slideDiv);
-  });
-
-  charCurrentSlide = 0;
-  showCharSlide(charCurrentSlide);
+  charModalImg.src = imgSrc;
 
   charModal.style.display = "block";
 }
-
-function showCharSlide(index) {
-  if (charSlides.length === 0) return;
-  charSlides.forEach(s => (s.style.display = "none"));
-  charSlides[index].style.display = "block";
-}
-
-function plusCharSlides(n) {
-  if (charSlides.length === 0) return;
-  charCurrentSlide = (charCurrentSlide + n + charSlides.length) % charSlides.length;
-  showCharSlide(charCurrentSlide);
-}
-
-charPrevBtn.addEventListener("click", () => plusCharSlides(-1));
-charNextBtn.addEventListener("click", () => plusCharSlides(1));
 
 // Attach listeners
 document.querySelectorAll(".char-card").forEach(card => {

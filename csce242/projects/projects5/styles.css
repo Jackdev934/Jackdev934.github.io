@@ -351,6 +351,19 @@ ul {
 }
 .close:hover { color: #fff; }
 
+/* Force all modal images to same size */
+#char-modal-img {
+  width: 300px;         
+  height: 400px;       
+  object-fit: cover;    
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto; 
+  margin-right: auto;   
+}
+
+
 /* Slideshow styling */
 .slideshow-container {
   position: relative;
