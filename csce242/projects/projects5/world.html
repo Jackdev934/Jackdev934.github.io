@@ -1,55 +1,148 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>World Locations • Astora's Archive</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <header class="title-bar"><h1>World Locations</h1></header>
-            <div class="top-nav">
-                <button class="hamburger" id="hamburger">&#9776;</button>
-                <nav class="nav-row" id="navRow">
-                    <a href="index.html">Home</a>
-                    <a href="bosses.html">Bosses</a>
-                    <a href="characters.html">Characters</a>
-                    <a href="weapons.html">Weapons &amp; Tools</a>
-                    <a class="active" href="#">World Location</a>
-                    <a href="lore.html">Lore &amp; Story</a>
-                    <a href="guides.html">Guides &amp; Walkthrough</a>
-                    <a href="community.html">Community</a>
-                    <a href="about.html">About Us</a>
-                </nav>
-            </div>
+<head>
+  <title>World Locations • Astora's Archive</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="title-bar"><h1>World Locations</h1></header>
+  <div class="top-nav">
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav class="nav-row" id="navRow">
+      <a href="index.html">Home</a>
+      <a href="bosses.html">Bosses</a>
+      <a href="characters.html">Characters</a>
+      <a href="weapons.html">Weapons &amp; Tools</a>
+      <a class="active" href="#">World Location</a>
+      <a href="lore.html">Lore &amp; Story</a>
+      <a href="guides.html">Guides &amp; Walkthrough</a>
+      <a href="community.html">Community</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </div>
 
-        <main class="container band-dark">
-            <div class="grid grid-3 gap-lg world-grid">
-                <!-- 6 places -->
-                <article class="place-card">
-                    <img src="https://picsum.photos/720/420?random=201">
-                    <button class="pill">Place 1</button>
-                </article>
-                <article class="place-card">
-                    <img src="https://picsum.photos/720/420?random=202">
-                    <button class="pill">Place 2</button>
-                </article>
-                <article class="place-card">
-                    <img src="https://picsum.photos/720/420?random=203">
-                    <button class="pill">Place 3</button>
-                </article>
-                <article class="place-card">
-                    <img src="https://picsum.photos/720/420?random=204">
-                    <button class="pill">Place 4</button>
-                </article>
-                <article class="place-card">
-                    <img src="https://picsum.photos/720/420?random=205">
-                    <button class="pill">Place 5</button>
-                </article>
-                <article class="place-card">
-                    <img src="https://picsum.photos/720/420?random=206">
-                    <button class="pill">Place 6</button>
-                </article>
-            </div>
-        </main>
-        <script src="nav-tog.js"></script>
-    </body>
+  <main class="container band-dark">
+
+    <!-- Main Story -->
+    <h2 class="boss-title">Main Story Locations</h2>
+    <div class="grid grid-3 gap-lg world-grid">
+      <article class="place-card" data-place="Firelink Shrine">
+        <img src="world images/firelink.jpeg" alt="Firelink Shrine">
+        <button class="pill">Firelink Shrine</button>
+      </article>
+
+      <article class="place-card" data-place="Cemetery of Ash">
+        <img src="world images/cemetary.jpeg" alt="Cemetery of Ash">
+        <button class="pill">Cemetery of Ash</button>
+      </article>
+
+      <article class="place-card" data-place="High Wall of Lothric">
+        <img src="world images/lotheric.jpeg" alt="High Wall of Lothric">
+        <button class="pill">High Wall of Lothric</button>
+      </article>
+
+      <article class="place-card" data-place="Undead Settlement">
+        <img src="world images/undead.jpeg" alt="Undead Settlement">
+        <button class="pill">Undead Settlement</button>
+      </article>
+
+      <article class="place-card" data-place="Road of Sacrifices">
+        <img src="world images/sacrifices.jpeg" alt="Road of Sacrifices">
+        <button class="pill">Road of Sacrifices</button>
+      </article>
+
+      <article class="place-card" data-place="Cathedral of the Deep">
+        <img src="world images/cathedral.jpeg" alt="Cathedral of the Deep">
+        <button class="pill">Cathedral of the Deep</button>
+      </article>
+
+      <article class="place-card" data-place="Farron Keep">
+        <img src="world images/farron.jpeg" alt="Farron Keep">
+        <button class="pill">Farron Keep</button>
+      </article>
+
+      <article class="place-card" data-place="Catacombs of Carthus">
+        <img src="world images/catacombs.jpeg" alt="Catacombs of Carthus">
+        <button class="pill">Catacombs of Carthus</button>
+      </article>
+
+      <article class="place-card" data-place="Smouldering Lake">
+        <img src="world images/smouldering.jpeg" alt="Smouldering Lake">
+        <button class="pill">Smouldering Lake</button>
+      </article>
+
+      <article class="place-card" data-place="Irithyll of the Boreal Valley">
+        <img src="world images/boreal.jpeg" alt="Irithyll of the Boreal Valley">
+        <button class="pill">Irithyll of the Boreal Valley</button>
+      </article>
+
+      <article class="place-card" data-place="Irithyll Dungeon">
+        <img src="world images/dungeon.jpeg" alt="Irithyll Dungeon">
+        <button class="pill">Irithyll Dungeon</button>
+      </article>
+
+      <article class="place-card" data-place="Profaned Capital">
+        <img src="world images/profaned.jpeg" alt="Profaned Capital">
+        <button class="pill">Profaned Capital</button>
+      </article>
+
+      <article class="place-card" data-place="Anor Londo">
+        <img src="world images/anor.jpeg" alt="Anor Londo">
+        <button class="pill">Anor Londo</button>
+      </article>
+
+      <article class="place-card" data-place="Lothric Castle">
+        <img src="world images/castle.jpeg" alt="Lothric Castle">
+        <button class="pill">Lothric Castle</button>
+      </article>
+
+      <article class="place-card" data-place="Consumed King’s Garden">
+        <img src="world images/consumed.jpeg" alt="Consumed King’s Garden">
+        <button class="pill">Consumed King’s Garden</button>
+      </article>
+
+      <article class="place-card" data-place="Grand Archives">
+        <img src="world images/archives.jpeg" alt="Grand Archives">
+        <button class="pill">Grand Archives</button>
+      </article>
+
+      <article class="place-card" data-place="Kiln of the First Flame">
+        <img src="world images/kiln.jpeg" alt="Kiln of the First Flame">
+        <button class="pill">Kiln of the First Flame</button>
+      </article>
+    </div>
+
+    <!-- DLC -->
+    <h2 class="boss-title">DLC Locations</h2>
+    <div class="grid grid-3 gap-lg world-grid">
+      <article class="place-card" data-place="Painted World of Ariandel">
+        <img src="world images/painted.jpeg" alt="Painted World of Ariandel">
+        <button class="pill">Painted World of Ariandel</button>
+      </article>
+
+      <article class="place-card" data-place="The Dreg Heap">
+        <img src="world images/dreg.jpeg" alt="The Dreg Heap">
+        <button class="pill">The Dreg Heap</button>
+      </article>
+
+      <article class="place-card" data-place="The Ringed City">
+        <img src="world images/ring.jpeg" alt="The Ringed City">
+        <button class="pill">The Ringed City</button>
+      </article>
+    </div>
+
+    <!-- Modal -->
+    <div id="placeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="place-modal-title">Location Name</h3>
+        <img id="place-modal-img" src="" alt="Location Image">
+        <p id="place-modal-text">Location description goes here.</p>
+      </div>
+    </div>
+
+  </main>
+  <script src="java/nav-tog.js"></script>
+  <script src="java/world.js"></script>
+</body>
 </html>
