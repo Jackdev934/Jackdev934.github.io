@@ -23,45 +23,67 @@
 
         <main class="container grid grid-2 community-wrap">
             <section class="band-dark community-left">
-                <h3>Artwork</h3>
-                <input class="upload-input" placeholder="Upload Your Own Image" disabled />
+                <h3>Community Artwork</h3>
+                <!-- Upload button (now active) -->
+                <button class="upload-btn">Upload an Image</button>
                 <div class="grid grid-2 thumbs">
-                    <img src="https://picsum.photos/520/300?random=41">
-                    <img src="https://picsum.photos/520/300?random=42">
-                    <img src="https://picsum.photos/520/300?random=43">
-                    <img src="https://picsum.photos/520/300?random=44">
-                    <img src="https://picsum.photos/520/300?random=45">
-                    <img src="https://picsum.photos/520/300?random=46">
+                    <img src="artwork/art1.jpeg" class="art-img">
+                    <img src="artwork/art2.jpeg" class="art-img">
+                    <img src="artwork/art3.jpeg" class="art-img">
+                    <img src="artwork/art4.jpeg" class="art-img">
+                    <img src="artwork/art5.jpeg" class="art-img">
+                    <img src="artwork/art6.jpeg" class="art-img">
                 </div>
             </section>
 
             <aside class="community-right">
                 <section class="band-dark">
-                    <h3>In Game Videos</h3>
+                    <h3>Bosses Artwork</h3>
                     <div class="grid grid-3 comm-grid">
-                        <img src="https://picsum.photos/420/240?random=47">
-                        <img src="https://picsum.photos/420/240?random=48">
-                        <img src="https://picsum.photos/420/240?random=49">
+                        <img src="artwork/art7.jpeg" class="art-img">
+                        <img src="artwork/art8.jpeg" class="art-img">
+                        <img src="artwork/art9.jpeg" class="art-img">
                     </div>
                 </section>
                 <section class="band-dark">
                     <h3>In Game Pictures</h3>
                     <div class="grid grid-3 comm-grid">
-                        <img src="https://picsum.photos/420/240?random=50">
-                        <img src="https://picsum.photos/420/240?random=51">
-                        <img src="https://picsum.photos/420/240?random=52">
+                        <img src="artwork/art13.jpg" class="art-img">
+                        <img src="artwork/art14.jpeg" class="art-img">
+                        <img src="artwork/art15.jpeg" class="art-img">
                     </div>
                 </section>
                 <section class="band-dark">
-                    <h3>Animations and Fanimations</h3>
+                    <h3>Characters Artwork</h3>
                     <div class="grid grid-3 comm-grid">
-                        <img src="https://picsum.photos/420/240?random=53">
-                        <img src="https://picsum.photos/420/240?random=54">
-                        <img src="https://picsum.photos/420/240?random=55">
+                        <img src="artwork/art10.jpeg" class="art-img">
+                        <img src="artwork/art11.jpeg" class="art-img">
+                        <img src="artwork/art12.jpeg" class="art-img">
                     </div>
                 </section>
             </aside>
         </main>
+
+        <!-- 🔹 Image Modal -->
+        <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <!-- 🔹 Upload Modal -->
+        <div id="uploadModal" class="modal">
+            <div class="modal-content upload-modal">
+                <span class="close">&times;</span>
+                <h2>Upload Your Image</h2>
+                <form>
+                    <input type="file" id="uploadFile" accept="image/*" disabled>
+                    <br><br>
+                    <button type="button" class="upload-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
         <script src="java/nav-tog.js"></script>
+        <script src="java/community.js"></script>
     </body>
 </html>
