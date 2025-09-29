@@ -49,9 +49,7 @@ ul {
   list-style: none;
 }
 
-/* =========================
-   Layout Containers
-   ========================= */
+/* Layout Containers */
 .container {
   width: 94%;
   max-width: 1280px;
@@ -107,9 +105,7 @@ ul {
   box-shadow: 0 0 8px rgba(180, 60, 40, 0.6);
 }
 
-/* =========================
-   Header & Nav
-   ========================= */
+/* Header & Nav */
 .title-bar {
   width: 92%;
   max-width: 1280px;
@@ -175,9 +171,7 @@ ul {
   padding: 10px;
 }
 
-/* =========================
-   Page Layout
-   ========================= */
+/* Page Layout */
 .page-wrap {
   width: 94%;
   max-width: 1280px;
@@ -203,9 +197,7 @@ ul {
 .tile h3 { text-align: center; margin-top: 8px; }
 .tile p { text-align: center; color: var(--muted); }
 
-/* =========================
-   Community Artwork Gallery
-   ========================= */
+/* Community Artwork Gallery */
 .scroll-gallery {
   overflow-x: auto;
   overflow-y: hidden;
@@ -258,7 +250,6 @@ ul {
   box-shadow: 0 6px 18px rgba(0,0,0,0.8);
 }
 
-
 #artModal .close {
   position: absolute;
   top: 20px;
@@ -276,10 +267,7 @@ ul {
   font-size: 16px;
 }
 
-
-/* =========================
-   World Map Section
-   ========================= */
+/* World Map Section */
 .world-map-section {
   margin-top: 20px;
   text-align: center;
@@ -287,17 +275,14 @@ ul {
 
 .world-map {
   width: 100%;
-  max-width: 700px;
+  max-width: 550px; /* smaller */
   border: 1px solid var(--border);
   border-radius: var(--radius);
   margin: 0 auto;
   display: block;
 }
 
-
-/* =========================
-   Community Page Layout Fix
-   ========================= */
+/* Community Page Layout */
 .community-wrap {
   gap: 24px;
   align-items: start;
@@ -373,7 +358,6 @@ ul {
   box-sizing: border-box;
 }
 
-/* Responsive tweaks */
 @media (max-width: 900px) {
   .community-wrap {
     grid-template-columns: 1fr;
@@ -389,9 +373,7 @@ ul {
   }
 }
 
-/* =========================
-   Cards - World Locations
-   ========================= */
+/* Cards - World Locations */
 .world-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -427,9 +409,7 @@ ul {
   border: 1px solid var(--border);
 }
 
-/* =========================
-   Sidebar Panels
-   ========================= */
+/* Sidebar Panels */
 .info-block {
   background: var(--panel-alt);
   border: 1px solid var(--border);
@@ -468,9 +448,7 @@ ul {
   height: 220px;
 }
 
-/* =========================
-   Cards - Characters & Bosses
-   ========================= */
+/* Cards - Characters & Bosses */
 .char-card, .boss-card {
   background: var(--panel);
   padding: 20px;
@@ -507,9 +485,7 @@ ul {
 
 .boss-title { text-align: center; margin: 20px 0; }
 
-/* =========================
-   Weapons page
-   ========================= */
+/* Weapons page */
 .weapon-container {
   width: 94%;
   max-width: 1280px;
@@ -620,9 +596,7 @@ ul {
   object-fit: contain;
 }
 
-/* =========================
-   Lore page layout
-   ========================= */
+/* Lore page */
 .lore-wrap {
   display: grid;
   grid-template-columns: 2fr 1.2fr;
@@ -672,9 +646,7 @@ ul {
 .lore-btn:hover { background: #a82323; transform: translateY(-2px); box-shadow: 0 0 6px rgba(180,60,40,0.6); }
 .lore-btn:active { transform: translateY(0); }
 
-/* =========================
-   Guides & Walkthrough
-   ========================= */
+/* Guides & Walkthrough */
 .guide-band {
   padding: 20px;
   border-radius: var(--radius);
@@ -790,7 +762,7 @@ ul {
   color: #bbb;
 }
 
-/* Upload modal style */
+/* Upload modal */
 .upload-modal {
   max-width: 500px;
   width: 90%;
@@ -835,7 +807,7 @@ ul {
 /* About Us Layout */
 .about-wrap {
   display: grid;
-  grid-template-columns: 2fr 1.5fr; /* content + map */
+  grid-template-columns: 2fr 1.5fr;
   gap: 24px;
   align-items: start;
 }
@@ -858,17 +830,13 @@ ul {
   border: 1px solid var(--border);
 }
 
-/* Responsive stacking */
 @media (max-width: 900px) {
   .about-wrap {
     grid-template-columns: 1fr;
   }
 }
 
-
-/* =========================
-   Modal Styles
-   ========================= */
+/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -963,9 +931,7 @@ ul {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* =========================
-   Responsive
-   ========================= */
+/* Responsive */
 @media (max-width: 1100px) {
   .page-wrap { grid-template-columns: 1fr; }
 }
