@@ -47,312 +47,312 @@ const weaponsData = {
   /* ---------- Ultra Greatswords (Colossal) ---------- */
   "ultra-greatswords": {
     colossal: [
-      { name: "Greatsword (Colossal)", img: PH, desc: "The massive slab, famed by certain strugglers; astonishing stagger and reach." },
-      { name: "Zweihander", img: PH, desc: "Classic giant blade with pancake-slam knockdowns and crowd control." },
-      { name: "Cathedral Knight Greatsword", img: PH, desc: "A heavy cathedral slab—slow, crushing, and authoritative." },
-      { name: "Profaned Greatsword", img: PH, desc: "Glows with profaned flame; skill grants a fiery damage boost." },
-      { name: "Astora Greatsword", img: PH, desc: "A lightweight ultra ideal for elemental infusions and dex hybrids." },
-      { name: "Black Knight Greatsword", img: PH, desc: "A demon-slayer; wide, fiery arcs and high hyperarmor." }
+      { name: "Greatsword (Colossal)", img: "weapons img/ultra-great/colossal/ultra_greatsword.png", desc: "The massive slab, famed by certain strugglers; astonishing stagger and reach." },
+      { name: "Zweihander", img: "weapons img/ultra-great/colossal/zweihander.png", desc: "Classic giant blade with pancake-slam knockdowns and crowd control." },
+      { name: "Cathedral Knight Greatsword", img: "weapons img/ultra-great/colossal/cathedral_knight_greatsword.png", desc: "A heavy cathedral slab—slow, crushing, and authoritative." },
+      { name: "Profaned Greatsword", img: "weapons img/ultra-great/colossal/profane_greatsword.png", desc: "Glows with profaned flame; skill grants a fiery damage boost." },
+      { name: "Astora Greatsword", img: "weapons img/ultra-great/colossal/astora_greatsword.png", desc: "A lightweight ultra ideal for elemental infusions and dex hybrids." },
+      { name: "Black Knight Greatsword", img: "weapons img/ultra-great/colossal/black_knight_greatsword.png", desc: "A demon-slayer; wide, fiery arcs and high hyperarmor." }
     ],
     paired: [
-      { name: "Fume Ultra Greatsword", img: PH, desc: "A monstrous, dense blade; supreme poise damage and guard-breaking power." }
+      { name: "Fume Ultra Greatsword", img: "weapons img/ultra-great/paired/fume_ultra_greatsword.png", desc: "A monstrous, dense blade; supreme poise damage and guard-breaking power." }
     ]
   },
 
   /* ---------- Curved Swords ---------- */
   "curved-swords": {
     light: [
-      { name: "Scimitar", img: PH, desc: "Swift, flowing cuts; an agile duelist’s friend." },
-      { name: "Falchion", img: PH, desc: "Weightier curved sword with broad, meaty hits." },
-      { name: "Carthus Curved Sword", img: PH, desc: "Fast, bleed-friendly, and infamous roll-catcher." },
-      { name: "Shotel", img: PH, desc: "Hooked blade that punishes shield turtling." },
-      { name: "Pontiff Knight Curved Sword", img: PH, desc: "Frost-kissed arcs that pressure and chase." }
+      { name: "Scimitar", img: "weapons img/curved-sword/light/Scimitar2.png", desc: "Swift, flowing cuts; an agile duelist’s friend." },
+      { name: "Falchion", img: "weapons img/curved-sword/light/falchion.png", desc: "Weightier curved sword with broad, meaty hits." },
+      { name: "Carthus Curved Sword", img: "weapons img/curved-sword/light/carthus_curved_sword.png", desc: "Fast, bleed-friendly, and infamous roll-catcher." },
+      { name: "Shotel", img: "weapons img/curved-sword/light/shotel.png", desc: "Hooked blade that punishes shield turtling." },
+      { name: "Pontiff Knight Curved Sword", img: "weapons img/curved-sword/light/pontiff_knight.png", desc: "Frost-kissed arcs that pressure and chase." }
     ],
     heavy: [
-      { name: "Murakumo", img: PH, desc: "Long, sweeping powerhouse with destructive two-handed swings." },
-      { name: "Carthus Shotel", img: PH, desc: "Hooked and vicious; circumvents guards with style." }
+      { name: "Murakumo", img: "weapons img/curved-sword/heavy/murakumo.png", desc: "Long, sweeping powerhouse with destructive two-handed swings." },
+      { name: "Carthus Shotel", img: "weapons img/curved-sword/heavy/carthus_shotel.png", desc: "Hooked and vicious; circumvents guards with style." }
     ],
     paired: [
-      { name: "Sellsword Twinblades", img: PH, desc: "Relentless paired slashes; melts bars with buffs." },
-      { name: "Warden Twinblades", img: PH, desc: "Bleed-stacking paired blades favored by dark wardens." }
+      { name: "Sellsword Twinblades", img: "weapons img/curved-sword/paired/sellsword_twinblades.png", desc: "Relentless paired slashes; melts bars with buffs." },
+      { name: "Warden Twinblades", img: "weapons img/curved-sword/paired/warden_twinblades.png", desc: "Bleed-stacking paired blades favored by dark wardens." }
     ]
   },
 
   /* ---------- Curved Greatswords ---------- */
   "curved-greatswords": {
     heavy: [
-      { name: "Exile Greatsword", img: PH, desc: "Savage force with bleed potential; feared in close quarters." },
-      { name: "Carthus Curved Greatsword", img: PH, desc: "Long, punishing arcs that demand spacing mastery." }
+      { name: "Exile Greatsword", img: "weapons img/curved-great/heavy/exile_greatsword.png", desc: "Savage force with bleed potential; feared in close quarters." },
+      { name: "Carthus Curved Greatsword", img: "weapons img/curved-great/heavy/carthus_curved_greatsword.png", desc: "Long, punishing arcs that demand spacing mastery." }
     ],
     unique: [
-      { name: "Old Wolf Curved Sword", img: PH, desc: "Boosts attacks on consecutive hits; a tribute to Farron’s pack." }
+      { name: "Old Wolf Curved Sword", img: "weapons img/curved-great/unique/old_wolf_curved_sword.png", desc: "Boosts attacks on consecutive hits; a tribute to Farron’s pack." }
     ]
   },
 
   /* ---------- Katanas ---------- */
   "katanas": {
     standard: [
-      { name: "Uchigatana", img: PH, desc: "Sharp, fast, and bleed-capable; obtainable early from the Sword Master." },
-      { name: "Washing Pole", img: PH, desc: "Ridiculously long katana; spacing monster with durability costs." },
-      { name: "Darkdrift", img: PH, desc: "A ghostly blade that slips through guards; hidden scabbard." }
+      { name: "Uchigatana", img: "weapons img/katanas/standard/uchigatana.png", desc: "Sharp, fast, and bleed-capable; obtainable early from the Sword Master." },
+      { name: "Washing Pole", img: "weapons img/katanas/standard/washing_pole.png", desc: "Ridiculously long katana; spacing monster with durability costs." },
+      { name: "Darkdrift", img: "weapons img/katanas/standard/darkdrift.png", desc: "A ghostly blade that slips through guards; hidden scabbard." }
     ],
     unique: [
-      { name: "Black Blade", img: PH, desc: "Shorter, heavier katana with brutal strikes." },
-      { name: "Chaos Blade", img: PH, desc: "Harms the wielder on hit; high risk, high reward." },
-      { name: "Frayed Blade", img: PH, desc: "Abyss-touched, with unique R1→WA pressure and dark slashes." }
+      { name: "Black Blade", img: "weapons img/katanas/unique/black_blade.png", desc: "Shorter, heavier katana with brutal strikes." },
+      { name: "Chaos Blade", img: "weapons img/katanas/unique/chaos_blade.png", desc: "Harms the wielder on hit; high risk, high reward." },
+      { name: "Frayed Blade", img: "weapons img/katanas/unique/frayed_blade.png", desc: "Abyss-touched, with unique R1→WA pressure and dark slashes." }
     ]
   },
 
   /* ---------- Daggers ---------- */
   "daggers": {
     standard: [
-      { name: "Dagger", img: PH, desc: "Tiny reach, lightning speed; excels with backstabs and ripostes." },
-      { name: "Bandit’s Knife", img: PH, desc: "Bleed-ready pokes and swift pressure." },
-      { name: "Handmaid’s Dagger", img: PH, desc: "Restores small FP on hit; a curious utility blade." },
-      { name: "Parrying Dagger", img: PH, desc: "Built to catch blows; pairs with riposte play." }
+      { name: "Dagger", img: "weapons img/daggers/standard/Dagger2.png", desc: "Tiny reach, lightning speed; excels with backstabs and ripostes." },
+      { name: "Bandit’s Knife", img: "weapons img/daggers/standard/bandits_knife.png", desc: "Bleed-ready pokes and swift pressure." },
+      { name: "Handmaid’s Dagger", img: "weapons img/daggers/standard/handmaids_dagger.png", desc: "Restores small FP on hit; a curious utility blade." },
+      { name: "Parrying Dagger", img: "weapons img/daggers/standard/parrying_dagger.png", desc: "Built to catch blows; pairs with riposte play." }
     ],
     paired: [
-      { name: "Brigand Twindaggers", img: PH, desc: "Whirlwind combos for glass-cannon duelists." },
-      { name: "Corvian Greatknife (alt classed dagger)", img: PH, desc: "A long, cruel knife favored by Corvians; nasty bleed tool." }
+      { name: "Brigand Twindaggers", img: "weapons img/daggers/paired/brigand_twindaggers.png", desc: "Whirlwind combos for glass-cannon duelists." },
+      { name: "Corvian Greatknife (alt classed dagger)", img: "weapons img/daggers/paired/corvian_greatknife.jpeg", desc: "A long, cruel knife favored by Corvians; nasty bleed tool." }
     ],
     special: [
-      { name: "Mail Breaker", img: PH, desc: "Thrusting dagger that pierces armor cleanly." }
+      { name: "Mail Breaker", img: "weapons img/daggers/unique/mail_breaker.png", desc: "Thrusting dagger that pierces armor cleanly." }
     ]
   },
 
   /* ---------- Thrusting Swords ---------- */
   "thrusting-swords": {
     standard: [
-      { name: "Rapier", img: PH, desc: "Quick pokes, high counter-damage, great with buffs." },
-      { name: "Estoc", img: PH, desc: "Thrusting reach with useful slashes; a PvP staple." },
-      { name: "Irithyll Rapier", img: PH, desc: "Frost-touched stabs for attrition and pressure." }
+      { name: "Rapier", img: "weapons img/thrusting/standard/rapier.png", desc: "Quick pokes, high counter-damage, great with buffs." },
+      { name: "Estoc", img: "weapons img/thrusting/standard/estoc.png", desc: "Thrusting reach with useful slashes; a PvP staple." },
+      { name: "Irithyll Rapier", img: "weapons img/thrusting/standard/irithyll_rapier.png", desc: "Frost-touched stabs for attrition and pressure." }
     ],
     special: [
-      { name: "Ricard’s Rapier", img: PH, desc: "Flurry skill unleashes a storm of thrusts." }
+      { name: "Ricard’s Rapier", img: "weapons img/thrusting/special/ricards_rapier.png", desc: "Flurry skill unleashes a storm of thrusts." }
     ]
   },
 
   /* ---------- Axes ---------- */
   "axes": {
     small: [
-      { name: "Hand Axe", img: PH, desc: "Light and lively; early-game workhorse." },
-      { name: "Millwood Battle Axe", img: PH, desc: "Wild strength weapon with a howling warcry." },
-      { name: "Butcher Knife", img: PH, desc: "Cleansing cleaver that heals on hit; stamina hungry." },
-      { name: "Brigand Axe", img: PH, desc: "Aggressive small axe with chunky hits." }
+      { name: "Hand Axe", img: "weapons img/axes/small/hand_axe.png", desc: "Light and lively; early-game workhorse." },
+      { name: "Millwood Battle Axe", img: "weapons img/axes/small/millwood_battle_axe_-_final.png", desc: "Wild strength weapon with a howling warcry." },
+      { name: "Butcher Knife", img: "weapons img/axes/small/butcher_knife.png", desc: "Cleansing cleaver that heals on hit; stamina hungry." },
+      { name: "Brigand Axe", img: "weapons img/axes/small/brigand_axe.png", desc: "Aggressive small axe with chunky hits." }
     ],
     large: [
-      { name: "Battle Axe", img: PH, desc: "Classic one-hander with big payoffs." },
-      { name: "Dragonslayer’s Axe", img: PH, desc: "Lightning-wreathed chops that demolish knights." },
-      { name: "Thrall Axe", img: PH, desc: "Small, quick, and vicious, favored by sneaks." }
+      { name: "Battle Axe", img: "weapons img/axes/large/battle_axe.png", desc: "Classic one-hander with big payoffs." },
+      { name: "Dragonslayer’s Axe", img: "weapons img/axes/large/dragonslayers_axe.png", desc: "Lightning-wreathed chops that demolish knights." },
+      { name: "Thrall Axe", img: "weapons img/axes/large/thrall_axe.png", desc: "Small, quick, and vicious, favored by sneaks." }
     ],
     unique: [
-      { name: "Man Serpent Hatchet", img: PH, desc: "Serpentine hatchet with jagged bite." },
-      { name: "Dragon King Greataxe (legacy nod)", img: PH, desc: "A myth-tinged axe known for its crashing blows." }
+      { name: "Man Serpent Hatchet", img: "weapons img/axes/unique/man_serpent_hatchet.png", desc: "Serpentine hatchet with jagged bite." },
+      { name: "Dragon King Greataxe (legacy nod)", img: "weapons img/axes/unique/dragon-king-greataxe.png", desc: "A myth-tinged axe known for its crashing blows." }
     ]
   },
 
   /* ---------- Greataxes ---------- */
   "greataxes": {
     standard: [
-      { name: "Greataxe", img: PH, desc: "Found in the swamps; enormous AR and staggering blows." },
-      { name: "Demon’s Greataxe", img: PH, desc: "Demon-forged, heavy, and explosive with lava bursts." }
+      { name: "Greataxe", img: "weapons img/greataxes/standard/greataxe.png", desc: "Found in the swamps; enormous AR and staggering blows." },
+      { name: "Demon’s Greataxe", img: "weapons img/greataxes/standard/demon-s-great-axe.png", desc: "Demon-forged, heavy, and explosive with lava bursts." }
     ],
     unique: [
-      { name: "Yhorm’s Great Machete", img: PH, desc: "Colossal cleaver with massive poise damage." },
-      { name: "Black Knight Greataxe", img: PH, desc: "Demon-hungry and menacing; sweeping fire arcs." }
+      { name: "Yhorm’s Great Machete", img: "weapons img/greataxes/unique/yhorms_great_machete.png", desc: "Colossal cleaver with massive poise damage." },
+      { name: "Black Knight Greataxe", img: "weapons img/greataxes/unique/black_knight_greataxe.png", desc: "Demon-hungry and menacing; sweeping fire arcs." }
     ]
   },
 
   /* ---------- Hammers ---------- */
   "hammers": {
     standard: [
-      { name: "Club", img: PH, desc: "Primitive but effective; breaks guards and bones alike." },
-      { name: "Mace", img: PH, desc: "Clerical cudgel with strike damage and faith vibes." },
-      { name: "Morning Star", img: PH, desc: "Spiked head that induces bleed." },
-      { name: "Reinforced Club", img: PH, desc: "Nailed, crude, and surprisingly strong." }
+      { name: "Club", img: "weapons img/hammers/standard/Club2.png", desc: "Primitive but effective; breaks guards and bones alike." },
+      { name: "Mace", img: "weapons img/hammers/standard/mace.png", desc: "Clerical cudgel with strike damage and faith vibes." },
+      { name: "Morning Star", img: "weapons img/hammers/standard/Morning Star.png", desc: "Spiked head that induces bleed." },
+      { name: "Reinforced Club", img: "weapons img/hammers/standard/reinforced_club.png", desc: "Nailed, crude, and surprisingly strong." }
     ],
     unique: [
-      { name: "Warpick", img: PH, desc: "A piercing hammer that shreds defense." },
-      { name: "Heysel Pick", img: PH, desc: "Strange scholar’s pick; odd but potent." }
+      { name: "Warpick", img: "weapons img/hammers/unique/warpick.png", desc: "A piercing hammer that shreds defense." },
+      { name: "Heysel Pick", img: "weapons img/hammers/unique/heysel_pick.png", desc: "Strange scholar’s pick; odd but potent." }
     ]
   },
 
   /* ---------- Great Hammers ---------- */
   "great-hammers": {
     colossal: [
-      { name: "Great Club", img: PH, desc: "The tree-trunk; deceptively nimble two-handed." },
-      { name: "Large Club", img: PH, desc: "Shorter than the Great Club, still craters foes." },
-      { name: "Smough’s Great Hammer", img: PH, desc: "Echoes of Anor Londo; thunderous, buttery slams." },
-      { name: "Vordt’s Great Hammer", img: PH, desc: "Frost-laden blows that chill and crush." }
+      { name: "Great Club", img: "weapons img/great-hammers/colossal/great_club.png", desc: "The tree-trunk; deceptively nimble two-handed." },
+      { name: "Large Club", img: "weapons img/great-hammers/colossal/large_club.png", desc: "Shorter than the Great Club, still craters foes." },
+      { name: "Smough’s Great Hammer", img: "weapons img/great-hammers/colossal/Smough_Hammer.png", desc: "Echoes of Anor Londo; thunderous, buttery slams." },
+      { name: "Vordt’s Great Hammer", img: "weapons img/great-hammers/colossal/vordts_great_hammer.png", desc: "Frost-laden blows that chill and crush." }
     ],
     unique: [
-      { name: "Dragon Tooth", img: PH, desc: "A petrified dragon tooth; near indestructible." },
-      { name: "Old King’s Great Hammer", img: PH, desc: "Burns with lingering chaos." }
+      { name: "Dragon Tooth", img: "weapons img/great-hammers/unique/dragon_tooth.png", desc: "A petrified dragon tooth; near indestructible." },
+      { name: "Old King’s Great Hammer", img: "weapons img/great-hammers/unique/old_kings_great_hammer.png", desc: "Burns with lingering chaos." }
     ]
   },
 
   /* ---------- Spears & Pikes ---------- */
   "spears": {
     spears: [
-      { name: "Spear", img: PH, desc: "Classic thrusting control with safe spacing." },
-      { name: "Winged Spear", img: PH, desc: "Reliable pokes and nimble recovery." },
-      { name: "Dragonslayer Spear", img: PH, desc: "Lightning-kissed spear with iconic heritage." },
-      { name: "Gargoyle Flame Spear", img: PH, desc: "Flame-belching spear that pressures at range." },
-      { name: "Partizan", img: PH, desc: "Thrusts and sweeping slashes; hybrid utility." }
+      { name: "Spear", img: "weapons img/spears/spears/spear.png", desc: "Classic thrusting control with safe spacing." },
+      { name: "Winged Spear", img: "weapons img/spears/spears/Winged Spear.png", desc: "Reliable pokes and nimble recovery." },
+      { name: "Dragonslayer Spear", img: "weapons img/spears/spears/dragonslayer_spear.png", desc: "Lightning-kissed spear with iconic heritage." },
+      { name: "Gargoyle Flame Spear", img: "weapons img/spears/spears/gargoyle_flame_spear.png", desc: "Flame-belching spear that pressures at range." },
+      { name: "Partizan", img: "weapons img/spears/spears/partizan.png", desc: "Thrusts and sweeping slashes; hybrid utility." }
     ],
     pikes: [
-      { name: "Pike", img: PH, desc: "Outranges most melee; wins on spacing and patience." },
-      { name: "Lothric Knight Long Spear", img: PH, desc: "Disciplined reach and piercing ferocity." }
+      { name: "Pike", img: "weapons img/spears/pikes/pike.png", desc: "Outranges most melee; wins on spacing and patience." },
+      { name: "Lothric Knight Long Spear", img: "weapons img/spears/pikes/lothric_knight_long_spear.png", desc: "Disciplined reach and piercing ferocity." }
     ],
     paired: [
-      { name: "Dragonslayer Swordspear", img: PH, desc: "Hybrid spear-sword with lightning arts and style." }
+      { name: "Dragonslayer Swordspear", img: "weapons img/spears/paired/dragonslayer_swordspear.png", desc: "Hybrid spear-sword with lightning arts and style." }
     ]
   },
 
   /* ---------- Halberds ---------- */
   "halberds": {
     standard: [
-      { name: "Halberd", img: PH, desc: "Polearm fundamentals—sweet-spot mastery rewarded." },
-      { name: "Lucerne", img: PH, desc: "Piercing halberd; punishes rolls and shields." },
-      { name: "Red Hilted Halberd", img: PH, desc: "Versatile moveset with strong thrusts." }
+      { name: "Halberd", img: "weapons img/halberds/standard/Halberd2.png", desc: "Polearm fundamentals—sweet-spot mastery rewarded." },
+      { name: "Lucerne", img: "weapons img/halberds/standard/lucerne.png", desc: "Piercing halberd; punishes rolls and shields." },
+      { name: "Red Hilted Halberd", img: "weapons img/halberds/standard/red_hilted_halberd.png", desc: "Versatile moveset with strong thrusts." }
     ],
     special: [
-      { name: "Black Knight Glaive", img: PH, desc: "Demon-slayer halberd with fiery memory." },
-      { name: "Glaive", img: PH, desc: "Wider sweeps; spacing tool with authority." }
+      { name: "Black Knight Glaive", img: "weapons img/halberds/special/black_knight_glaive.png", desc: "Demon-slayer halberd with fiery memory." },
+      { name: "Glaive", img: "weapons img/halberds/special/glaive.png", desc: "Wider sweeps; spacing tool with authority." }
     ]
   },
 
   /* ---------- Reapers (Scythes) ---------- */
   "reapers": {
     scythes: [
-      { name: "Great Scythe", img: PH, desc: "Long, sweeping reaper with bleed and spacing dominance." },
-      { name: "Pontiff Knight Great Scythe", img: PH, desc: "Frost-touched reaper with elegant arcs." },
-      { name: "Friede’s Great Scythe", img: PH, desc: "Dual-phase ice and blackflame artistry." }
+      { name: "Great Scythe", img: "weapons img/reapers/scythes/great_scythe.png", desc: "Long, sweeping reaper with bleed and spacing dominance." },
+      { name: "Pontiff Knight Great Scythe", img: "weapons img/reapers/scythes/pontiff_knight_great_scythe.png", desc: "Frost-touched reaper with elegant arcs." },
+      { name: "Friede’s Great Scythe", img: "weapons img/reapers/scythes/friede's_great_scythe_-_final.png", desc: "Dual-phase ice and blackflame artistry." }
     ],
     unique: [
-      { name: "Corvian Scythe", img: PH, desc: "Long-handled with savage R2s and bleed." }
+      { name: "Corvian Scythe", img: "weapons img/reapers/unique/Great_Corvian_Scythe.webp", desc: "Long-handled with savage R2s and bleed." }
     ]
   },
 
   /* ---------- Whips ---------- */
   "whips": {
     standard: [
-      { name: "Whip", img: PH, desc: "No parries against it; safe chip and spacing." },
-      { name: "Notched Whip", img: PH, desc: "Barbed lash that inflicts bleed." }
+      { name: "Whip", img: "weapons img/whips/standard/whip.png", desc: "No parries against it; safe chip and spacing." },
+      { name: "Notched Whip", img: "weapons img/whips/standard/notched_whip.png", desc: "Barbed lash that inflicts bleed." }
     ],
     unique: [
-      { name: "Witch’s Locks", img: PH, desc: "Pyromancer’s hair-whip that scales with int/faith." },
-      { name: "Spotted Whip", img: PH, desc: "Poison-tipped lashes for attrition." }
+      { name: "Witch’s Locks", img: "weapons img/whips/unique/witchs_locks.png", desc: "Pyromancer’s hair-whip that scales with int/faith." },
+      { name: "Spotted Whip", img: "weapons img/whips/unique/spotted_whip.png", desc: "Poison-tipped lashes for attrition." }
     ]
   },
 
   /* ---------- Fists & Claws ---------- */
   "fists-claws": {
     fist: [
-      { name: "Caestus", img: PH, desc: "Parry king and brawler’s staple." },
-      { name: "Dragon Bone Fist (nod)", img: PH, desc: "Legend echoes; close-quarters menace." },
-      { name: "Demon’s Fist", img: PH, desc: "Paired infernal gauntlets with fiery arts." }
+      { name: "Caestus", img: "weapons img/fists-claws/fist/caestus.png", desc: "Parry king and brawler’s staple." },
+      { name: "Dragon Bone Fist (nod)", img: "weapons img/fists-claws/fist/Bone_Fist.webp", desc: "Legend echoes; close-quarters menace." },
+      { name: "Demon’s Fist", img: "weapons img/fists-claws/fist/demons_fist.png", desc: "Paired infernal gauntlets with fiery arts." }
     ],
     claws: [
-      { name: "Claw", img: PH, desc: "Rake and bleed; agile and stylish." },
-      { name: "Manikin Claws", img: PH, desc: "Concealed blades with innate bleed and flips." }
+      { name: "Claw", img: "weapons img/fists-claws/claws/claw.png", desc: "Rake and bleed; agile and stylish." },
+      { name: "Manikin Claws", img: "weapons img/fists-claws/claws/manikin_claws2.png", desc: "Concealed blades with innate bleed and flips." }
     ]
   },
 
   /* ---------- Bows ---------- */
   "bows": {
     short: [
-      { name: "Short Bow", img: PH, desc: "Fast draw for roll-shots and quick picks." },
-      { name: "Composite Bow", img: PH, desc: "Tight, snappy shots; great for pressure." }
+      { name: "Short Bow", img: "weapons img/bows/short/Short_Bow_29.webp", desc: "Fast draw for roll-shots and quick picks." },
+      { name: "Composite Bow", img: "weapons img/bows/short/composite_bow.png", desc: "Tight, snappy shots; great for pressure." }
     ],
     long: [
-      { name: "Longbow", img: PH, desc: "Steady aim and range for PvE utility." },
-      { name: "Black Bow of Pharis", img: PH, desc: "High range and rapid fire potential." }
+      { name: "Longbow", img: "weapons img/bows/long/Longbow2.png", desc: "Steady aim and range for PvE utility." },
+      { name: "Black Bow of Pharis", img: "weapons img/bows/long/black_bow_of_pharis.png", desc: "High range and rapid fire potential." }
     ],
     great: [
-      { name: "Dragonrider Bow (nod)", img: PH, desc: "Heavy draw and punishing hits." },
-      { name: "Millwood Greatbow", img: PH, desc: "Detonating arrows and savage knockback." }
+      { name: "Dragonrider Bow (nod)", img: "weapons img/bows/great/dragonrider_bow.png", desc: "Heavy draw and punishing hits." },
+      { name: "Millwood Greatbow", img: "weapons img/bows/great/millwood_greatbow.png", desc: "Detonating arrows and savage knockback." }
     ]
   },
 
   /* ---------- Crossbows ---------- */
   "crossbows": {
     light: [
-      { name: "Light Crossbow", img: PH, desc: "Quick bolts and utility for status arrows." },
-      { name: "Hand Crossbow", img: PH, desc: "One-handed firing for hybrid setups." }
+      { name: "Light Crossbow", img: "weapons img/crossbows/light/light_crossbow.png", desc: "Quick bolts and utility for status arrows." },
+      { name: "Hand Crossbow", img: "weapons img/crossbows/light/hand_crossbow.png", desc: "One-handed firing for hybrid setups." }
     ],
     unique: [
-      { name: "Heavy Crossbow", img: PH, desc: "Slower but heavier punch per shot." },
-      { name: "Avelyn", img: PH, desc: "Triple-shot legend that deletes gaps." },
-      { name: "Repeating Crossbow", img: PH, desc: "Rapid stagger pressure at mid-range." }
+      { name: "Heavy Crossbow", img: "weapons img/crossbows/unique/heavy_crossbow.png", desc: "Slower but heavier punch per shot." },
+      { name: "Avelyn", img: "weapons img/crossbows/unique/avelyn.png", desc: "Triple-shot legend that deletes gaps." },
+      { name: "Repeating Crossbow", img: "weapons img/crossbows/unique/ds3-repeating_crossbow.png", desc: "Rapid stagger pressure at mid-range." }
     ]
   },
 
   /* ---------- Staves (Sorcery) ---------- */
   "staves": {
     basic: [
-      { name: "Sorcerer’s Staff", img: PH, desc: "Starter focus for pure sorcery." },
-      { name: "Heretic’s Staff", img: PH, desc: "Great early scaling with int investment." },
-      { name: "Court Sorcerer’s Staff", img: PH, desc: "Top-tier int scaling; glass-cannon caster’s choice." }
+      { name: "Sorcerer’s Staff", img: "weapons img/staves/basic/sorcerers_staff.png", desc: "Starter focus for pure sorcery." },
+      { name: "Heretic’s Staff", img: "weapons img/staves/basic/heretic-s-staff.png", desc: "Great early scaling with int investment." },
+      { name: "Court Sorcerer’s Staff", img: "weapons img/staves/basic/court_sorcerers_staff.png", desc: "Top-tier int scaling; glass-cannon caster’s choice." }
     ],
     unique: [
-      { name: "Mendicant’s Staff", img: PH, desc: "Slight soul gain; a farm tool for scholars." },
-      { name: "Sage’s Crystal Staff", img: PH, desc: "Burst damage under its weapon art chant." }
+      { name: "Mendicant’s Staff", img: "weapons img/staves/unique/medicants_staff.png", desc: "Slight soul gain; a farm tool for scholars." },
+      { name: "Sage’s Crystal Staff", img: "weapons img/staves/unique/sages_crystal_staff.png", desc: "Burst damage under its weapon art chant." }
     ]
   },
 
   /* ---------- Chimes (Miracles) ---------- */
   "chimes": {
     basic: [
-      { name: "Priest’s Chime", img: PH, desc: "Foundational miracle tool for early faith builds." },
-      { name: "Cleric’s Sacred Chime", img: PH, desc: "Well-rounded miracle focus with decent scaling." },
-      { name: "Talisman of the Sun (chime alt nod)", img: PH, desc: "A sunny focus favored by warriors of light." }
+      { name: "Priest’s Chime", img: "weapons img/chimes/basic/Priest's Chime.png", desc: "Foundational miracle tool for early faith builds." },
+      { name: "Cleric’s Sacred Chime", img: "weapons img/chimes/basic/clerics_sacred_chime.png", desc: "Well-rounded miracle focus with decent scaling." },
+      { name: "Talisman of the Sun (chime alt nod)", img: "weapons img/chimes/basic/sunless_talisman.png", desc: "A sunny focus favored by warriors of light." }
     ],
     unique: [
-      { name: "Yorshka’s Chime", img: PH, desc: "Highest miracle spell-buff at high faith." },
-      { name: "Saint’s Talisman (chime alt)", img: PH, desc: "Poise-casting miracle focus to tank interrupts." }
+      { name: "Yorshka’s Chime", img: "weapons img/chimes/unique/yorshkas_chime.png", desc: "Highest miracle spell-buff at high faith." },
+      { name: "Saint’s Talisman (chime alt)", img: "weapons img/chimes/unique/saints_talisman.png", desc: "Poise-casting miracle focus to tank interrupts." }
     ]
   },
 
   /* ---------- Talismans (Miracles) ---------- */
   "talismans": {
     standard: [
-      { name: "Talisman", img: PH, desc: "Baseline miracle catalyst with balanced scaling." },
-      { name: "Canvas Talisman", img: PH, desc: "Poise-casting makes close-range miracles safer." }
+      { name: "Talisman", img: "weapons img/talismans/standard/talisman.webp", desc: "Baseline miracle catalyst with balanced scaling." },
+      { name: "Canvas Talisman", img: "weapons img/talismans/standard/canvas_talisman.png", desc: "Poise-casting makes close-range miracles safer." }
     ],
     special: [
-      { name: "Sunlight Talisman", img: PH, desc: "Poise-casting and sun-blessed channeling." },
-      { name: "White Hair Talisman", img: PH, desc: "Casts both pyromancies and miracles (hybrid tool)." }
+      { name: "Sunlight Talisman", img: "weapons img/talismans/special/sunlight_talisman.png", desc: "Poise-casting and sun-blessed channeling." },
+      { name: "White Hair Talisman", img: "weapons img/talismans/special/white_hair_talisman.png", desc: "Casts both pyromancies and miracles (hybrid tool)." }
     ]
   },
 
   /* ---------- Pyromancy Flames ---------- */
   "pyromancy": {
     standard: [
-      { name: "Pyromancy Flame", img: PH, desc: "Foundational glove for fire arts; scales with int/faith." }
+      { name: "Pyromancy Flame", img: "weapons img/pyromancy/standard/pyromancer_parting_flame.png", desc: "Foundational glove for fire arts; scales with int/faith." }
     ],
     unique: [
-      { name: "Demon’s Scar", img: PH, desc: "A curved sword that also casts pyromancies—style and utility." }
+      { name: "Demon’s Scar", img: "weapons img/pyromancy/unique/demon's_scar.png", desc: "A curved sword that also casts pyromancies—style and utility." }
     ]
   },
 
   /* ---------- Shields ---------- */
   "shields": {
     small: [
-      { name: "Small Leather Shield", img: PH, desc: "Lightweight parry tool for dexterous duelists." },
-      { name: "Target Shield", img: PH, desc: "Wider parry frames; classic riposte partner." },
-      { name: "Buckler", img: PH, desc: "Fast parry window and quick guard raises." }
+      { name: "Small Leather Shield", img: "weapons img/shields/small/small_leather_shield.png", desc: "Lightweight parry tool for dexterous duelists." },
+      { name: "Target Shield", img: "weapons img/shields/small/target_shield.webp", desc: "Wider parry frames; classic riposte partner." },
+      { name: "Buckler", img: "weapons img/shields/small/buckler.png", desc: "Fast parry window and quick guard raises." }
     ],
     medium: [
-      { name: "Kite Shield", img: PH, desc: "Balanced, reliable blocking across damage types." },
-      { name: "Crest Shield", img: PH, desc: "Magic resist specialty for sorcery-heavy areas." },
-      { name: "Spirit Tree Crest Shield", img: PH, desc: "Lightning resist star; tailor to drakeslaying." }
+      { name: "Kite Shield", img: "weapons img/shields/medium/kite_shield.png", desc: "Balanced, reliable blocking across damage types." },
+      { name: "Crest Shield", img: "weapons img/shields/medium/crest_shield.png", desc: "Magic resist specialty for sorcery-heavy areas." },
+      { name: "Spirit Tree Crest Shield", img: "weapons img/shields/medium/spirit_tree_crest_shield.png", desc: "Lightning resist star; tailor to drakeslaying." }
     ],
     great: [
-      { name: "Greatshield of Glory", img: PH, desc: "Immense guard but stamina recovery penalty." },
-      { name: "Lothric Knight Greatshield", img: PH, desc: "Stable bulwark used by Lothric’s elites." },
-      { name: "Yhorm’s Greatshield", img: PH, desc: "Gigantic slab that laughs at small arms." },
-      { name: "Wolf Knight’s Greatshield", img: PH, desc: "Artorias’ emblem offering stalwart protection." }
+      { name: "Greatshield of Glory", img: "weapons img/shields/great/greatshield_of_glory.png", desc: "Immense guard but stamina recovery penalty." },
+      { name: "Lothric Knight Greatshield", img: "weapons img/shields/great/lothric_knight_greatshield.png", desc: "Stable bulwark used by Lothric’s elites." },
+      { name: "Yhorm’s Greatshield", img: "weapons img/shields/great/yhorms_greatshield.png", desc: "Gigantic slab that laughs at small arms." },
+      { name: "Wolf Knight’s Greatshield", img: "weapons img/shields/great/wolf_knights_greatshield.png", desc: "Artorias’ emblem offering stalwart protection." }
     ]
   }
 };
