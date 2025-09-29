@@ -475,7 +475,7 @@ ul {
 /* Lore page layout */
 .lore-wrap {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* left = 2/3, right = 1/3 */
+  grid-template-columns: 2fr 1.2fr; /* left = 2 parts, right = a little larger */
   gap: 20px;
   align-items: start;
 }
@@ -485,17 +485,26 @@ ul {
 }
 
 .lore-right {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* two images side by side */
-  gap: 12px;
+  display: flex;
+  justify-content: center; /* center the whole stack inside the aside */
   padding: 20px;
 }
 
-.lore-right img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 6px;
+/* 🔹 Lore Aside Images */
+.aside-images-lore {
+  display: flex;
+  flex-direction: column;  /* stack vertically */
+  gap: 20px;               /* space between images */
+  width: 100%;             /* full aside width */
+  max-width: 500px;        /* keeps them from being too huge */
+  align-items: center;     /* center images inside stack */
+}
+
+.aside-images-lore img {
+  width: 100%;             /* each image fills its container */
+  height: auto;            /* preserve aspect ratio */
+  border-radius: 8px;      /* optional rounded corners */
+  object-fit: cover;       /* fill space nicely */
   border: 1px solid var(--border);
 }
 
@@ -526,6 +535,23 @@ ul {
 .lore-btn:active {
   transform: translateY(0); /* press effect */
 }
+
+/* 🔹 Ashes of Ariandel images (2x2 grid) */
+#ash-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* 2 columns */
+  gap: 16px;                       /* space between items */
+  margin: 20px 0;
+}
+
+#ash-images img {
+  width: 100%;                     /* each image fills its grid cell */
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  object-fit: cover;
+}
+
 
 
 
