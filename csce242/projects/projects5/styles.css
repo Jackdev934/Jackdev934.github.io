@@ -100,7 +100,7 @@ ul {
   text-align: center;
   cursor: pointer;
   transition: background 0.3s ease;
-  min-height: 40px;   /* ✅ keeps all buttons same height */
+  min-height: 40px;
 }
 .pill:hover {
   background: #a30012;
@@ -259,7 +259,7 @@ ul {
   align-items: stretch;
   gap: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 360px;   /* ✅ consistent height */
+  min-height: 360px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -271,8 +271,8 @@ ul {
 
 .place-card img {
   width: 100%;
-  height: 220px;       /* ✅ uniform height */
-  object-fit: cover;   /* ✅ crops nicely */
+  height: 220px;
+  object-fit: cover;
   border-radius: var(--radius);
   border: 1px solid var(--border);
 }
@@ -328,7 +328,7 @@ ul {
   border-radius: var(--radius);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
-  min-height: 480px;   /* ✅ default desktop height */
+  min-height: 480px;
 }
 
 .char-card:hover, .boss-card:hover {
@@ -353,7 +353,6 @@ ul {
 .boss-title { text-align: center; margin: 20px 0; }
 
 /* Weapons page */
-
 .weapon-container {
   width: 94%;
   max-width: 1280px;
@@ -361,7 +360,6 @@ ul {
   padding: 0 12px;
 }
 
-/* Page title */
 .weapon-head-title {
   text-align: center;
   margin-bottom: 20px;
@@ -369,7 +367,6 @@ ul {
   color: var(--text);
 }
 
-/* Layout for all weapon sections */
 .weapon-sections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -377,7 +374,6 @@ ul {
   margin: 20px;
 }
 
-/* Each weapon class block */
 .weapon-section {
   background: var(--panel-alt);
   border: 1px solid var(--border);
@@ -385,7 +381,6 @@ ul {
   padding: 16px;
 }
 
-/* Titles for each weapon class */
 .weapon-section h2 {
   font-size: 22px;
   margin-bottom: 12px;
@@ -393,7 +388,6 @@ ul {
   text-align: center;
 }
 
-/* Subclass gallery inside each section */
 .scroll-gallery {
   display: flex;
   overflow-x: auto;
@@ -409,7 +403,6 @@ ul {
   border-radius: 4px;
 }
 
-/* Subclass card */
 .subclass-card {
   flex: 0 0 auto;
   scroll-snap-align: start;
@@ -444,7 +437,6 @@ ul {
   background: #73000A;
 }
 
-/* Weapon detail modal */
 #weaponDetailModal .modal-content {
   max-width: 500px;
   text-align: center;
@@ -459,60 +451,52 @@ ul {
 #weaponDetailDesc {
   margin-top: 12px;
   font-size: 15px;
-  color: #cfcfcf;
+  color: var(--muted);
   line-height: 1.4;
 }
 
-/* Weapon modal images */
 #weaponModal .slide img {
-  width: 250px;     /* fixed width */
-  height: auto;     /* keeps aspect ratio */
+  width: 250px;
+  height: auto;
   margin: 0 auto 12px;
-  display: block;   /* centers it */
+  display: block;
   object-fit: contain;
 }
 
 /* Lore page layout */
 .lore-wrap {
   display: grid;
-  grid-template-columns: 2fr 1.2fr; /* left = 2 parts, right = a little larger */
+  grid-template-columns: 2fr 1.2fr;
   gap: 20px;
   align-items: start;
 }
 
-.lore-left {
-  padding: 20px;
-}
+.lore-left { padding: 20px; }
 
 .lore-right {
   display: flex;
-  justify-content: center; /* center the whole stack inside the aside */
+  justify-content: center;
   padding: 20px;
 }
 
-/* 🔹 Lore Aside Images */
 .aside-images-lore {
   display: flex;
-  flex-direction: column;  /* stack vertically */
-  gap: 20px;               /* space between images */
-  width: 100%;             /* full aside width */
-  max-width: 500px;        /* keeps them from being too huge */
-  align-items: center;     /* center images inside stack */
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  align-items: center;
 }
 
 .aside-images-lore img {
-  width: 100%;             /* each image fills its container */
-  height: auto;            /* preserve aspect ratio */
-  border-radius: 8px;      /* optional rounded corners */
-  object-fit: cover;       /* fill space nicely */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
   border: 1px solid var(--border);
 }
 
-/* Lore page buttons */
-.lore-buttons {
-  margin-top: 16px;
-  gap: 12px;
-}
+.lore-buttons { margin-top: 16px; gap: 12px; }
 
 .lore-btn {
   background: var(--accent);
@@ -526,32 +510,98 @@ ul {
   text-align: center;
   transition: background 0.3s ease, transform 0.2s ease;
 }
+.lore-btn:hover { background: #a30012; transform: translateY(-2px); }
+.lore-btn:active { transform: translateY(0); }
 
-.lore-btn:hover {
-  background: #a30012;   /* darker red hover */
-  transform: translateY(-2px);
-}
-
-.lore-btn:active {
-  transform: translateY(0); /* press effect */
-}
-
-/* 🔹 Ashes of Ariandel images (2x2 grid) */
 #ash-images {
   display: grid;
-  grid-template-columns: 1fr 1fr;  /* 2 columns */
-  gap: 16px;                       /* space between items */
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
   margin: 20px 0;
 }
-
 #ash-images img {
-  width: 100%;                     /* each image fills its grid cell */
+  width: 100%;
   height: auto;
   border-radius: 6px;
   border: 1px solid var(--border);
   object-fit: cover;
 }
 
+/* =========================
+   Guides & Walkthrough
+   ========================= */
+.guide-band {
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--panel-alt);
+  margin-bottom: 24px;
+}
+
+
+.guide-band .grid {
+  width: 96%;           /* make it a little wider than default */
+  max-width: 1400px;    /* larger than global 1280px */
+  margin: 0 auto;       /* keep centered */
+}
+
+
+.guide-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.guide-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.guide-card figcaption {
+  padding: 12px;
+  font-size: 15px;
+  color: var(--text);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.guide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.divider-line {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  border-top: 1px solid var(--border);
+}
+
+/* Video Modal */
+.video-modal {
+  max-width: 800px;
+  width: 90%;
+  background: #000;
+  border-radius: 8px;
+  padding: 0;
+}
+
+.video-modal iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 6px;
+}
 
 
 
@@ -581,8 +631,6 @@ ul {
   text-align: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   animation: fadeIn 0.3s ease-in-out;
-
-  /* make arrows position against this box */
   position: relative;
 }
 
@@ -595,19 +643,17 @@ ul {
 }
 .close:hover { color: #fff; }
 
-/* Force all modal images to same size */
 #char-modal-img {
-  width: 300px;         
-  height: 400px;       
-  object-fit: cover;    
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
   display: block;
-  margin-left: auto; 
-  margin-right: auto;   
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Modal for Locations */
 #place-modal-img {
   width: 600px;
   height: 400px;
@@ -617,7 +663,6 @@ ul {
   display: block;
 }
 
-/* Slideshow styling */
 .slideshow-container {
   position: relative;
   margin: auto;
@@ -632,8 +677,6 @@ ul {
   margin-bottom: 15px;
 }
 
-/* Next & previous buttons (carousel style) */
-/* Slideshow arrows */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -647,16 +690,13 @@ ul {
   user-select: none;
   border-radius: 4px;
   background: rgba(0,0,0,0.4);
-  z-index: 1100; /* keeps arrows on top of slides */
+  z-index: 1100;
 }
 .next { right: 10px; }
 .prev { left: 10px; }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.6);
-}
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.6); }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
@@ -666,57 +706,35 @@ ul {
    Responsive
    ========================= */
 @media (max-width: 1100px) {
-  .page-wrap {
-    grid-template-columns: 1fr;
-  }
+  .page-wrap { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 900px) {
-  .row-tiles {
-    grid-template-columns: 50% 50%;
-  }
+  .row-tiles { grid-template-columns: 50% 50%; }
 
-  .char-card, .boss-card {
-    min-height: 420px;   /* ✅ shrink on medium screens */
-  }
-  .char-card img, .boss-card img {
-    height: 280px;
-  }
+  .char-card, .boss-card { min-height: 420px; }
+  .char-card img, .boss-card img { height: 280px; }
+
+  .grid.grid-3 { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
-  .char-card, .boss-card {
-    min-height: 360px;   /* ✅ shrink further on phones */
-  }
-  .char-card img, .boss-card img {
-    height: 240px;
-  }
+  .char-card, .boss-card { min-height: 360px; }
+  .char-card img, .boss-card img { height: 240px; }
+
+  .grid.grid-3 { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 760px) {
-  .grid-4, .grid-3, .grid-2, .world-grid {
-    grid-template-columns: 100%;
-  }
-  .row-tiles {
-    grid-template-columns: 100%;
-  }
-  .title-bar h1 {
-    font-size: 32px;
-  }
+  .grid-4, .grid-3, .grid-2, .world-grid { grid-template-columns: 100%; }
+  .row-tiles { grid-template-columns: 100%; }
+  .title-bar h1 { font-size: 32px; }
 
-  /* Hamburger replaces nav */
   .top-nav .nav-row {
     display: none;
     flex-direction: column;
     gap: 8px;
   }
-
-  .top-nav .nav-row.show {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-    margin: 10px auto;
-  }
+  .top-nav .nav-row.show { display: flex; }
+  .hamburger { display: block; margin: 10px auto; }
 }
