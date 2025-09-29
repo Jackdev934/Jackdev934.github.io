@@ -17,7 +17,6 @@ const afterPics = {
 };
 
 // Load Gallery
-
 const gallery = document.getElementById("gallery");
 
 for (let name in beforePics) {
@@ -34,12 +33,10 @@ for (let name in beforePics) {
   const caption = document.createElement("span");
   caption.textContent = `${name} - Please Adopt!`;
 
-  // Put together
   card.appendChild(img);
   card.appendChild(caption);
   gallery.appendChild(card);
 
-  // Click Event for Popup
 
   img.addEventListener("click", () => {
     document.getElementById("popup-title").textContent = `${name} - After Adoption`;
