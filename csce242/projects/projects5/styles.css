@@ -1,12 +1,12 @@
 :root {
-  --bg: #0b0f14;
-  --surface: #11161c;
-  --panel: #5a4435;
-  --panel-alt: #181c22;
-  --border: #2a2f36;
-  --text: #edecec;
-  --muted: #cfcfcf;
-  --accent: #73000A;
+  --bg: #0d0d0f;
+  --surface: #1a1c1f;
+  --panel: #2c2620;
+  --panel-alt: #23262b;
+  --border: #3a3d42;
+  --text: #e6e6e6;
+  --muted: #b3b3b3;
+  --accent: #8b1a1a;
   --radius: 6px;
 }
 
@@ -32,7 +32,7 @@ img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  background: #dcdcdc;
+  background: #222;
   border: 1px solid var(--border);
 }
 
@@ -99,11 +99,12 @@ ul {
   border-radius: 20px;
   text-align: center;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   min-height: 40px;
 }
 .pill:hover {
-  background: #a30012;
+  background: #a82323;
+  box-shadow: 0 0 8px rgba(180, 60, 40, 0.6);
 }
 
 /* =========================
@@ -149,17 +150,18 @@ ul {
   color: var(--text);
   border-radius: 4px;
   white-space: nowrap;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .top-nav a:hover,
 .top-nav a:focus {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(200, 40, 40, 0.15);
+  box-shadow: 0 0 6px rgba(180, 40, 40, 0.4);
   outline: none;
 }
 
 .top-nav .active {
-  box-shadow: inset 0 -2px 0 var(--text);
+  box-shadow: inset 0 -2px 0 var(--accent);
 }
 
 /* Hamburger Menu */
@@ -202,6 +204,98 @@ ul {
 .tile p { text-align: center; color: var(--muted); }
 
 /* =========================
+   Community Artwork Gallery
+   ========================= */
+.scroll-gallery {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-top: 12px;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 12px;
+}
+
+.scroll-track img {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-track img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(139,26,26,0.6);
+}
+
+/* Artwork Modal */
+#artModal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.9);
+}
+
+#artModal .modal-content {
+  display: block;
+  margin: 5% auto;
+  max-width: 60%;   
+  max-height: 60%;  
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.8);
+}
+
+
+#artModal .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#artModalCaption {
+  margin: 10px auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+
+/* =========================
+   World Map Section
+   ========================= */
+.world-map-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.world-map {
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* =========================
    Community Page Layout Fix
    ========================= */
 .community-wrap {
@@ -209,7 +303,6 @@ ul {
   align-items: start;
 }
 
-/* Left + Right Columns */
 .community-left,
 .community-right {
   padding: 20px;
@@ -296,7 +389,6 @@ ul {
   }
 }
 
-
 /* =========================
    Cards - World Locations
    ========================= */
@@ -324,7 +416,7 @@ ul {
 
 .place-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 15px rgba(139, 26, 26, 0.5);
 }
 
 .place-card img {
@@ -350,12 +442,17 @@ ul {
 }
 
 .info-rows button {
-  background: #20252b;
+  background: #2a2a2a;
   color: #fff;
   border: 1px solid var(--border);
   padding: 10px;
   text-align: left;
   border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.info-rows button:hover {
+  background: #3a3a3a;
 }
 
 .other-games {
@@ -391,7 +488,7 @@ ul {
 
 .char-card:hover, .boss-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 15px rgba(139, 26, 26, 0.5);
 }
 
 .char-card img, .boss-card img {
@@ -410,7 +507,9 @@ ul {
 
 .boss-title { text-align: center; margin: 20px 0; }
 
-/* Weapons page */
+/* =========================
+   Weapons page
+   ========================= */
 .weapon-container {
   width: 94%;
   max-width: 1280px;
@@ -468,7 +567,7 @@ ul {
   flex-direction: column;
   align-items: center;
   width: 120px;
-  background: #181c22;
+  background: #1a1a1d;
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 8px;
@@ -484,7 +583,7 @@ ul {
 }
 .subclass-card button {
   font-size: 14px;
-  background: #5a4435;
+  background: #2c2620;
   border: none;
   padding: 4px 8px;
   border-radius: 4px;
@@ -492,7 +591,7 @@ ul {
   cursor: pointer;
 }
 .subclass-card button:hover {
-  background: #73000A;
+  background: #8b1a1a;
 }
 
 #weaponDetailModal .modal-content {
@@ -521,7 +620,9 @@ ul {
   object-fit: contain;
 }
 
-/* Lore page layout */
+/* =========================
+   Lore page layout
+   ========================= */
 .lore-wrap {
   display: grid;
   grid-template-columns: 2fr 1.2fr;
@@ -566,24 +667,10 @@ ul {
   border-radius: var(--radius);
   cursor: pointer;
   text-align: center;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
-.lore-btn:hover { background: #a30012; transform: translateY(-2px); }
+.lore-btn:hover { background: #a82323; transform: translateY(-2px); box-shadow: 0 0 6px rgba(180,60,40,0.6); }
 .lore-btn:active { transform: translateY(0); }
-
-#ash-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin: 20px 0;
-}
-#ash-images img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  object-fit: cover;
-}
 
 /* =========================
    Guides & Walkthrough
@@ -596,13 +683,11 @@ ul {
   margin-bottom: 24px;
 }
 
-
 .guide-band .grid {
-  width: 96%;           /* make it a little wider than default */
-  max-width: 1400px;    /* larger than global 1280px */
-  margin: 0 auto;       /* keep centered */
+  width: 96%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-
 
 .guide-card {
   background: var(--panel);
@@ -636,7 +721,7 @@ ul {
 
 .guide-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 15px rgba(139, 26, 26, 0.5);
 }
 
 .divider-line {
@@ -661,7 +746,6 @@ ul {
   border-radius: 6px;
 }
 
-
 /* Hover effect for artwork */
 .art-img {
   cursor: pointer;
@@ -669,7 +753,7 @@ ul {
 }
 .art-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  box-shadow: 0 6px 18px rgba(139,26,26,0.6);
 }
 
 /* Image Modal */
@@ -745,9 +829,41 @@ ul {
 }
 
 .upload-submit:hover {
-  background: #a30012;
+  background: #a82323;
 }
 
+/* About Us Layout */
+.about-wrap {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr; /* content + map */
+  gap: 24px;
+  align-items: start;
+}
+
+.about-left {
+  padding: 20px;
+}
+
+.about-right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about-right iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* Responsive stacking */
+@media (max-width: 900px) {
+  .about-wrap {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 /* =========================
