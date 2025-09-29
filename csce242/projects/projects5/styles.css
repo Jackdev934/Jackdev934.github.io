@@ -965,3 +965,18 @@ ul {
   .top-nav .nav-row.show { display: flex; }
   .hamburger { display: block; margin: 10px auto; }
 }
+
+/* Small screens: stack columns vertically */
+@media (max-width: 768px) {
+  .lore-wrap {
+    grid-template-columns: 1fr; 
+  }
+
+  .lore-right {
+    order: 2;   
+  }
+
+  .lore-left {
+    order: 1;
+  }
+}
