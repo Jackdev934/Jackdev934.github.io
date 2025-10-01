@@ -181,7 +181,30 @@ h2 {
         top:0px;
         left:0;
     }
-  }
+}
+
+/*Dog Classes*/
+#dog-list {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+.dog{
+    background-color: blue;
+    margin: 20px;
+    width: 90%;
+    padding: 10px; 
+    border-radius: 10px;
+    color: white;
+}
+
+.dog img{
+    max-width: 100%;
+    height: auto;
+}
+
+
 
 /* Playing with positioning */
 #main-logo {
