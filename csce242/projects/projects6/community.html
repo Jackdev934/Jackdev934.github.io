@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Community & Art • Astora's Archive</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header class="title-bar"><h1>Community and Art</h1></header>
+        <div class="top-nav">
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <nav class="nav-row" id="navRow">
+                <a href="index.html">Home</a>
+                <a href="bosses.html">Bosses</a>
+                <a href="characters.html">Characters</a>
+                <a href="weapons.html">Weapons &amp; Tools</a>
+                <a href="world.html">World Location</a>
+                <a href="lore.html">Lore &amp; Story</a>
+                <a href="guides.html">Guides &amp; Walkthrough</a>
+                <a class="active" href="#">Community</a>
+                <a href="about.html">About Us</a>
+                <a href="sign.html">Sign In</a>
+            </nav>
+        </div>
+
+        <main class="container grid grid-2 community-wrap">
+            <section class="band-dark community-left">
+                <h3>Community Artwork</h3>
+                <!-- Upload button -->
+                <button class="upload-btn">Upload an Image</button>
+                <div class="grid grid-2 thumbs">
+                    <img src="artwork/art1.jpeg" class="art-img">
+                    <img src="artwork/art2.jpeg" class="art-img">
+                    <img src="artwork/art3.jpeg" class="art-img">
+                    <img src="artwork/art4.jpeg" class="art-img">
+                    <img src="artwork/art5.jpeg" class="art-img">
+                    <img src="artwork/art6.jpeg" class="art-img">
+                </div>
+            </section>
+
+            <aside class="community-right">
+                <section class="band-dark">
+                    <h3>Bosses Artwork</h3>
+                    <div class="grid grid-3 comm-grid">
+                        <img src="artwork/art7.jpeg" class="art-img">
+                        <img src="artwork/art8.jpeg" class="art-img">
+                        <img src="artwork/art9.jpeg" class="art-img">
+                    </div>
+                </section>
+                <section class="band-dark">
+                    <h3>In Game Pictures</h3>
+                    <div class="grid grid-3 comm-grid">
+                        <img src="artwork/art13.jpg" class="art-img">
+                        <img src="artwork/art14.jpeg" class="art-img">
+                        <img src="artwork/art15.jpeg" class="art-img">
+                    </div>
+                </section>
+                <section class="band-dark">
+                    <h3>Characters Artwork</h3>
+                    <div class="grid grid-3 comm-grid">
+                        <img src="artwork/art10.jpeg" class="art-img">
+                        <img src="artwork/art11.jpeg" class="art-img">
+                        <img src="artwork/art12.jpeg" class="art-img">
+                    </div>
+                </section>
+            </aside>
+        </main>
+
+        <!--Image Modal -->
+        <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <!--Upload Modal -->
+        <div id="uploadModal" class="modal">
+            <div class="modal-content upload-modal">
+                <span class="close">&times;</span>
+                <h2>Upload Your Image</h2>
+                <form>
+                    <input type="file" id="uploadFile" accept="image/*" disabled>
+                    <br><br>
+                    <button type="button" class="upload-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="java/nav-tog.js"></script>
+        <script src="java/community.js"></script>
+    </body>
+</html>
