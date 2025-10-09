@@ -1035,118 +1035,66 @@ ul {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Responsive */
+/* =========================
+   Responsive media queries
+   (organized, same behavior)
+   ========================= */
+
+/* <= 1100px
+   - Collapse page-wrap to a single column
+*/
 @media (max-width: 1100px) {
   .page-wrap { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 900px) {
-  .row-tiles { grid-template-columns: 50% 50%; }
-
-  .char-card, .boss-card { min-height: 420px; }
-  .char-card img, .boss-card img { height: 280px; }
-
-  .grid.grid-3 { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 600px) {
-  .char-card, .boss-card { min-height: 360px; }
-  .char-card img, .boss-card img { height: 240px; }
-
-  .grid.grid-3 { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 760px) {
-  .grid-4, .grid-3, .grid-2, .world-grid { grid-template-columns: 100%; }
-  .row-tiles { grid-template-columns: 100%; }
-  .title-bar h1 { font-size: 32px; }
-
-  .top-nav .nav-row {
-    display: none;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .top-nav .nav-row.show { display: flex; }
-  .hamburger { display: block; margin: 10px auto; }
-}
-
-/* Small screens: stack columns vertically */
-@media (max-width: 768px) {
-  .lore-wrap {
-    grid-template-columns: 1fr; 
-  }
-
-  .lore-right {
-    order: 2;   
-  }
-
-  .lore-left {
-    order: 1;
-  }
-}
-
-/* -------------------------
-   Small-screen responsive tweaks
-   ------------------------- */
-
-/* Make the overall page and community blocks stack earlier and use full width */
+/* <= 1000px
+   - Container & community blocks stack earlier
+*/
 @media (max-width: 1000px) {
   .container { width: 96%; padding: 12px; }
   .page-wrap, .community-wrap { grid-template-columns: 1fr; gap: 18px; }
   .community-left, .community-right { width: 100%; padding: 14px; }
 }
 
-/* Thumbs / artwork grid adjustments */
+/* <= 900px
+   - Main tablet breakpoint: multiple adjustments consolidated here
+   - Row tiles -> two columns, thumbs & comm-grid adjustments, image modal sizing
+   - Lore layout stacks (keeps previous behavior)
+*/
 @media (max-width: 900px) {
+  /* row / cards */
+  .row-tiles { grid-template-columns: 50% 50%; }
+
+  .char-card, .boss-card { min-height: 420px; }
+  .char-card img, .boss-card img { height: 280px; }
+
+  /* grids */
+  .grid.grid-3 { grid-template-columns: 1fr 1fr; }
+  .grid.grid-4, .grid-3, .grid-2, .world-grid { /* included earlier smaller-breakpoint rule (max-width:760) */ }
+
+  /* Thumbs / artwork grids */
   .grid.grid-2.thumbs {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
-
   .grid.grid-3.comm-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
-
   .thumbs img,
   .comm-grid img,
   .scroll-track img {
     height: 160px; /* reduce image height on smaller screens */
   }
-
   .upload-btn {
     width: 100%;
     padding: 12px;
     font-size: 16px;
   }
-}
 
-/* Narrow phone sizes */
-@media (max-width: 480px) {
-  .grid.grid-2.thumbs,
-  .grid.grid-3.comm-grid {
-    grid-template-columns: 1fr; /* single column stacks */
-  }
-
-  .thumbs img,
-  .comm-grid img,
-  .scroll-track img {
-    height: auto;
-    max-height: 40vh;
-    width: 100%;
-  }
-
-  .title-bar h1 { font-size: 28px; }
-  .top-nav .nav-row { padding: 8px; gap: 6px; }
-  .top-nav a { padding: 8px 10px; font-size: 14px; }
-
-  .upload-btn { font-size: 15px; padding: 10px; }
-}
-
-/* Make image modal fit on small screens without overflow */
-@media (max-width: 900px) {
+  /* Make image modal fit on small screens without overflow */
   #imgModal .modal-content {
     max-width: 92%;
     max-height: 86vh;
@@ -1167,20 +1115,129 @@ ul {
     right: 18px;
     font-size: 28px;
   }
+
+  /* Lore: stack sections vertically and adjust images/buttons */
+  .lore-wrap {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    padding: 16px;
+  }
+  .lore-left, .lore-right {
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+    box-sizing: border-box;
+  }
+  .lore-left { order: 1; }
+  .lore-right { order: 2; }
+  .lore-left h3,
+  .lore-left h2 { font-size: 18px; margin-bottom: 8px; }
+  .lore-left p { font-size: 15px; line-height: 1.5; margin-bottom: 10px; }
+
+  .aside-images-lore {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .aside-images-lore img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  #ash-images {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  #ash-images img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .lore-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .lore-buttons .lore-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
 }
 
-/* Upload modal adjustments */
-@media (max-width: 700px) {
-  .upload-modal {
-    width: 94%;
-    padding: 14px;
+/* <= 760px
+   - Make many grids full-width, show hamburger
+*/
+@media (max-width: 760px) {
+  .grid-4, .grid-3, .grid-2, .world-grid { grid-template-columns: 100%; }
+  .row-tiles { grid-template-columns: 100%; }
+  .title-bar h1 { font-size: 32px; }
+
+  .top-nav .nav-row {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
   }
+  .top-nav .nav-row.show { display: flex; }
+  .hamburger { display: block; margin: 10px auto; }
+}
+
+/* <= 700px
+   - Upload modal and inputs sizing */
+@media (max-width: 700px) {
+  .upload-modal { width: 94%; padding: 14px; }
   .upload-modal h2 { font-size: 18px; }
   .upload-submit { width: 100%; padding: 10px; }
   .upload-input { width: 100%; }
 }
 
-/* Minor touch improvements */
+/* <= 600px
+   - Smaller card heights and images */
+@media (max-width: 600px) {
+  .char-card, .boss-card { min-height: 360px; }
+  .char-card img, .boss-card img { height: 240px; }
+
+  .grid.grid-3 { grid-template-columns: 1fr; }
+}
+
+/* <= 480px
+   - Narrow phone sizes: single-column stacks, reduced header, touch-friendly */
+@media (max-width: 480px) {
+  .grid.grid-2.thumbs,
+  .grid.grid-3.comm-grid {
+    grid-template-columns: 1fr; /* single column stacks */
+  }
+
+  .thumbs img,
+  .comm-grid img,
+  .scroll-track img {
+    height: auto;
+    max-height: 40vh;
+    width: 100%;
+  }
+
+  .title-bar h1 { font-size: 28px; }
+  .top-nav .nav-row { padding: 8px; gap: 6px; }
+  .top-nav a { padding: 8px 10px; font-size: 14px; }
+
+  .upload-btn { font-size: 15px; padding: 10px; }
+
+  /* Lore narrow stacking adjustments */
+  .aside-images-lore { grid-template-columns: 1fr; }
+  #ash-images { grid-template-columns: 1fr; }
+
+  .lore-left p { font-size: 15px; }
+  .lore-buttons { grid-template-columns: 1fr; }
+  .lore-buttons .lore-btn { padding: 12px; font-size: 16px; }
+}
+
+/* Touch-only devices: remove hover effects */
 @media (hover: none) {
   .art-img:hover, .scroll-track img:hover { transform: none; box-shadow: none; }
 }
