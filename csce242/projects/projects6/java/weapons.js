@@ -22,7 +22,7 @@ const weaponsData = {
       { name: "Broadsword", img: "weapons img/straight-swords/broadswords/broadsword.png", desc: "Short reach but high base damage; aggressive and straightforward." }
     ],
     shortswords: [
-      { name: "Shortsword", img: "weapons img/straight-swords/shortswords/shortsword2.png", desc: "A compact blade with fast swings; great as an off-hand or parry complement." }
+      { name: "Shortsword", img: "weapons img/straight-swords/shortswords/Shortsword2.png", desc: "A compact blade with fast swings; great as an off-hand or parry complement." }
     ]
   },
 
