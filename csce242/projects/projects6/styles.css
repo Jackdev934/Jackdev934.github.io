@@ -1084,3 +1084,103 @@ ul {
     order: 1;
   }
 }
+
+/* -------------------------
+   Small-screen responsive tweaks
+   ------------------------- */
+
+/* Make the overall page and community blocks stack earlier and use full width */
+@media (max-width: 1000px) {
+  .container { width: 96%; padding: 12px; }
+  .page-wrap, .community-wrap { grid-template-columns: 1fr; gap: 18px; }
+  .community-left, .community-right { width: 100%; padding: 14px; }
+}
+
+/* Thumbs / artwork grid adjustments */
+@media (max-width: 900px) {
+  .grid.grid-2.thumbs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .grid.grid-3.comm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .thumbs img,
+  .comm-grid img,
+  .scroll-track img {
+    height: 160px; /* reduce image height on smaller screens */
+  }
+
+  .upload-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Narrow phone sizes */
+@media (max-width: 480px) {
+  .grid.grid-2.thumbs,
+  .grid.grid-3.comm-grid {
+    grid-template-columns: 1fr; /* single column stacks */
+  }
+
+  .thumbs img,
+  .comm-grid img,
+  .scroll-track img {
+    height: auto;
+    max-height: 40vh;
+    width: 100%;
+  }
+
+  .title-bar h1 { font-size: 28px; }
+  .top-nav .nav-row { padding: 8px; gap: 6px; }
+  .top-nav a { padding: 8px 10px; font-size: 14px; }
+
+  .upload-btn { font-size: 15px; padding: 10px; }
+}
+
+/* Make image modal fit on small screens without overflow */
+@media (max-width: 900px) {
+  #imgModal .modal-content {
+    max-width: 92%;
+    max-height: 86vh;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  #imgModal .modal-content img,
+  #modalImg {
+    width: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+  #imgModal .close {
+    top: 12px;
+    right: 18px;
+    font-size: 28px;
+  }
+}
+
+/* Upload modal adjustments */
+@media (max-width: 700px) {
+  .upload-modal {
+    width: 94%;
+    padding: 14px;
+  }
+  .upload-modal h2 { font-size: 18px; }
+  .upload-submit { width: 100%; padding: 10px; }
+  .upload-input { width: 100%; }
+}
+
+/* Minor touch improvements */
+@media (hover: none) {
+  .art-img:hover, .scroll-track img:hover { transform: none; box-shadow: none; }
+}
