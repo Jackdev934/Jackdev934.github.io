@@ -176,6 +176,8 @@
         </div>
       </div>
 
+      <div id="char-list"></div>
+
       <!-- Modal -->
       <div id="charModal" class="modal">
         <div class="modal-content">
@@ -185,10 +187,14 @@
           <p id="char-modal-text">Character description goes here.</p>
         </div>
       </div>
-
     </main>
 
     <script src="java/characters.js"></script>
     <script src="java/nav-tog.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (typeof showChar === "function") showChar();
+      });
+    </script>
   </body>
 </html>
