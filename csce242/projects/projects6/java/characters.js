@@ -10,7 +10,7 @@ let charInfo = [];
 
 // Fetch characters from JSON
 const getChar = async () => {
-  const url = "https://raw.githubusercontent.com/Jackdev934/Jackdev934.github.io/main/csce242/projects/projects6/java/json/characters.json";
+  const url = "https://raw.githubusercontent.com/Jackdev934/Jackdev934.github.io/refs/heads/main/csce242/projects/projects6/java/json/characters.json";
 
   try {
     const response = await fetch(url);
