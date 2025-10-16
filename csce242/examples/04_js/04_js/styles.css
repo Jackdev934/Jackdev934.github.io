@@ -310,7 +310,8 @@ footer p {
 
 #map {
     width:100%;
-    height:500px;
+    margin:5%;
+    height: 500px;
 }
 
 
