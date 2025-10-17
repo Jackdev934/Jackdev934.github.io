@@ -37,7 +37,8 @@
                     <p>Email: someone123@gmail.com</p>
 
                     <form method="POST" id="contact-form">
-                    <input type="hidden" name="access_key" value="8bb4245c-6735-4353-887e-ffad510d947d">
+
+                        <input type="hidden" name="access_key" value="8bb4245c-6735-4353-887e-ffad510d947d">
 
                         <p>
                             <label for = "name"> Name:</label>
@@ -54,10 +55,9 @@
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                         <button type="submit">Submit Form</button>
-
-                        <div id="contact-result"></div>
-
                     </form>
+
+                    <div id="contact-result" aria-live="polite" role="status"></div>
                 </div>
             </section>
 
