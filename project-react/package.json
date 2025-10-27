@@ -1,5 +1,5 @@
 {
-  "homepage":"/jackdev934.github.io/project-react/",
+  "homepage": "/jackdev934.github.io",
   "name": "project-react",
   "version": "0.1.0",
   "private": false,
@@ -19,8 +19,8 @@
     "build": "react-scripts build --add --history false",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
