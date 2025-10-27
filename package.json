@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Jackdev934/Jackdev934.github.io/issues"
   },
-  "homepage": "https://github.com/Jackdev934/Jackdev934.github.io#readme"
+  "homepage": "https://github.com/Jackdev934/Jackdev934.github.io#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
