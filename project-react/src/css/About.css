@@ -1,4 +1,3 @@
-/* ===== About Us — Dark UI to match Sign In (no brown) ===== */
 
 .about-wrap {
   display: grid;
@@ -7,7 +6,6 @@
   align-items: start;
 }
 
-/* Card-style panels (same look as .signin-card) */
 .about-left,
 .about-right {
   background: var(--surface, #11161c);
@@ -18,7 +16,7 @@
   color: var(--text, #edecec);
 }
 
-/* Headings inside About */
+
 .about-left h3,
 .about-right h3 {
   margin: 0 0 12px;
@@ -29,7 +27,7 @@
   padding-bottom: 8px;
 }
 
-/* Map card (keeps same dark card look) */
+
 .map-wrap {
   margin-top: 12px;
   background: var(--surface, #11161c);
@@ -46,7 +44,6 @@
   display: block;
 }
 
-/* Contact panel uses panel-alt like your sign-in inputs */
 .about-left .contact {
   background: var(--panel-alt, #181c22);
   border: 1px solid var(--border, #2a2f36);
@@ -84,7 +81,6 @@
   box-shadow: 0 0 0 1px rgba(115,0,10,0.25);
 }
 
-/* Form styles — identical palette to Sign In */
 #contact-form { display: grid; gap: 12px; margin-top: 8px; }
 #contact-form .form-row-contact {
   display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
@@ -160,7 +156,6 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
   color: var(--text, #edecec) !important;
 }
-
 
 /* Responsive */
 @media (max-width: 900px) {

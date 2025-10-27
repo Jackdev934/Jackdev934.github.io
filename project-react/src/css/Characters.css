@@ -1,17 +1,17 @@
-/* ===== FORCE 4-UP UNIFORM GRID ON DESKTOP ===== */
+
 .page .container .character-grid,
 .character-grid.grid,
 .character-grid.grid-4 {
   display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important; /* lock 4 columns */
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   gap: 24px !important;
-  align-items: stretch !important;  /* equal row heights */
+  align-items: stretch !important; 
   justify-items: stretch !important;
   width: 100%;
   margin: 0 auto;
 }
 
-/* Uniform card sizing so single-item rows match the 4-up rows */
+
 .character-grid .char-card {
   display: flex !important;
   flex-direction: column;
@@ -20,13 +20,13 @@
   border: 1px solid var(--border, #333);
   border-radius: var(--radius, 6px);
   padding: 16px;
-  height: 520px !important;                /* fixed height */
+  height: 520px !important;               
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .character-grid .char-card img {
   width: 100%;
-  height: 320px !important;                 /* fixed image height */
+  height: 320px !important;          
   object-fit: cover;
   object-position: top;
   border-radius: var(--radius, 6px);
@@ -41,7 +41,7 @@
   text-align: center;
 }
 
-/* ===== RESPONSIVE: loosen to 3/2/1 columns as screen narrows ===== */
+/* ===== RESPONSIVE===== */
 @media (max-width: 1200px) {
   .page .container .character-grid,
   .character-grid.grid,
