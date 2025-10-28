@@ -11,9 +11,11 @@ import Guides from './pages/Guides';
 import Community from './pages/Community';
 import Sign from './pages/Sign';
 
+import { HashRouter, Routes, Route } from "react-router-dom";
+
 export default function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename="/">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -28,6 +30,6 @@ export default function App() {
           <Route path="sign" element={<Sign />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
