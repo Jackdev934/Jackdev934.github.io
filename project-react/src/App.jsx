@@ -15,7 +15,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
-    <HashRouter basename="/">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -30,6 +30,6 @@ export default function App() {
           <Route path="sign" element={<Sign />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }

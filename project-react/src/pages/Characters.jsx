@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../css/Characters.css";
 import andre from "../images/character images/andre.jpeg";
 import firekeeper from "../images/character images/fire.jpeg";
