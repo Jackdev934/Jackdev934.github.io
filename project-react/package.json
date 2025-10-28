@@ -1,5 +1,5 @@
 {
-  "homepage": "/jackdev934.github.io",
+  "homepage": "/project-react",
   "name": "project-react",
   "version": "0.1.0",
   "private": false,
@@ -40,7 +40,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "Portia's learning react",
+  "description": "Jackson's learning react",
   "main": "index.js",
   "keywords": [],
   "author": "",
